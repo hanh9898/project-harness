@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-technical-design-decision",
+  "round": "T05",
+  "session": "Detailed technical design — Paseo 0.12",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3308,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb3ba978588191a4859f66bb74d05d",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb3ba978588191a4859f66bb74d05d",
+      "createdBy": "agent",
+      "text": "Paseo 0.12 có cron, chạy ngay và lịch sử chạy; nhưng chưa đủ cơ chế chạy bù có giới hạn, admission chung và Pause của orchestrator theo yêu cầu V1. [Nguồn native scheduler](https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/schedule/service.ts).\n\n❓ **Q1 — Khi native không đáp ứng, cho phép plugin quản lý cả lịch của agent/workflow Job?**\n\n➡️ **Đề xuất: đồng ý.**\n\n- **Triggers** quản lý thời điểm, lượt bị lỡ và chạy chồng.\n- **Work** kiểm quyền, tài nguyên và Pause trước khi giao việc.\n- Lịch native đáp ứng đủ yêu cầu vẫn do Paseo sở hữu; mỗi lịch có một nơi quản lý.\n\nVí dụ: daily retro cần gom một lượt sau downtime và chờ khi Engineering đang Pause sẽ dùng lịch của Triggers.\n\nPhương án khác là mở rộng khả năng scheduling của Paseo trước. Đề xuất và giới hạn đã lưu tại [T05](docs/design/technical-scheduling.md); chưa tự chuyển lịch nào.",
+      "updatedAt": "2026-10-23T10:49:19.619Z",
+      "jsonPointer": "/structuredResponse/items/7"
+    },
+    {
+      "position": 3310,
+      "itemId": "turn-item:message:97a36d0c-728f-4e10-bf59-5f933ec83367",
+      "messageId": "97a36d0c-728f-4e10-bf59-5f933ec83367",
+      "createdBy": "user",
+      "text": "đồng ý",
+      "updatedAt": "2026-10-23T11:00:21.733Z",
+      "jsonPointer": "/structuredResponse/items/8"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "T05.Q1",
+      "status": "accepted",
+      "meaning": "When native scheduling cannot meet a harness Job's required contract, Triggers may own its Schedule even when the target is agent work or a workflow. Triggers owns timing/missed/overlap; Work checks authority/resources/logical Pause before dispatch. Adequate native schedules stay Paseo-owned, and every Schedule has one owner without a duplicate active scheduling engine."
+    }
+  ],
+  "retains": [
+    "one thick plugin and one project; eight module owners",
+    "Paseo ownership of native profiles, Sessions and native cadence that is actually selected",
+    "no automatic migration of existing native schedules; capability-dependent binding remains verified or blocked",
+    "existing arming/disabled-state/Pause/recovery and V1 evidence obligations"
+  ],
+  "excludes": [
+    "cardinality limiting how many distinct Schedules a Job may have",
+    "live schedule/configuration changes, automatic orchestrator Spawn/Replace, HBU operations",
+    "approval of exact parser/library/DDL/adapter internals or private native API adoption",
+    "closure of technical T0 or a V1 test pass"
+  ]
+}

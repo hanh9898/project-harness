@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": {
+    "snapshots": 3,
+    "fileLinks": 124,
+    "reportUnchanged": true,
+    "conceptModelUnchanged": true,
+    "A11StillPending": true
+  },
+  "errors": [],
+  "scope": "Documentation-only consistency checks; no runtime tests/live operations."
+}

@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "3bb282020f8bb13f1e84c25ce97361e156e35f7f5a11e6fafe4e713e666f652b"
+    },
+    {
+      "originalPath": "docs/design/harness-composition.md",
+      "snapshotPath": "before/docs/design/harness-composition.md",
+      "sha256": "df144fae8e5742011acf935313df069b6e1d6b48e7d8580e9c959c994d036ba4"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "1254419c51e9272281085157e0bde5f924b5027ecfb5b2b870def74ad2236d01"
+    },
+    {
+      "originalPath": "docs/design/configuration.md",
+      "snapshotPath": "before/docs/design/configuration.md",
+      "sha256": "954edf74073fef75ade9317d351746521ae9b382ad9408d7ba61ca7a50e96949"
+    },
+    {
+      "originalPath": "docs/design/first-run-ux.md",
+      "snapshotPath": "before/docs/design/first-run-ux.md",
+      "sha256": "e937ef0c1ac605b6ffabc1fe6891d352faae8c02962c67040cd3854be47442d3"
+    },
+    {
+      "originalPath": "docs/design/verification.md",
+      "snapshotPath": "before/docs/design/verification.md",
+      "sha256": "0f10a25448f2e562636c22f58615441ba82f1214a615f31078d8bd4792c42733"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "c2b93820e5552a14eb8f3296cf7b49a580fa7c4ac5f273250af35e3fc3282ea2"
+    },
+    {
+      "originalPath": "docs/design/autonomous-team-proposal.md",
+      "snapshotPath": "before/docs/design/autonomous-team-proposal.md",
+      "sha256": "ffa4230002891cc0776a7aa2a4d65b8a24b19387b4ec98298311a2a2845d4fcf"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC479",
+      "path": "docs/design/first-run-ux.md",
+      "startLine": 41,
+      "endLine": 41,
+      "excerpt": "Người dùng trao đổi sản phẩm, mục tiêu, quy tắc, task và tiêu chí trực tiếp với Project Orchestrator sau bước dựng/khởi chạy. V1 khảo sát codebase hiện có từ nguồn đã cấp; luồng ý tưởng đến repo rỗng nằm ngoài V1. Project Orchestrator giữ cuộc trao đổi/context xuyên suốt, không chờ harness khám phá hết nghiệp vụ rồi mới bàn giao.",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC482",
+      "path": "docs/design/configuration.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "> **Yêu cầu Skills hiện hành:** Agent Definition chọn bộ Skills cần dùng; khi giao việc, Orchestrator Agent chỉ định tường minh tên và nguồn Skill trong instructions. Agent Session có thể thấy các Skills khác từ môi trường dùng chung. Không yêu cầu per-agent catalog isolation; không cần fork, monkey patch hoặc đổi môi trường discovery để đáp ứng yêu cầu này. Phải kiểm nguồn Skill truy cập được và đánh giá kết quả công việc.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC484",
+      "path": "docs/design/configuration.md",
+      "startLine": 66,
+      "endLine": 66,
+      "excerpt": "Git giữ definitions/templates/skills/principles và catalog đội có version. SQLite dự kiến giữ mutable settings revisions, work/checkpoint/decision, receipts/cursors và active definition references. Artifacts lớn có reference/digest; secrets không nằm trong export/chat/log.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC492",
+      "path": "docs/design/verification.md",
+      "startLine": 50,
+      "endLine": 52,
+      "excerpt": "11. Các overlap policy đúng; nhiều trigger cùng sửa repo vẫn chịu admission tài nguyên chung.\n12. Pause/sửa/retire cạnh tranh callback cũ đúng mốc commit; runOnce retry cùng ID không tạo hai lượt; work đã nhận giữ revisions.\n13. Wake dồn khi orchestrator busy hoặc thay agent: chỉ một active owner, context/handoff đúng.",
+      "kind": "test-requirement"
+    },
+    {
+      "id": "SRC493",
+      "path": "docs/design/verification.md",
+      "startLine": 62,
+      "endLine": 62,
+      "excerpt": "23. Config export/log không chứa secret value; boot settings đọc được khi registry chưa mở mà không tạo hai nguồn active policy.",
+      "kind": "test-requirement"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed",
+  "factualMemo": {
+    "path": "docs/design/orchestrator-stop-pause-facts-r4.md",
+    "sha256": "0505cae39dc9e6fcdb4483e1a3155d17566b03a871fa9fd81144c3329b332111"
+  }
+}

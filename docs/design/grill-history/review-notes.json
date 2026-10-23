@@ -1,0 +1,1666 @@
+{
+  "schemaVersion": 1,
+  "cutoffPosition": 2584,
+  "method": "Manual audit of source chat, using one response event per user message; IDs created by this audit. Automatic context grouping is not automatic semantic approval.",
+  "classificationDefinitions": {
+    "question_or_instruction": "Câu hỏi/yêu cầu học hoặc hành động; không tự là acceptance của lời assistant trước.",
+    "accepted_scoped": "Có câu trả lời xác nhận đối chiếu được với đề xuất xác định; chỉ có hiệu lực trong phạm vi hỏi và phải đọc các thay thế về sau.",
+    "accepted_with_exception": "Chấp nhận có điều kiện, bổ sung hoặc một phần; không gộp thành đồng ý toàn bộ.",
+    "rejected_or_redirected": "Bác bỏ, yêu cầu sửa hoặc đổi hướng phỏng vấn; không ghi là đồng ý.",
+    "explicit_requirement": "Người dùng phát biểu trực tiếp yêu cầu/ranh giới; giữ lời nguyên văn.",
+    "research_or_spike_requested": "Yêu cầu nghiên cứu/kiểm chứng hoặc cho phép bước spike, không chứng minh capability sản phẩm.",
+    "artifact_work_requested": "Yêu cầu viết/sửa tài liệu, prototype, mappings hoặc làm tiếp; không duyệt trước artifact sinh ra sau.",
+    "continue_or_repitch_requested": "Tiếp tục/chọn luồng/giải thích lại; không chốt mọi đề xuất trước đó.",
+    "clarification_requested": "Hỏi lại một nghĩa/phạm vi; không phải acceptance.",
+    "status_or_audit_requested": "Yêu cầu trạng thái, tổng kết hoặc audit/lưu bằng chứng.",
+    "informational_reply": "Thông báo sự kiện/cấu hình người dùng đã làm.",
+    "corrected_typo": "Câu được người dùng sửa ngay; dùng câu sửa khi xác định intent.",
+    "ambiguous_approval_scope": "Có lời đồng ý nhưng đối tượng/phạm vi chưa đủ tường minh; không nâng thành duyệt toàn bộ."
+  },
+  "events": {
+    "1": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "2": {
+      "classification": "research_or_spike_requested",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "3": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo",
+      "assessment": "User message tự chứa câu hỏi async và câu trả lời; giữ nguyên chuỗi API, không dựng lại tool request."
+    },
+    "4": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "5": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "6": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "7": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "8": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "9": {
+      "classification": "research_or_spike_requested",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "10": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "11": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "12": {
+      "classification": "research_or_spike_requested",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "13": {
+      "classification": "question_or_instruction",
+      "topic": "Khảo sát T3/Paseo"
+    },
+    "14": {
+      "classification": "research_or_spike_requested",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Bắt đầu grill-with-docs. Mục tiêu nhiều loại dự án được thu hẹp thành một bộ cho một dự án ở R017.",
+      "supersededBy": [
+        17
+      ]
+    },
+    "15": {
+      "classification": "explicit_requirement",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "16": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Đồng ý Q1–Q3 của P161. Phần cả hai controller bằng code được làm rõ lại bằng closed-loop agent ở R018/R021.",
+      "supersededBy": [
+        18,
+        21
+      ]
+    },
+    "17": {
+      "classification": "rejected_or_redirected",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Bác mô hình một harness orchestrator phục vụ nhiều dự án; một bộ đi với một dự án."
+    },
+    "18": {
+      "classification": "explicit_requirement",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Nêu rõ năm pattern ghép/lồng và harness orchestrator là plugin/agent closed loop, dùng pstack/matt, inbox và daily retro."
+    },
+    "19": {
+      "classification": "rejected_or_redirected",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Làm rõ đầu ra là orchestrator dự án; sau đó R069 làm rõ hơn: toàn Project Harness chứa Project Orchestrator.",
+      "supersededBy": [
+        69
+      ]
+    },
+    "20": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "21": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Đồng ý autonomy/promotion/retro Q1–Q3 ở P199; bổ sung UI cho tiêu chí. Không phải duyệt mọi technical contract."
+    },
+    "22": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "23": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "24": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "25": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "26": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "P235 có Q1–Q3; P238 và P244 nhắc rõ chúng vẫn chờ. Vì vậy ok sau P244 có liên kết tường minh tới các câu hỏi P235, dù không đứng liền.",
+      "proposalPositions": [
+        235,
+        244
+      ]
+    },
+    "27": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc"
+    },
+    "28": {
+      "classification": "accepted_with_exception",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Q1 cho phép repo riêng kèm self-improve/upstream; Q2 đồng ý; Q3 hỏi lại về plugin dày, chưa đồng ý plugin mỏng."
+    },
+    "29": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Chốt plugin dày theo P265, thay lựa chọn plugin mỏng trước đó."
+    },
+    "30": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Chốt bootstrap/contribution/nghiệm thu hành vi theo ba câu P271; không chứng minh hiện có runtime."
+    },
+    "31": {
+      "classification": "accepted_scoped",
+      "topic": "Hai orchestrator và kiến trúc",
+      "assessment": "Chốt common owner interface và tiếp nhận HBU từng phần theo P278."
+    },
+    "32": {
+      "classification": "artifact_work_requested",
+      "topic": "Deep modules và closed loop"
+    },
+    "33": {
+      "classification": "research_or_spike_requested",
+      "topic": "Deep modules và closed loop"
+    },
+    "34": {
+      "classification": "artifact_work_requested",
+      "topic": "Deep modules và closed loop"
+    },
+    "35": {
+      "classification": "status_or_audit_requested",
+      "topic": "First-run UX và chat"
+    },
+    "36": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "First-run UX và chat"
+    },
+    "37": {
+      "classification": "accepted_scoped",
+      "topic": "First-run UX và chat",
+      "assessment": "Chấp nhận hướng first-run lúc đó, gồm cả dự án mới; phạm vi nghiệm thu V1 được thu hẹp ở R099, menu được đổi ở R140.",
+      "supersededBy": [
+        99,
+        140
+      ]
+    },
+    "38": {
+      "classification": "accepted_scoped",
+      "topic": "First-run UX và chat",
+      "assessment": "Chấp nhận hướng UI lúc đó; phần form/wizard được giảm và thay thế dần bởi native chat/onboarding ở R039/R047/R140.",
+      "supersededBy": [
+        39,
+        47,
+        140
+      ]
+    },
+    "39": {
+      "classification": "rejected_or_redirected",
+      "topic": "First-run UX và chat",
+      "assessment": "Sửa trực tiếp giả định một ô chat/router chung và form hóa yêu cầu nghiệp vụ."
+    },
+    "40": {
+      "classification": "accepted_scoped",
+      "topic": "First-run UX và chat",
+      "assessment": "Chấp nhận mô hình management/control/data planes như phép ánh xạ và chat là interface chính."
+    },
+    "41": {
+      "classification": "accepted_scoped",
+      "topic": "First-run UX và chat",
+      "assessment": "Chấp nhận Project Orchestrator sơ khởi xuất hiện sớm lúc đó; thứ tự onboarding→engineering→project được đổi rõ ở R140.",
+      "supersededBy": [
+        140
+      ]
+    },
+    "42": {
+      "classification": "accepted_scoped",
+      "topic": "First-run UX và chat",
+      "assessment": "Chốt monitor hoạt động vận hành, chi tiết agent/tool/log mở sâu."
+    },
+    "43": {
+      "classification": "artifact_work_requested",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "44": {
+      "classification": "explicit_requirement",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "45": {
+      "classification": "artifact_work_requested",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "46": {
+      "classification": "clarification_requested",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "47": {
+      "classification": "explicit_requirement",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "48": {
+      "classification": "explicit_requirement",
+      "topic": "Prototype, config và ranh giới Paseo",
+      "assessment": "Bác việc bỏ toàn bộ scheduler riêng: code jobs Backlog/PR không nhất thiết cần agent."
+    },
+    "49": {
+      "classification": "question_or_instruction",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "50": {
+      "classification": "research_or_spike_requested",
+      "topic": "Prototype, config và ranh giới Paseo"
+    },
+    "51": {
+      "classification": "research_or_spike_requested",
+      "topic": "Agent Definitions, Skills, Principles, native profiles",
+      "assessment": "Yêu cầu học HBU agent-spawn: chọn specialist kèm Skills và Principles; đây là yêu cầu research và preference, không blanket approval của phân tích kế tiếp."
+    },
+    "52": {
+      "classification": "artifact_work_requested",
+      "topic": "Agent Definitions, Skills, Principles, native profiles",
+      "assessment": "Cho phép cập nhật prototype theo đề xuất trước; không coi đây là duyệt mọi schema/giới hạn kỹ thuật trong prototype."
+    },
+    "53": {
+      "classification": "clarification_requested",
+      "topic": "Agent Definitions, Skills, Principles, native profiles"
+    },
+    "54": {
+      "classification": "explicit_requirement",
+      "topic": "Agent Definitions, Skills, Principles, native profiles",
+      "assessment": "Yêu cầu tạo/sửa Agent Definitions, fallback, chọn Skills, Principles. Phần model/provider native được sửa rõ ở R055.",
+      "supersededBy": [
+        55
+      ]
+    },
+    "55": {
+      "classification": "explicit_requirement",
+      "topic": "Agent Definitions, Skills, Principles, native profiles",
+      "assessment": "Native profile phải tạo trong Paseo trước; harness tham chiếu profile, không nhân đôi chức năng native."
+    },
+    "56": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "57": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills",
+      "assessment": "Cho phép bước kiểm chứng khả thi đề xuất; không phải xác nhận Paseo đã hỗ trợ toàn bộ prototype."
+    },
+    "58": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills",
+      "assessment": "User message chứa nguyên câu hỏi async về profile và trả lời ok. Không coi ok là một profile đã tồn tại; R059 mới báo đã tạo test."
+    },
+    "59": {
+      "classification": "informational_reply",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "60": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "61": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "62": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "63": {
+      "classification": "research_or_spike_requested",
+      "topic": "Paseo feasibility và nguồn Skills"
+    },
+    "64": {
+      "classification": "clarification_requested",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Yêu cầu mở interview glossary, không chấp nhận đề xuất fork Paseo trước đó."
+    },
+    "65": {
+      "classification": "rejected_or_redirected",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Bác cả hai quy ước tên/phạm vi; cần research thuật ngữ ngành trước."
+    },
+    "66": {
+      "classification": "research_or_spike_requested",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Cho phép tiếp tục sau research thuật ngữ, không phê duyệt các tên bị bác ở R065."
+    },
+    "67": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Product vocabulary và packaging"
+    },
+    "68": {
+      "classification": "rejected_or_redirected",
+      "topic": "Product vocabulary và packaging"
+    },
+    "69": {
+      "classification": "explicit_requirement",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Xác định thứ được tạo là Project Harness; Project Orchestrator là thành phần."
+    },
+    "70": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "71": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "72": {
+      "classification": "explicit_requirement",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Đóng gói đơn giản một Paseo plugin, bác việc thêm một tên/tầng packaging không cần thiết."
+    },
+    "73": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "74": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "75": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "76": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "77": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "78": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "79": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "80": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "81": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "82": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "83": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging"
+    },
+    "84": {
+      "classification": "accepted_scoped",
+      "topic": "Product vocabulary và packaging",
+      "assessment": "Đồng ý bản tổng hợp vocabulary ở P1127 trong phạm vi hiểu sản phẩm thời điểm đó; không chứng minh glossary toàn V1 đã đủ.",
+      "supersededBy": [
+        103,
+        174,
+        177
+      ]
+    },
+    "85": {
+      "classification": "status_or_audit_requested",
+      "topic": "Skill scope và việc còn dở"
+    },
+    "86": {
+      "classification": "artifact_work_requested",
+      "topic": "Skill scope và việc còn dở"
+    },
+    "87": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Skill scope và việc còn dở"
+    },
+    "88": {
+      "classification": "research_or_spike_requested",
+      "topic": "Skill scope và việc còn dở"
+    },
+    "89": {
+      "classification": "corrected_typo",
+      "topic": "Skill scope và việc còn dở",
+      "assessment": "Câu có 'ko làm chỉ định' được người dùng sửa ngay ở R090. Không dùng bản lỗi gõ để suy ra yêu cầu ngược lại.",
+      "supersededBy": [
+        90
+      ]
+    },
+    "90": {
+      "classification": "explicit_requirement",
+      "topic": "Skill scope và việc còn dở",
+      "assessment": "Bản sửa rõ: chỉ cần chỉ định tường minh khi làm. Bỏ yêu cầu fork/monkey patch/isolation; không suy ra provider thật sự chỉ discovery Skills đó."
+    },
+    "91": {
+      "classification": "status_or_audit_requested",
+      "topic": "Skill scope và việc còn dở"
+    },
+    "92": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Phạm vi V1"
+    },
+    "93": {
+      "classification": "rejected_or_redirected",
+      "topic": "Phạm vi V1",
+      "assessment": "Yêu cầu liệt kê phần V1 bị cắt trước khi quyết định; không đồng ý Q1–Q3 ở P1232."
+    },
+    "94": {
+      "classification": "explicit_requirement",
+      "topic": "Phạm vi V1",
+      "assessment": "Yêu cầu scheduler tổng quát; được bổ sung đầy đủ ngay R095.",
+      "supersededBy": [
+        95
+      ]
+    },
+    "95": {
+      "classification": "explicit_requirement",
+      "topic": "Phạm vi V1",
+      "assessment": "Ba MUST V1: lịch tổng quát, tự cập nhật mọi phần plugin, dashboard phân tích sâu."
+    },
+    "96": {
+      "classification": "accepted_scoped",
+      "topic": "Phạm vi V1",
+      "assessment": "Chốt độ rộng ba MUST theo P1244; lựa chọn automatic rollback về sau được chỉnh bởi policy release R111–R117/R185.",
+      "supersededBy": [
+        111,
+        112,
+        185
+      ]
+    },
+    "97": {
+      "classification": "accepted_scoped",
+      "topic": "Phạm vi V1",
+      "assessment": "Chốt tạo handler mới qua chat, update có checkpoint và saved dashboard views theo P1249."
+    },
+    "98": {
+      "classification": "accepted_scoped",
+      "topic": "Phạm vi V1",
+      "assessment": "Chốt overlap/missed policy và quan sát vs controlled evaluation; automatic recovery mặc định lúc này được thay/làm rõ bằng fix-forward và compatible recovery ở các vòng release sau.",
+      "supersededBy": [
+        112,
+        121,
+        185
+      ]
+    },
+    "99": {
+      "classification": "accepted_scoped",
+      "topic": "Phạm vi V1",
+      "assessment": "Chốt existing codebase, Backlog/GitLab, Codex/Claude theo P1259."
+    },
+    "100": {
+      "classification": "accepted_scoped",
+      "topic": "Phạm vi V1",
+      "assessment": "Chốt user không phải viết workflow, host-off semantics, contribution không phụ thuộc upstream theo P1264."
+    },
+    "101": {
+      "classification": "status_or_audit_requested",
+      "topic": "Phạm vi V1",
+      "assessment": "Không trả lời gate nghiệm thu P1270; chuyển sang hỏi thiếu màn prototype. Không suy ra chốt gate."
+    },
+    "102": {
+      "classification": "artifact_work_requested",
+      "topic": "Phạm vi V1"
+    },
+    "103": {
+      "classification": "status_or_audit_requested",
+      "topic": "Cấu trúc glossary theo phạm vi"
+    },
+    "104": {
+      "classification": "accepted_scoped",
+      "topic": "Cấu trúc glossary theo phạm vi",
+      "assessment": "Đồng ý tổ chức glossary theo phạm vi/mapping; không phải duyệt mọi definition sẽ viết sau."
+    },
+    "105": {
+      "classification": "accepted_scoped",
+      "topic": "Cấu trúc glossary theo phạm vi"
+    },
+    "106": {
+      "classification": "accepted_scoped",
+      "topic": "Cấu trúc glossary theo phạm vi"
+    },
+    "107": {
+      "classification": "accepted_scoped",
+      "topic": "Cấu trúc glossary theo phạm vi"
+    },
+    "108": {
+      "classification": "rejected_or_redirected",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Dừng để research fast release HBU, chưa trả lời cặp Active/Known-good ở P1398; được giải quyết bằng Active/Recovery ở R121.",
+      "supersededBy": [
+        121
+      ]
+    },
+    "109": {
+      "classification": "research_or_spike_requested",
+      "topic": "Release theo thay đổi nhỏ và spikes"
+    },
+    "110": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Đồng ý khung Product Development Flow và yêu cầu đi sâu implementation; không duyệt trước mọi implementation."
+    },
+    "111": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt risk-based Fast/Deep, không full nightly mọi patch, code giữ mức kiểm tối thiểu theo P1442."
+    },
+    "112": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt checkpoint theo phạm vi, fix-forward/independent recovery, backup theo thay đổi dữ liệu ở P1449."
+    },
+    "113": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt Fast checks, pin run revision, theo dõi chi phí/lỗi theo P1455."
+    },
+    "114": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt Deep theo ảnh hưởng, chặn phần lỗi, một activation tại một thời điểm theo P1462."
+    },
+    "115": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt check reuse có điều kiện, recovery drill khi cơ chế đổi, đạt khi mandatory checks trước/sau pass theo P1468."
+    },
+    "116": {
+      "classification": "artifact_work_requested",
+      "topic": "Release theo thay đổi nhỏ và spikes"
+    },
+    "117": {
+      "classification": "accepted_scoped",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Chốt Skill drift/source digest, reuse chỉ cùng candidate/inputs/environment và executable recovery khởi chạy trước reload theo P1492."
+    },
+    "118": {
+      "classification": "artifact_work_requested",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Cho phép tiếp tục spike đề xuất trong P1513; không duyệt một release protocol production."
+    },
+    "119": {
+      "classification": "research_or_spike_requested",
+      "topic": "Release theo thay đổi nhỏ và spikes",
+      "assessment": "Yêu cầu test bổ sung; không gọi các kết quả spike là nghiệm thu V1."
+    },
+    "120": {
+      "classification": "artifact_work_requested",
+      "topic": "Release theo thay đổi nhỏ và spikes"
+    },
+    "121": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary",
+      "assessment": "Chốt Active Release ≠ Activation Target và Recovery Release tương thích dữ liệu hiện tại; thay tên Known-good."
+    },
+    "122": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary"
+    },
+    "123": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary"
+    },
+    "124": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary"
+    },
+    "125": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary",
+      "assessment": "Chốt Assignment và hai kiểu phân tích; identity khi retry/redispatch được bổ sung rõ ở R193/GA01.",
+      "supersededBy": [
+        193
+      ]
+    },
+    "126": {
+      "classification": "accepted_scoped",
+      "topic": "Execution/Evolution/Analytics vocabulary"
+    },
+    "127": {
+      "classification": "rejected_or_redirected",
+      "topic": "English-first UI và Managed Agents research",
+      "assessment": "Bác tuyên bố glossary/UI đã hoàn tất. Nhiều definitions đã chốt không đồng nghĩa UI naming xong."
+    },
+    "128": {
+      "classification": "accepted_scoped",
+      "topic": "English-first UI và Managed Agents research"
+    },
+    "129": {
+      "classification": "explicit_requirement",
+      "topic": "English-first UI và Managed Agents research",
+      "assessment": "Quy tắc English canonical definitions trước rồi mới Vietnamese equivalents."
+    },
+    "130": {
+      "classification": "research_or_spike_requested",
+      "topic": "English-first UI và Managed Agents research"
+    },
+    "131": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "English-first UI và Managed Agents research"
+    },
+    "132": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Delegation vòng 1: shared catalog, policy per orchestrator, Delegate/Consult/Workflow và definition mới qua candidate."
+    },
+    "133": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Vòng 2: child delegation off mặc định, Consult không sửa code, tài nguyên chung với orchestrator/worker slots phân biệt."
+    },
+    "134": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Vòng 3: self-edit trong quyền đã cấp, context theo Assignment, thiếu specialist gửi yêu cầu liên kết/escalation."
+    },
+    "135": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Vòng 4: pin policy + revoke check, timeout/late result không overwrite, quyền con trong phạm vi cha."
+    },
+    "136": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Vòng 5: modes per definition, English Agent Catalog và editor chính/Advanced."
+    },
+    "137": {
+      "classification": "accepted_scoped",
+      "topic": "Agent Catalog/Delegation — sáu vòng",
+      "assessment": "Vòng 6: Vietnamese Danh mục agent/Chính sách giao việc/Giao việc/Tham vấn/Trong luồng công việc."
+    },
+    "138": {
+      "classification": "clarification_requested",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Không duyệt nhóm tên Work Items/Assignments/Project Chat ở P1798; yêu cầu giải thích chat."
+    },
+    "139": {
+      "classification": "clarification_requested",
+      "topic": "Onboarding menu và MCP"
+    },
+    "140": {
+      "classification": "explicit_requirement",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Yêu cầu menu quản lý và thứ tự user Spawn Onboarding→Engineering→Project. Thay mô hình hai menu chat bắt buộc/sơ khởi trước onboarding."
+    },
+    "141": {
+      "classification": "accepted_with_exception",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Q1 đồng ý Open thay tạo trùng; Q2 yêu cầu MCP config/hướng dẫn, chưa duyệt technical schema cụ thể."
+    },
+    "142": {
+      "classification": "research_or_spike_requested",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Yêu cầu research T3 MCP trước chốt scope Q1/Q2, không phải đồng ý các câu P1820."
+    },
+    "143": {
+      "classification": "accepted_scoped",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Chốt owner API chung với UI, native-write chỉ API đã kiểm/quyền được cấp, code readiness + user Spawn; không sửa file native nội bộ."
+    },
+    "144": {
+      "classification": "accepted_scoped",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Chốt agent chọn defaults kỹ thuật và Replace Session chuyển giao authority/lịch sử."
+    },
+    "145": {
+      "classification": "accepted_scoped",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Chốt config tối thiểu; integrations chưa dùng chỉ chặn phần phụ thuộc, không cắt khỏi V1."
+    },
+    "146": {
+      "classification": "accepted_scoped",
+      "topic": "Onboarding menu và MCP",
+      "assessment": "Chốt initial build bundle và Launch Readiness, không cần đủ mọi workflow/specialist trước mở Project."
+    },
+    "147": {
+      "classification": "artifact_work_requested",
+      "topic": "Contracts, spike và ưu tiên công việc",
+      "assessment": "Cho phép viết contracts tiếp; không phải blanket approval của contracts sau đó."
+    },
+    "148": {
+      "classification": "status_or_audit_requested",
+      "topic": "Contracts, spike và ưu tiên công việc"
+    },
+    "149": {
+      "classification": "status_or_audit_requested",
+      "topic": "Contracts, spike và ưu tiên công việc"
+    },
+    "150": {
+      "classification": "research_or_spike_requested",
+      "topic": "Contracts, spike và ưu tiên công việc",
+      "assessment": "Giao spike Onboarding MCP; báo cáo spike không tự phê duyệt sản phẩm."
+    },
+    "151": {
+      "classification": "status_or_audit_requested",
+      "topic": "Contracts, spike và ưu tiên công việc"
+    },
+    "152": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Contracts, spike và ưu tiên công việc"
+    },
+    "153": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "English Orchestrators/Work Items/Assignments và phạm vi ở P1958."
+    },
+    "154": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Vietnamese ba tên màn theo P1967."
+    },
+    "155": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "English tên màn quan sát/config/improvement/inbox theo P1973."
+    },
+    "156": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Vietnamese các tên màn theo P1980."
+    },
+    "157": {
+      "classification": "rejected_or_redirected",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Bác cả ba nhãn Khởi chạy/Mở phiên/Thay phiên; không giữ chúng như nhãn đã duyệt.",
+      "supersededBy": [
+        158
+      ]
+    },
+    "158": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Chấp nhận nhãn hành động theo mục đích và Mở cuộc trò chuyện/Chuyển sang cuộc trò chuyện mới."
+    },
+    "159": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "160": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "161": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "162": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "163": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "P2032 có spike report xen ngang nhưng kết thúc nhắc rõ nhóm glossary còn chờ; 'Theo đề xuất' đối chiếu P2027. Không gán nó thành đồng ý triển khai menu thật.",
+      "proposalPositions": [
+        2027,
+        2032
+      ]
+    },
+    "164": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "165": {
+      "classification": "accepted_with_exception",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Giữ Checkpoint nguyên tiếng Anh; các nhãn khác theo P2043."
+    },
+    "166": {
+      "classification": "rejected_or_redirected",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Bác Q1 nhãn phiên bản ở P2049; chưa coi im lặng về Q2/Q3 là xác nhận riêng.",
+      "supersededBy": [
+        167
+      ]
+    },
+    "167": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese",
+      "assessment": "Chốt cả ba nhóm; Q1 dùng bản sửa đầy đủ ở P2054, Q2/Q3 gốc P2049.",
+      "proposalPositions": [
+        2049,
+        2054
+      ]
+    },
+    "168": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "169": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "170": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "171": {
+      "classification": "accepted_scoped",
+      "topic": "UI naming: English rồi Vietnamese"
+    },
+    "172": {
+      "classification": "artifact_work_requested",
+      "topic": "Code mappings và concept graph method",
+      "assessment": "Cho phép đồng bộ code mappings/prototype; không suy ra universal Attempt↔Assignment cardinality hoặc runtime production."
+    },
+    "173": {
+      "classification": "status_or_audit_requested",
+      "topic": "Code mappings và concept graph method"
+    },
+    "174": {
+      "classification": "rejected_or_redirected",
+      "topic": "Code mappings và concept graph method",
+      "assessment": "Dừng đề xuất triển khai production; glossary còn chưa đầy đủ."
+    },
+    "175": {
+      "classification": "clarification_requested",
+      "topic": "Code mappings và concept graph method"
+    },
+    "176": {
+      "classification": "research_or_spike_requested",
+      "topic": "Code mappings và concept graph method"
+    },
+    "177": {
+      "classification": "accepted_scoped",
+      "topic": "Code mappings và concept graph method",
+      "assessment": "Chấp nhận ontology/CQ method và giao subagent dựng draft; không phê duyệt mọi concept/relation trong draft."
+    },
+    "178": {
+      "classification": "status_or_audit_requested",
+      "topic": "Scenario: D02–D05"
+    },
+    "179": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "Đồng ý bắt đầu review theo scenario; chưa duyệt trước D02–D05."
+    },
+    "180": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D02 phần identity: mỗi visit tạo Step Run, technical retry thêm Attempt cùng Step Run; quality return mới Step Run."
+    },
+    "181": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D02 admission/dispatch và D03 all-required join: chặn trước admission chưa tạo Attempt, ghi trước dispatch, lost response reconcile."
+    },
+    "182": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D03 dynamic branch-set closure và nhánh required failure/tiếp tục nhánh khác trong budget."
+    },
+    "183": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D03 aggregate Outcome/provenance khác Verdict và result reuse eligibility."
+    },
+    "184": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D04 mandatory Deep triggers; D05 goal-specific evaluation evidence, Inconclusive và Attribution Policy."
+    },
+    "185": {
+      "classification": "accepted_scoped",
+      "topic": "Scenario: D02–D05",
+      "assessment": "D04 Fix-forward phải đủ bốn điều kiện; nếu không pause/reconcile và independent compatible recovery khi cần."
+    },
+    "186": {
+      "classification": "clarification_requested",
+      "topic": "Vocabulary D01: phạm vi xác nhận",
+      "assessment": "Hỏi lại 'Đội năng lực', không phải câu xác nhận bulk vocabulary D01."
+    },
+    "187": {
+      "classification": "ambiguous_approval_scope",
+      "topic": "Vocabulary D01: phạm vi xác nhận",
+      "assessment": "Phạm vi mơ hồ: P2359 hỏi duyệt 96 mục; P2365 chỉ giải thích Agent Catalog; user P2367 nói 'Ok thế theo đề xuất'. P2368 là assistant tự hiểu thành duyệt toàn bộ. Lưu bằng chứng nhưng không coi đây là explicit bulk approval.",
+      "proposalPositions": [
+        2359,
+        2365
+      ]
+    },
+    "188": {
+      "classification": "status_or_audit_requested",
+      "topic": "Backlog thiết kế và ranh giới phase"
+    },
+    "189": {
+      "classification": "artifact_work_requested",
+      "topic": "Backlog thiết kế và ranh giới phase",
+      "assessment": "Ok sau danh sách việc/ưu tiên ở P2425 cho phép tiếp tục tài liệu; không phải duyệt từng schema/command/spec được viết sau."
+    },
+    "190": {
+      "classification": "explicit_requirement",
+      "topic": "Backlog thiết kế và ranh giới phase",
+      "assessment": "Xác định hiện ở phase thiết kế, chưa triển khai production. Các spikes trước là bằng chứng riêng, không đổi phase."
+    },
+    "191": {
+      "classification": "research_or_spike_requested",
+      "topic": "Concept graph audit và GA01",
+      "assessment": "Yêu cầu audit concept graph, không tự duyệt mọi sửa cardinality."
+    },
+    "192": {
+      "classification": "continue_or_repitch_requested",
+      "topic": "Concept graph audit và GA01",
+      "assessment": "Yêu cầu đề xuất về GA01 đang mở."
+    },
+    "193": {
+      "classification": "accepted_scoped",
+      "topic": "Concept graph audit và GA01",
+      "assessment": "Chốt GA01 qua P2540→P2542; actual redispatch tạo Assignment mới, lost response/continued Turns giữ cũ, late results và worker continuity được giữ."
+    },
+    "194": {
+      "classification": "status_or_audit_requested",
+      "topic": "Audit lịch sử grill",
+      "assessment": "Yêu cầu tổng kết các vòng, không bổ sung acceptance."
+    },
+    "195": {
+      "classification": "status_or_audit_requested",
+      "topic": "Audit lịch sử grill",
+      "assessment": "Yêu cầu chỉ ra lưu trữ và vòng chưa hoàn thiện."
+    },
+    "196": {
+      "classification": "status_or_audit_requested",
+      "topic": "Audit lịch sử grill",
+      "assessment": "Yêu cầu audit/save bằng chứng là cutoff của bundle này."
+    }
+  },
+  "claims": [
+    {
+      "id": "H01",
+      "title": "Một bộ cho một dự án",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        17
+      ],
+      "sourcePositions": [
+        166,
+        168
+      ],
+      "documentPaths": [
+        "docs/adr/0002-mot-bo-mot-du-an.md"
+      ],
+      "assessment": "Yêu cầu trực tiếp sửa giả định multi-project.",
+      "quotes": []
+    },
+    {
+      "id": "H02",
+      "title": "Hai orchestrator; Harness Engineering là closed-loop agent",
+      "evidenceStatus": "supported_with_later_refinement",
+      "userSequences": [
+        15,
+        16,
+        18,
+        21
+      ],
+      "sourcePositions": [
+        154,
+        161,
+        163,
+        174,
+        199,
+        201
+      ],
+      "documentPaths": [
+        "docs/adr/0003-harness-orchestrator-closed-loop.md"
+      ],
+      "assessment": "Không giữ cách hiểu cả hai là code controller ở ADR0001 làm policy cuối.",
+      "quotes": []
+    },
+    {
+      "id": "H03",
+      "title": "Năm pattern ghép/lồng",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        18
+      ],
+      "sourcePositions": [
+        174
+      ],
+      "documentPaths": [
+        "docs/design/architecture.md"
+      ],
+      "assessment": "Do người dùng nêu trực tiếp, không phải suy ra từ ví dụ workflow.",
+      "quotes": []
+    },
+    {
+      "id": "H04",
+      "title": "Plugin dày, TypeScript, Git/SQLite/files",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        27,
+        29
+      ],
+      "sourcePositions": [
+        250,
+        252,
+        265,
+        267
+      ],
+      "documentPaths": [
+        "docs/adr/0006-typescript-runtime-va-luu-tru.md",
+        "docs/adr/0007-plugin-day-runtime-phuc-hoi.md"
+      ],
+      "assessment": "Chốt hướng kiến trúc; không xác nhận mọi protocol kỹ thuật.",
+      "quotes": []
+    },
+    {
+      "id": "H05",
+      "title": "Chat chính; panel config/inbox/monitor",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        39,
+        40
+      ],
+      "sourcePositions": [
+        432,
+        445,
+        447
+      ],
+      "documentPaths": [
+        "docs/design/interaction-model.md"
+      ],
+      "assessment": "Không buộc router chat chung hoặc UI hóa yêu cầu nghiệp vụ.",
+      "quotes": [
+        {
+          "position": 432,
+          "text": "Nói chung interface chính vẫn là chat."
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "title": "Agent Definitions: native refs, fallback, Skills, Principles",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        51,
+        54,
+        55
+      ],
+      "sourcePositions": [
+        687,
+        758,
+        809
+      ],
+      "documentPaths": [
+        "docs/design/configuration.md"
+      ],
+      "assessment": "Chọn profile native sẵn có; không nhân đôi provider/model editor.",
+      "quotes": []
+    },
+    {
+      "id": "H07",
+      "title": "Skill fork/monkey patch/isolation không còn yêu cầu",
+      "evidenceStatus": "supported_corrected_typo",
+      "userSequences": [
+        88,
+        89,
+        90
+      ],
+      "sourcePositions": [
+        1185,
+        1213,
+        1217
+      ],
+      "documentPaths": [
+        "docs/design/skill-origins.md",
+        "docs/design/configuration.md"
+      ],
+      "assessment": "R090 là bản sửa của R089; explicit instruction không bảo đảm catalog isolation.",
+      "quotes": [
+        {
+          "position": 1217,
+          "text": "Chỉ cần khi làm chỉ định tường minh là được"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "title": "V1 lịch tổng quát, full self-update, deep Analytics",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "sourcePositions": [
+        1241,
+        1244,
+        1246,
+        1249,
+        1251,
+        1254,
+        1256,
+        1259,
+        1261,
+        1264,
+        1266
+      ],
+      "documentPaths": [
+        "docs/design/scope-80-20.md"
+      ],
+      "assessment": "Các năng lực/ranh giới có xác nhận theo vòng; release recovery được đổi sau.",
+      "quotes": [
+        {
+          "position": 1241,
+          "text": "2. Phải có tự động cập nhật mọi phần của chính plugin"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "title": "Gate hoàn thành V1 tổng hợp",
+      "evidenceStatus": "not_answered",
+      "userSequences": [
+        101
+      ],
+      "sourcePositions": [
+        1270,
+        1272
+      ],
+      "documentPaths": [
+        "docs/design/scope-80-20.md"
+      ],
+      "assessment": "Sau câu hỏi chốt gate, user hỏi thiếu màn prototype. Chưa có câu xác nhận tổng thể tương ứng.",
+      "quotes": []
+    },
+    {
+      "id": "H10",
+      "title": "Risk-based Fast/Deep và phát hành từng thay đổi nhỏ",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        108,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        117
+      ],
+      "sourcePositions": [
+        1400,
+        1432,
+        1434,
+        1442,
+        1444,
+        1449,
+        1451,
+        1455,
+        1457,
+        1462,
+        1464,
+        1468,
+        1470,
+        1492,
+        1494
+      ],
+      "documentPaths": [
+        "docs/design/release-policy.md",
+        "docs/design/release-execution.md"
+      ],
+      "assessment": "Chốt policy; implementation chi tiết còn có phần đề xuất.",
+      "quotes": []
+    },
+    {
+      "id": "H11",
+      "title": "Active/Activation Target/Recovery Release",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        121
+      ],
+      "sourcePositions": [
+        1652,
+        1654
+      ],
+      "documentPaths": [
+        "docs/domain/evolution/GLOSSARY.md"
+      ],
+      "assessment": "Recovery phù hợp current data, không mặc nhiên bản liền trước hoặc bản từng tốt.",
+      "quotes": []
+    },
+    {
+      "id": "H12",
+      "title": "Sáu vòng Agent Catalog/Delegation",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ],
+      "sourcePositions": [
+        1756,
+        1758,
+        1764,
+        1766,
+        1771,
+        1773,
+        1779,
+        1781,
+        1785,
+        1787,
+        1792,
+        1794
+      ],
+      "documentPaths": [
+        "docs/design/agent-delegation.md"
+      ],
+      "assessment": "Mỗi vòng có đề xuất Q1–Q3 và một câu Ok; schemas/context/resources/enforcement chi tiết không vì thế đã hoàn thiện.",
+      "quotes": []
+    },
+    {
+      "id": "H13",
+      "title": "Menu Onboarding→Engineering→Project, user Spawn",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        140,
+        141,
+        143,
+        144,
+        145,
+        146
+      ],
+      "sourcePositions": [
+        1806,
+        1812,
+        1814,
+        1838,
+        1840,
+        1851,
+        1853,
+        1861,
+        1863,
+        1867,
+        1869
+      ],
+      "documentPaths": [
+        "docs/design/onboarding-agent.md",
+        "docs/design/first-run-ux.md"
+      ],
+      "assessment": "Thay menu Project Chat/Harness Chat bắt buộc và Project sơ khởi trước onboarding.",
+      "quotes": []
+    },
+    {
+      "id": "H14",
+      "title": "MCP mỏng gọi owner services; native-write có API/quyền",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        141,
+        143
+      ],
+      "sourcePositions": [
+        1814,
+        1838,
+        1840
+      ],
+      "documentPaths": [
+        "docs/design/onboarding-contracts.md"
+      ],
+      "assessment": "Scope sản phẩm được chốt, tên tool/schema/protocol vẫn là thiết kế riêng.",
+      "quotes": []
+    },
+    {
+      "id": "H15",
+      "title": "English definitions trước Vietnamese equivalents",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        129
+      ],
+      "sourcePositions": [
+        1712
+      ],
+      "documentPaths": [
+        "docs/ui/ui-naming-interview.md",
+        "docs/ui/GLOSSARY.md"
+      ],
+      "assessment": "Có yêu cầu trực tiếp.",
+      "quotes": []
+    },
+    {
+      "id": "H16",
+      "title": "UI labels có bác bỏ và thay thế",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        157,
+        158,
+        165,
+        166,
+        167
+      ],
+      "sourcePositions": [
+        1987,
+        1989,
+        1992,
+        1994,
+        2043,
+        2045,
+        2049,
+        2051,
+        2054,
+        2056
+      ],
+      "documentPaths": [
+        "docs/ui/ui-naming-interview.md",
+        "docs/ui/GLOSSARY.md"
+      ],
+      "assessment": "Bỏ Khởi chạy/Mở phiên/Thay phiên; giữ Checkpoint; dùng bản sửa nhãn phiên bản.",
+      "quotes": []
+    },
+    {
+      "id": "H17",
+      "title": "D02 identity/admission/dispatch",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        180,
+        181
+      ],
+      "sourcePositions": [
+        2212,
+        2214,
+        2232,
+        2234
+      ],
+      "documentPaths": [
+        "docs/design/v1-glossary-completion-plan.md"
+      ],
+      "assessment": "Hai xác nhận trực tiếp; không tự chốt schema/concurrency.",
+      "quotes": []
+    },
+    {
+      "id": "H18",
+      "title": "D03 join/dynamic branches/Outcome/reuse",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        181,
+        182,
+        183
+      ],
+      "sourcePositions": [
+        2232,
+        2234,
+        2247,
+        2249,
+        2262,
+        2264
+      ],
+      "documentPaths": [
+        "docs/design/v1-glossary-completion-plan.md"
+      ],
+      "assessment": "Ba cặp Q/A; phân biệt all-required/closure/failed branch/partial Outcome.",
+      "quotes": []
+    },
+    {
+      "id": "H19",
+      "title": "D04 mandatory Deep và bốn điều kiện Fix-forward",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        184,
+        185
+      ],
+      "sourcePositions": [
+        2279,
+        2281,
+        2291,
+        2293
+      ],
+      "documentPaths": [
+        "docs/design/release-policy.md",
+        "docs/design/v1-glossary-completion-plan.md"
+      ],
+      "assessment": "Có Ok trực tiếp sau từng đề xuất.",
+      "quotes": []
+    },
+    {
+      "id": "H20",
+      "title": "D05 Evaluation Evidence và Attribution Policy",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        184
+      ],
+      "sourcePositions": [
+        2279,
+        2281
+      ],
+      "documentPaths": [
+        "docs/domain/analytics/GLOSSARY.md",
+        "docs/design/v1-glossary-completion-plan.md"
+      ],
+      "assessment": "Goal-specific evidence, Inconclusive, shared costs không double-count; chưa duyệt mọi metric formula.",
+      "quotes": []
+    },
+    {
+      "id": "H21",
+      "title": "D01 duyệt toàn bộ 96 vocabulary entries",
+      "evidenceStatus": "ambiguous_scope_in_chat",
+      "userSequences": [
+        186,
+        187
+      ],
+      "sourcePositions": [
+        2359,
+        2361,
+        2365,
+        2367,
+        2368
+      ],
+      "documentPaths": [
+        "docs/design/v1-glossary-completion-plan.md",
+        "docs/design/v1-concept-register.json"
+      ],
+      "assessment": "Docs đang ghi approved; chat có lời đồng ý nhưng câu ngay trước chỉ giải thích Agent Catalog. P2368 là assistant tự diễn giải bulk approval. Không khẳng định đây là explicit approval của cả 96 mục; không tự hạ status đã lưu.",
+      "quotes": [
+        {
+          "position": 2367,
+          "text": "Ok thế theo đề xuất"
+        },
+        {
+          "position": 2368,
+          "text": "Mình hiểu bạn đồng ý chốt bộ vocabulary theo bản review."
+        }
+      ]
+    },
+    {
+      "id": "H22",
+      "title": "GA01 allocation identity/continuity",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        193
+      ],
+      "sourcePositions": [
+        2540,
+        2542
+      ],
+      "documentPaths": [
+        "docs/design/v1-concept-graph-audit.md",
+        "docs/design/v1-glossary-completion-plan.md"
+      ],
+      "assessment": "Cặp đề xuất chi tiết→ok trực tiếp; không duyệt mọi cardinality/protocol.",
+      "quotes": []
+    },
+    {
+      "id": "H23",
+      "title": "Hiện vẫn ở phase thiết kế",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        190
+      ],
+      "sourcePositions": [
+        2487,
+        2489
+      ],
+      "documentPaths": [
+        "docs/design/README.md"
+      ],
+      "assessment": "Spikes/prototype không đổi thành product production.",
+      "quotes": [
+        {
+          "position": 2489,
+          "text": "Bây h mới đang ở phase thiết kế."
+        }
+      ]
+    },
+    {
+      "id": "H24",
+      "title": "Onboarding readiness khác verified project capability",
+      "evidenceStatus": "supported",
+      "userSequences": [
+        143,
+        146
+      ],
+      "sourcePositions": [
+        1838,
+        1840,
+        1867,
+        1869
+      ],
+      "documentPaths": [
+        "docs/design/onboarding-agent.md"
+      ],
+      "assessment": "Chỉ đủ khởi chạy không chứng minh project task đã đạt.",
+      "quotes": []
+    },
+    {
+      "id": "H25",
+      "title": "Nguyên tắc glossary/ontology không tự duyệt toàn graph",
+      "evidenceStatus": "supported_scoped_method",
+      "userSequences": [
+        104,
+        177,
+        179
+      ],
+      "sourcePositions": [
+        1375,
+        1377,
+        2172,
+        2174,
+        2200,
+        2202
+      ],
+      "documentPaths": [
+        "docs/design/glossary-concept-model.md",
+        "docs/design/v1-concept-register.json"
+      ],
+      "assessment": "Chấp nhận cách làm và review scenario, không blanket approved graph/cardinality.",
+      "quotes": []
+    },
+    {
+      "id": "H26",
+      "title": "Spikes là hoạt động được yêu cầu; không nghiệm thu toàn V1",
+      "evidenceStatus": "authorization_only",
+      "userSequences": [
+        57,
+        117,
+        118,
+        119,
+        120,
+        150
+      ],
+      "sourcePositions": [
+        869,
+        871,
+        1492,
+        1494,
+        1513,
+        1515,
+        1540,
+        1542,
+        1599,
+        1601,
+        1940,
+        1942
+      ],
+      "documentPaths": [
+        "docs/design/onboarding-spike-results.md",
+        "docs/design/release-verification-results.md"
+      ],
+      "assessment": "Source chat chứng minh yêu cầu/assistant báo cáo; không độc lập chứng minh tests thực sự pass. Xem artifact evidence riêng.",
+      "quotes": []
+    }
+  ],
+  "documentChecks": [
+    {
+      "path": "docs/design/scope-80-20.md",
+      "startLine": 90,
+      "endLine": 99,
+      "mustContain": "đề xuất chờ xác nhận",
+      "finding": "Aggregate acceptance gate remains unconfirmed."
+    },
+    {
+      "path": "docs/design/agent-delegation.md",
+      "startLine": 60,
+      "endLine": 67,
+      "mustContain": "Đang mở",
+      "finding": "Schemas/enforcement/context/resources remain technical design work."
+    },
+    {
+      "path": "docs/design/modules.md",
+      "startLine": 3,
+      "endLine": 5,
+      "mustContain": "TypeScript sketches",
+      "finding": "Module sketches are design, not implementation or blanket acceptance."
+    },
+    {
+      "path": "docs/design/modules.md",
+      "startLine": 304,
+      "endLine": 308,
+      "mustContain": "concurrency per Session",
+      "finding": "GA01 does not resolve per-Session concurrency."
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "startLine": 145,
+      "endLine": 160,
+      "mustContain": "D01 đóng",
+      "finding": "Document claims bulk vocabulary acceptance; original chat scope needs distinction."
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "startLine": 50,
+      "endLine": 52,
+      "mustContain": "schema",
+      "finding": "Technical investigation/proof frontier, not a claim all product decisions remain open."
+    },
+    {
+      "path": "docs/design/onboarding-implementation.md",
+      "startLine": 1,
+      "endLine": 9,
+      "mustContain": "đề xuất engineering",
+      "finding": "Latest schemas/commands are technical proposals; not production."
+    },
+    {
+      "path": "docs/design/release-policy.md",
+      "startLine": 62,
+      "endLine": 72,
+      "mustContain": "Check plan",
+      "finding": "Check Plan/cache identity/recovery protocols still need design."
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "startLine": 1,
+      "endLine": 3,
+      "mustContain": "chưa triển khai schema này",
+      "finding": "Configuration schema is product design; partial spikes do not prove implementation."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "3ca47c09b666737292135242b086495ec5c16cbc9775075046e54d53e4d501d2"
+    },
+    {
+      "path": "docs/design/technical-evaluation-release.md",
+      "snapshot": "before/docs/design/technical-evaluation-release.md",
+      "sha256": "fd054ab99b4a3d4935a5224e2a3ba6604c196e1f127a566387e5655d7df3c657"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "5f58bb575709a195a717de75cd8e6193d45fb677e8de17b07252b460cb437b0d"
+    },
+    {
+      "path": "docs/design/release-execution.md",
+      "snapshot": "before/docs/design/release-execution.md",
+      "sha256": "e70f8a03b36340f82cb3529a0c3c4503726ff422ae1aea682fc77d04d6a2a042"
+    }
+  ],
+  "report": "docs/design/paseo-012-release-host-facts-r4.md",
+  "reportSha256": "9bce662609e387e18385b169183e15cda468bb1d1d48f4b6e66c4dbaa7e7d623",
+  "protectedConceptRegisterSha256": "ea6f356020c84d7ea7b8f23a0527578891af9f75f445d22995d6acd412c2c122"
+}

@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-22T14:32:56.930Z",
+  "typecheck": {
+    "command": "PATH=/usr/local/bin:$PATH npm --prefix spikes/onboarding-mcp run typecheck",
+    "exitCode": 0
+  },
+  "local": {
+    "testCount": 13,
+    "passed": 13,
+    "failed": 0,
+    "paseoAdapter": "scripted",
+    "httpMcpProtocol": "real loopback transport",
+    "tapSha256": "0d6d450c3b43b71a36c9afbedecf9b8036f5726145ccbdbb5d2aa9482d435556"
+  },
+  "native": {
+    "passedAssertionGroups": 9,
+    "sessionCount": 2,
+    "realMcpCalls": 10,
+    "liveEvidenceSha256": "da85117794eda166abbe0bd5979af8da0ea47fc503ad6bf95e7e08c4471b118f"
+  },
+  "sourceHashes": {
+    "index.server.ts": "af4cdadb2db47f6a31723a93e9ea55f8a3195bdcce55cc195416f8a2d892d11f",
+    "server/owner.ts": "8d1233e1d23d06ae1e97259ca6397e6292978575504d5fc16e6f95d8c842f0b4",
+    "server/http.ts": "66e53445ae9d3eeef46cf2a2caba2183957df6df3eff70c768feff8aa8e92311",
+    "server/journal.ts": "612adea22c491b722b6f1393484759c91aeb29a86a3412e2286db9adf301c9fd",
+    "server/location.ts": "fe2b185192e3c35aeab7055f3ee2fd36a86740f75e5b3e571d1ad2447de5222d",
+    "shared/contracts.ts": "7f7d0c4d0a587e0aaad6df99e7c59bc53283d8abbb07faff3b7e5ebf4d967c31",
+    "driver/main.ts": "e1fc2b2591931b1575c347ff91883166fff38b1af21d727d919a95212bc5f601",
+    "server/owner.test.ts": "11292335bf961a2846db8008756cc447b40b4f3394e5f256552886c17a2a9381",
+    "package.json": "645d80f70eb3bbae95666fcd94400031ed8caa998468d081b74809ba8135f18c",
+    "package-lock.json": "c4891fe163ca03738bcba0b72d1813195bdce02072d0d20cbe7032783c24add5",
+    "paseo-plugin.json": "472d5de40c515031e09a5eaec655f4c207769253774c2d74f8ccc4119c5e2085",
+    "tsconfig.json": "d5934096b3a943d7514213402379b3d94d9b68075c6884224dd46463df8cfc06"
+  },
+  "sourceNote": "Final retained source after native smoke: subsequent reconcile workspace/context hardening and fixed 180-second schema validated locally. Actual lost native response and timeout cancellation paths not exercised live. Source hash is retained-source identity, not daemon binary equivalence.",
+  "officialDocs": [
+    {
+      "url": "https://paseo.sh/docs/plugins/reference.md",
+      "fetchedFileMtime": "2026-10-22T14:13:37.220Z",
+      "sha256": "2e8d3e62a2a433c342e98d49ae1e96ebb2846ccbf86afce5f6aedc4390d1f245"
+    },
+    {
+      "url": "https://paseo.sh/docs/plugins.md",
+      "fetchedFileMtime": "2026-10-22T14:13:38.178Z",
+      "sha256": "3af2503b76afb1efcdaffcbf2a8e6c2f327f96c992d61b5bc77278640c6dd97a"
+    },
+    {
+      "url": "https://paseo.sh/docs/plugins/publishing.md",
+      "fetchedFileMtime": "2026-10-22T14:13:38.394Z",
+      "sha256": "4d9d5119618f75079b0e9196051513d9bc126c8c8e03c9b6d9e9fcf1ba71c27b"
+    },
+    {
+      "url": "https://paseo.sh/docs/sdk/agents.md",
+      "fetchedFileMtime": "2026-10-22T14:13:39.608Z",
+      "sha256": "9b03d0424d12aa379bd05fa1603f9cbdb5a2c40d732ec5dbbf8f6f132abce5bd"
+    },
+    {
+      "url": "https://paseo.sh/docs/sdk.md",
+      "fetchedFileMtime": "2026-10-22T14:13:40.512Z",
+      "sha256": "bd3d25a12be57067231398194f3086cb3f4329d99f420d6a9371417dc4362d03"
+    },
+    {
+      "url": "https://paseo.sh/docs/sdk/reference.md",
+      "fetchedFileMtime": "2026-10-22T14:21:47.967Z",
+      "sha256": "58141fff793124359c2a529b5a3599e2629d290acaabf3b705bdab1e268d8a78"
+    }
+  ],
+  "cleanupSha256": "a9b74e0b5fa40ba29b3e272e68b0b8fb8c2233540d526cd3cb9870404f56dc4b"
+}

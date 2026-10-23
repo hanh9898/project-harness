@@ -1,0 +1,92 @@
+
+> project-harness-onboarding-mcp-spike@0.0.0 test
+> tsx --test server/*.test.ts
+
+TAP version 13
+# Subtest: mandatory missing config blocks completion and Spawn; optional integrations do not block valid config
+ok 1 - mandatory missing config blocks completion and Spawn; optional integrations do not block valid config
+  ---
+  duration_ms: 71.534
+  type: 'test'
+  ...
+# Subtest: configure receipt survives re-instantiation, replays once, rejects changed payload and revision
+ok 2 - configure receipt survives re-instantiation, replays once, rejects changed payload and revision
+  ---
+  duration_ms: 16.288792
+  type: 'test'
+  ...
+# Subtest: stale revision report cannot complete or unlock Spawn
+ok 3 - stale revision report cannot complete or unlock Spawn
+  ---
+  duration_ms: 59.540667
+  type: 'test'
+  ...
+# Subtest: source drift after readiness invalidates report and launch
+ok 4 - source drift after readiness invalidates report and launch
+  ---
+  duration_ms: 36.104125
+  type: 'test'
+  ...
+# Subtest: missing native profile blocks readiness and launch
+ok 5 - missing native profile blocks readiness and launch
+  ---
+  duration_ms: 59.271709
+  type: 'test'
+  ...
+# Subtest: repeated role Spawn and reload returns same native session without create
+ok 6 - repeated role Spawn and reload returns same native session without create
+  ---
+  duration_ms: 28.9245
+  type: 'test'
+  ...
+# Subtest: ambiguous intent reconciles existing labeled native session before any create
+ok 7 - ambiguous intent reconciles existing labeled native session before any create
+  ---
+  duration_ms: 16.38175
+  type: 'test'
+  ...
+# Subtest: unresolved empty native outcome fails closed without retry
+ok 8 - unresolved empty native outcome fails closed without retry
+  ---
+  duration_ms: 8.806792
+  type: 'test'
+  ...
+# Subtest: engineering role cannot configure; acknowledgement requires exact pinned content
+ok 9 - engineering role cannot configure; acknowledgement requires exact pinned content
+  ---
+  duration_ms: 53.926875
+  type: 'test'
+  ...
+# Subtest: strict config rejects authority escalation and arbitrary patch fields
+ok 10 - strict config rejects authority escalation and arbitrary patch fields
+  ---
+  duration_ms: 5.306708
+  type: 'test'
+  ...
+# Subtest: actual HTTP MCP protocol shares durable owner with driver, authenticates scope and hides configure from engineering
+ok 11 - actual HTTP MCP protocol shares durable owner with driver, authenticates scope and hides configure from engineering
+  ---
+  duration_ms: 727.603792
+  type: 'test'
+  ...
+# Subtest: engineering Spawn uses the pinned workspace agent API and repeats without another create
+ok 12 - engineering Spawn uses the pinned workspace agent API and repeats without another create
+  ---
+  duration_ms: 80.990458
+  type: 'test'
+  ...
+# Subtest: reconciliation rejects a known session whose native workspace changed
+ok 13 - reconciliation rejects a known session whose native workspace changed
+  ---
+  duration_ms: 26.165167
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1490.357958

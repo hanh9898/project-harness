@@ -1,0 +1,8 @@
+{
+  "name": "harness-release-recovery-live-spike",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "spike": "node run.mjs" },
+  "devDependencies": { "@getpaseo/plugin": "0.11.1", "@types/node": "^22.0.0", "typescript": "^5.9.3" }
+}

@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-22T12:08:08.756Z",
+  "host": "127.0.0.1:58986",
+  "daemonVersion": "0.12.0",
+  "cases": [
+    {
+      "name": "worker-restart",
+      "outcome": "passed",
+      "beforePid": 33345,
+      "afterPid": 38006
+    },
+    {
+      "name": "full-daemon-stop-start-auto-recovery",
+      "outcome": "passed",
+      "state": "/Users/hanhnt2/.t3/scratch/2026-10-21-h-ng-d-n-orchestration-6d026007/spikes/release-paseo-live/.suite/run-1792670886750/restart-recovery",
+      "launcherPid": 38655,
+      "recoveryPid": 38656,
+      "recovery": {
+        "at": "2026-10-22T12:08:34.012Z",
+        "recoveryPid": 38656,
+        "unavailableObservations": 8,
+        "outcome": "recovered",
+        "pluginStatus": "running",
+        "reloadExit": 0
+      }
+    },
+    {
+      "name": "invalid-fallback-blocks-without-overwrite",
+      "outcome": "passed",
+      "recovery": {
+        "at": "2026-10-22T12:08:40.130Z",
+        "recoveryPid": 39075,
+        "unavailableObservations": 0,
+        "outcome": "blocked",
+        "error": "Error: Fallback artifact drift"
+      }
+    },
+    {
+      "name": "fresh-operation-retries-after-blocked-recovery",
+      "outcome": "passed",
+      "recovery": {
+        "at": "2026-10-22T12:08:43.727Z",
+        "recoveryPid": 39318,
+        "unavailableObservations": 0,
+        "outcome": "recovered",
+        "pluginStatus": "running",
+        "reloadExit": 0
+      }
+    }
+  ],
+  "cleanup": {
+    "pluginRemoved": true,
+    "isolatedDaemonStopped": true,
+    "isolatedHomeRemoved": true,
+    "primaryHostWorkerPidUnchanged": 56104
+  }
+}

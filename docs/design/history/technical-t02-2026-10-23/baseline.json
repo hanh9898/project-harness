@@ -1,0 +1,22 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "9298d7e3f356a475af91a14a2852956443303e835ac8578f1c46569656d7ee32"
+    },
+    {
+      "path": "docs/design/technical-owner-ingress.md",
+      "snapshot": "before/docs/design/technical-owner-ingress.md",
+      "sha256": "1cfd9a268c4c3e70f4c35f84dff378f66df27acecbfe0a1b0717eef2826b8ff3"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "890157d71aeedc5499d5d43156242efce65071090e7663ee60c1399d0df40eab"
+    }
+  ],
+  "report": "docs/design/paseo-012-mcp-auth-facts-r2.md",
+  "reportSha256": "0a03bd383312919efa09dd92de008033a589aa0a785b391dc0f11c650cec675b",
+  "protectedConceptRegisterSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+}

@@ -1,0 +1,490 @@
+{
+  "sessionId": "01a1625f-ec72-7dd1-87dd-b5b69114208e",
+  "counts": {
+    "Codex system": 5,
+    "Matt Pocock": 27,
+    "OpenAI templates": 20,
+    "OpenAI curated plugins": 10,
+    "Paseo user skills": 6
+  },
+  "catalogCount": 68,
+  "initialPromptCount": 47,
+  "skills": [
+    {
+      "name": "imagegen",
+      "source": "Codex system",
+      "path": "/Users/hanhnt2/.codex/skills/.system/imagegen/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:ask-matt",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/ask-matt/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:code-review",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/code-review/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:codebase-design",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/codebase-design/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:diagnosing-bugs",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/diagnosing-bugs/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:domain-modeling",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/domain-modeling/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:grill-me",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/grill-me/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:grill-with-docs",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/grill-with-docs/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:grilling",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/grilling/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:handoff",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/handoff/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:implement",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/implement/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:implement-spec",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/implement-spec/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:improve-codebase-architecture",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/improve-codebase-architecture/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:pr",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/pr/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:prototype",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/prototype/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:research",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/research/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:retro",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/retro/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:setup-matt-pocock-skills",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:tdd",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/tdd/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:teach",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/teach/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:to-questionnaire",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/to-questionnaire/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:to-spec",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/to-spec/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:to-tickets",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/to-tickets/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:triage",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/triage/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:wait-what",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/wait-what/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:wayfinder",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/wayfinder/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:wizard",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/wizard/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "mattpocock-skills:writing-for-agents",
+      "source": "Matt Pocock",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/productivity/writing-for-agents/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "openai-docs",
+      "source": "Codex system",
+      "path": "/Users/hanhnt2/.codex/skills/.system/openai-docs/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "openai-templates:artifact-template-analytics-dashboard",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-analytics-dashboard/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-business-review",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-business-review/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-design-report",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-design-report/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-experiment-analysis",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-experiment-analysis/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-financial-budget",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-financial-budget/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-investment-committee-memo",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-legal-memorandum",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-market-trends-report",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-market-trends-report/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-minimal-letterhead",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-minimal-letterhead/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-operating-calendar",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-calendar/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-operating-review",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-review/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-project-kickoff",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-kickoff/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-project-tracker",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-tracker/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-sales-pipeline",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-sales-pipeline/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-simple-dark-mode",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-dark-mode/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-simple-light-mode",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-light-mode/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-strategy-memorandum",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-strategy-memorandum/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-system-design",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-system-design/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-team-alignment",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-team-alignment/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "openai-templates:artifact-template-three-statement-forecast",
+      "source": "OpenAI templates",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "pages:maintain-space",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/pages/0.1.23/skills/maintain-space/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "pages:manage-schedules",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/pages/0.1.23/skills/manage-schedules/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "pages:organize-space",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/pages/0.1.23/skills/organize-space/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "pages:write-page",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/pages/0.1.23/skills/write-page/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo-advisor",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo-advisor/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo-committee",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo-committee/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo-handoff",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo-handoff/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo-help",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo-help/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "paseo-plugin",
+      "source": "Paseo user skills",
+      "path": "/Users/hanhnt2/.agents/skills/paseo-plugin/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "plugin-management:plugin-management",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/plugin-management/0.1.0/skills/plugin-management/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "review-agent",
+      "source": "Codex system",
+      "path": "/Users/hanhnt2/.codex/skills/.system/review-agent/SKILL.md",
+      "listedInInitialPrompt": false,
+      "explicitOnlyPolicy": true
+    },
+    {
+      "name": "sites:sites",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/sites/1.1.1/skills/sites/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "sites:sites-remix",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/sites/1.1.1/skills/sites-remix/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "skill-creator",
+      "source": "Codex system",
+      "path": "/Users/hanhnt2/.codex/skills/.system/skill-creator/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "skill-installer",
+      "source": "Codex system",
+      "path": "/Users/hanhnt2/.codex/skills/.system/skill-installer/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "work-pets:create-pet",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/create-pet/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "work-pets:pets",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/pets/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    },
+    {
+      "name": "work-pets:update-pet",
+      "source": "OpenAI curated plugins",
+      "path": "/Users/hanhnt2/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/update-pet/SKILL.md",
+      "listedInInitialPrompt": true,
+      "explicitOnlyPolicy": false
+    }
+  ]
+}

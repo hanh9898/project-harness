@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "bytes": 19912,
+      "sha256": "740f2ab57e3edf850bec6d5bc59776bc7c499a1bd4838e3485d153fa12f59c8b"
+    },
+    {
+      "originalPath": "docs/design/architecture-review.md",
+      "snapshotPath": "before/docs/design/architecture-review.md",
+      "bytes": 9832,
+      "sha256": "108a2a7905cbf6fc9cd1e78cebd9cd8dc12bf0cc0b83670a42df72c34f140991"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "bytes": 17046,
+      "sha256": "5dd49d4c6a6b02b355c5a33edad8246ba4887cc8fa2ed4b972b9841bfd5ae1ba"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "bytes": 15473,
+      "sha256": "8dd2f5688a6e3e60d3984c906473a17526b20d5c80bc3ab5f665f322c6910689"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "exactSourceRecords": 2,
+  "acceptedChoices": 3,
+  "snapshotHashesValid": 7,
+  "existingLivePinsUnchanged": 48,
+  "registerUnchanged": true,
+  "newOwningGlossaryDefinitions": 2,
+  "modelIntegration": "tracked B9, not claimed complete",
+  "relativeFileLinksChecked": 170,
+  "A07": "unanswered",
+  "phase": "design only",
+  "runtimeOperationsOrTests": false
+}

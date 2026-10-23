@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "e913ea52a18e237028572e56b4bf2bdb3fedb41849750291897e1fbb2cd8b71e"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "27f330322977003ca499e645df1726c0c2c769791cf9f565d5bcd523c7bdfb64"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "a6402c148b9861526d422213c4b0d9cab30af08feb5755136c7200be4aaa175e"
+    },
+    {
+      "originalPath": "docs/design/architecture-whole-harness-review.md",
+      "snapshotPath": "before/docs/design/architecture-whole-harness-review.md",
+      "sha256": "9ffa8b66fced1f7a030077e67b14cb185f32f27144dec8491ab736f43a2a2743"
+    },
+    {
+      "originalPath": "docs/design/architecture-whole-harness-review.html",
+      "snapshotPath": "before/docs/design/architecture-whole-harness-review.html",
+      "sha256": "bfecac5bb968ea0651a8ac7e9a881a1e38e6dca649a1a9b295074db78a9ed975"
+    },
+    {
+      "originalPath": "docs/design/grill-session-closure-audit.md",
+      "snapshotPath": "before/docs/design/grill-session-closure-audit.md",
+      "sha256": "965d10a835485d61d67e7ab5e9f660f77a7ae5266bd5be72363df56969819ac3"
+    }
+  ],
+  "conceptRegisterSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+}

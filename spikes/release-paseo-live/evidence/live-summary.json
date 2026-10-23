@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-22T12:00:18.187Z",
+  "host": "127.0.0.1:6767",
+  "daemonVersion": "0.11.1",
+  "pluginId": "harness-release-recovery-spike-20261022",
+  "outcome": "recovered",
+  "watchReady": {
+    "pid": 511,
+    "at": "2026-10-22T12:00:12.567Z"
+  },
+  "launcherPid": 510,
+  "recoveryPid": 511,
+  "launcherExitedBeforeFault": true,
+  "faultyReloadExit": 1,
+  "failedStatus": "failed",
+  "failure": "INTENTIONAL_DISPOSABLE_RELEASE_SPIKE_FAILURE",
+  "bootBefore": {
+    "at": "2026-10-22T12:00:11.814Z",
+    "pid": 490,
+    "release": "good",
+    "dataDigest": "bd54ba3d125924a7df320659bbb80e33465f38574a35580050031bc068ffcc41"
+  },
+  "bootAfter": {
+    "at": "2026-10-22T12:00:17.220Z",
+    "pid": 619,
+    "release": "good",
+    "dataDigest": "bd54ba3d125924a7df320659bbb80e33465f38574a35580050031bc068ffcc41"
+  },
+  "recovery": {
+    "at": "2026-10-22T12:00:17.611Z",
+    "recoveryPid": 511,
+    "outcome": "recovered",
+    "pluginStatus": "running",
+    "reloadExit": 0
+  },
+  "applicationDataPreserved": true,
+  "fallbackSourceDigest": "69d5c0a76f3b77431b267e0e423eeb8dd85d8cc5c5ceff71483f234252975dc2",
+  "limits": [
+    "One actor; no fencing",
+    "No daemon/host restart",
+    "No migration or backup restore",
+    "No UI/agent continuation test",
+    "Recovery executable self-update untested"
+  ],
+  "cleanup": {
+    "disposableRemoved": true,
+    "existingPluginsUnchanged": true
+  }
+}

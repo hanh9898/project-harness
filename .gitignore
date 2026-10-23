@@ -1,0 +1,29 @@
+# Local dependencies and build output
+node_modules
+.venv/
+__pycache__/
+*.py[cod]
+dist/
+coverage/
+*.tsbuildinfo
+
+# Disposable spike runtime state and downloaded reference caches
+.run*/
+.spike/
+.suite/
+.local-docs/
+
+# Local credentials, databases and OS files
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.log
+.DS_Store

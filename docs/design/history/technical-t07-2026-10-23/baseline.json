@@ -1,0 +1,79 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "9c7e66e55da14608e39cd0604586c4a4728262d4f79cb338273987b073cf2745"
+    },
+    {
+      "path": "docs/design/technical-plugin-deployment.md",
+      "snapshot": "before/docs/design/technical-plugin-deployment.md",
+      "sha256": "a37d8feacc6dce9470b3359ef0789373906a5da2b02702654736eb98896cc3b0"
+    },
+    {
+      "path": "docs/design/technical-evaluation-release.md",
+      "snapshot": "before/docs/design/technical-evaluation-release.md",
+      "sha256": "d624f7649a721b451afa0a8def0aaae8801e514edfdaeed307fff2a60db8059f"
+    },
+    {
+      "path": "docs/design/technical-owner-ingress.md",
+      "snapshot": "before/docs/design/technical-owner-ingress.md",
+      "sha256": "67ef43c6fde0877711d7f0dd7f7404f01ede21f9b48730349cbdfebede2c5428"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "8aa0679d125a2e4315a48053bc8d919ba582f5a312d3ce6332e74c08e5c49155"
+    },
+    {
+      "path": "docs/design/release-execution.md",
+      "snapshot": "before/docs/design/release-execution.md",
+      "sha256": "ce18c6699d7ca88e1c31b55069ef4cd91ceb5f14612738c01bd0b685c4db70c4"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "snapshot": "before/docs/design/configuration.md",
+      "sha256": "ce9e9deb6e26955e410cd10bb443519e7b3673a375b2086825cb030c6dd3b1fe"
+    },
+    {
+      "path": "docs/design/harness-composition.md",
+      "snapshot": "before/docs/design/harness-composition.md",
+      "sha256": "12d4a979d15421ee7a4b0e87297cbdf4a326e10a787a76fa768637cafadd56a3"
+    },
+    {
+      "path": "docs/design/prototype-spec.md",
+      "snapshot": "before/docs/design/prototype-spec.md",
+      "sha256": "6fe335a2f6d7c7f00c1049cfe4505819e4d6b7e13f2062ec1ee90b089f09393d"
+    },
+    {
+      "path": "docs/design/prototype-checks.md",
+      "snapshot": "before/docs/design/prototype-checks.md",
+      "sha256": "5fd36e87fa56b0d14689ff12b798be2e124269cf45420831fd53aa1e1186b5c9"
+    },
+    {
+      "path": "docs/design/v1-concept-register.json",
+      "snapshot": "before/docs/design/v1-concept-register.json",
+      "sha256": "ea6f356020c84d7ea7b8f23a0527578891af9f75f445d22995d6acd412c2c122"
+    },
+    {
+      "path": "docs/design/v1-concept-graph-audit.json",
+      "snapshot": "before/docs/design/v1-concept-graph-audit.json",
+      "sha256": "57d986dbe8cc272a6fb3b4b1741c54b9467d792887762f8155feb745b2a651dd"
+    },
+    {
+      "path": "docs/design/v1-concept-graph.html",
+      "snapshot": "before/docs/design/v1-concept-graph.html",
+      "sha256": "0fff7bab43333564f5d670fe0b05b30aa454cd0af0d8254754770b0e077c3834"
+    },
+    {
+      "path": "docs/design/v1-competency-ledger.md",
+      "snapshot": "before/docs/design/v1-competency-ledger.md",
+      "sha256": "9f95c00ec8a40777aa050c38aa3d41286a77c165b357662fe835740b5d2e5e9c"
+    },
+    {
+      "path": "docs/design/v1-concept-validation.md",
+      "snapshot": "before/docs/design/v1-concept-validation.md",
+      "sha256": "9c6e2ad9bfe828446288f94e73d8c11ead810b9bf9afe4c807b1b5739d1b0d32"
+    }
+  ]
+}

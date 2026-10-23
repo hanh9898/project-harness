@@ -1,0 +1,5 @@
+{
+  "id": "harness-release-recovery-spike-20261022",
+  "name": "Disposable release recovery spike",
+  "requirements": { "paseo": ">=0.11.1 <0.12.0" }
+}

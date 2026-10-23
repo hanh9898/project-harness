@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": {
+    "apiRecords": 3,
+    "beforeSnapshots": 7,
+    "unchangedLiveSourcePins": 28,
+    "conceptRegisterUnchanged": true,
+    "relativeLinks": 213,
+    "conceptViewGenerator": "passed: 155 concepts / 236 relations / 63 constraints / 14 requirements / 51 questions / 110 mappings / 493 sources"
+  },
+  "errors": [],
+  "scope": "Documentation/evidence consistency only; no runtime, live Paseo or behavioral verification."
+}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-22T14:25:09.248Z",
+  "pluginRemoved": true,
+  "archivedAgentIds": [
+    "845afb9a-66d7-40ba-8c8c-f1ba7107539a",
+    "4cb6ed9e-6382-4e85-88de-5118244f7acb"
+  ],
+  "archivedWorkspaceIds": [
+    "wks_c41fa7a7e53f227d",
+    "wks_cb3de98519ff92d2"
+  ],
+  "workerPidUnchanged": 56104,
+  "profileUnchanged": true,
+  "hbu": "running",
+  "tokensDeleted": true
+}

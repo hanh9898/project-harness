@@ -1,0 +1,75 @@
+{
+  "type": "bounded-parent-source-review",
+  "recordedAt": "2026-10-23T12:28:47.639389+00:00",
+  "currentPin": "3fa625701eae6b3a07ccae18299200b1a7cf2776",
+  "previousPin": "cafe4b01c8522ff39560241c5deb01427dc8dc5b",
+  "reports": [
+    {
+      "path": "docs/design/paseo-013-beta1-runtime-delta-r7.md",
+      "sha256": "f4c90218f3764c02d1104e983421e794da96deae9ebdb96f26c8719740227513",
+      "readInFull": true
+    },
+    {
+      "path": "docs/design/paseo-013-beta1-dispatch-authority-delta-r8.md",
+      "sha256": "61fa48fdcb066adf712ceed1a2d3021430b92d03e2473a93e5a1d65cbf41e9ec",
+      "readInFull": true
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": "node:delegated-task:command%3Amcp%3Ac87c1d23-c8c3-4f09-b8be-6d3eacf404e8%3Adelegate-task%3Atechnical-013-runtime-delta-r7-20261023",
+      "status": "completed"
+    },
+    {
+      "taskId": "node:delegated-task:command%3Amcp%3Ac87c1d23-c8c3-4f09-b8be-6d3eacf404e8%3Adelegate-task%3Atechnical-013-dispatch-authority-delta-r8-20261023",
+      "status": "completed"
+    }
+  ],
+  "selection": {
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "options": {
+      "reasoningEffort": "xhigh",
+      "serviceTier": "default"
+    }
+  },
+  "independentlyInspectedPrimarySources": [
+    {
+      "path": "packages/client/package.json",
+      "scope": "public Node export map"
+    },
+    {
+      "path": "packages/client/src/node/index.ts",
+      "scope": "factory signature and returned DaemonClient"
+    },
+    {
+      "path": "packages/server/src/server/plugins/lifecycle/index.ts",
+      "scope": "completed/failed/canceled events emit empty timeline"
+    },
+    {
+      "path": "packages/server/src/server/agent/agent-messages/delivery.ts",
+      "scope": "memory-backed queue, two-second timer, dispatch flags and graceful drain"
+    },
+    {
+      "path": "packages/server/src/server/message-receipts/index.ts",
+      "scope": "entire receipt implementation, pending/completed replay"
+    },
+    {
+      "path": "packages/server/src/server/session.ts",
+      "scope": "selected send fingerprint/admission-response ranges"
+    }
+  ],
+  "limits": [
+    "Parent did not independently repeat every archive comparison or provider mapping in child reports.",
+    "Source inspection and local version metadata are not live integration/provider/enforcement proof.",
+    "No operational mutation or implementation was performed."
+  ],
+  "decisionsRetained": [
+    "T03",
+    "T05",
+    "T07"
+  ],
+  "newMaterialDecision": null,
+  "technicalT0": "open",
+  "v1Pass": false
+}

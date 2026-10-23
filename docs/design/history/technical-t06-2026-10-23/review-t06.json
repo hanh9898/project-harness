@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "type": "bounded-factual-parent-review",
+  "report": "docs/design/paseo-012-release-host-facts-r4.md",
+  "taskId": "node:delegated-task:command%3Amcp%3Ac87c1d23-c8c3-4f09-b8be-6d3eacf404e8%3Adelegate-task%3Atechnical-release-host-facts-r4-20261023",
+  "status": "completed-and-read",
+  "sourcePin": "cafe4b01c8522ff39560241c5deb01427dc8dc5b",
+  "parentVerification": [
+    "Read public CLI directory install and lifecycle paths.",
+    "Read native update activation/restoration/cleanup at plugins/index.ts:696\u2013755 and remove/settings cleanup at 456\u2013470.",
+    "Read plugins-map replacement at daemon-config-store.ts:364\u2013370.",
+    "Read app catalog-change/reconnect refresh and replacement request at catalog-sync.tsx:28\u201373."
+  ],
+  "findings": [
+    "Directory installs and managed acquisition are distinct supported paths; preparation and artifact publication remain harness engineering.",
+    "Native managed update/removal semantics do not supply the harness's data-aware recovery protocol.",
+    "Source path/filesystem revision and native running status do not attest whole-plugin/UI loading.",
+    "T03 public SDK connectivity does not add high-level lifecycle/plugin-RPC methods; private API adoption is not selected."
+  ],
+  "primarySources": [
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/cli/src/commands/plugin/index.ts#L114",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/plugins/index.ts#L696",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/plugins/index.ts#L456",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/daemon-config-store.ts#L364",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/app/src/plugins/catalog-sync.tsx#L28"
+  ],
+  "proposal": "docs/design/technical-plugin-deployment.md",
+  "decisionFrontier": [
+    {
+      "id": "T07.Q1",
+      "status": "pending",
+      "recommendation": "Use one prepared local directory installation with a stable runtime ID/path for V1 self-update; Releases controls staged own artifacts plus native reload, retaining compatible independent recovery and data outside replaced source."
+    }
+  ],
+  "limits": [
+    "No live operations/tests or production implementation.",
+    "No verified atomic/symlink publication, whole-plugin hash, UI rendering, directory relocation or data compatibility proof.",
+    "No automatic migration of an existing managed install or broad native plugins-map write.",
+    "No T0 closure/V1 pass or native-administrative grant for agents."
+  ],
+  "decisionsChosen": false,
+  "hbuMutated": false,
+  "reportSha256": "9bce662609e387e18385b169183e15cda468bb1d1d48f4b6e66c4dbaa7e7d623",
+  "proposalSha256": "a37d8feacc6dce9470b3359ef0789373906a5da2b02702654736eb98896cc3b0"
+}

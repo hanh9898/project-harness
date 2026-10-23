@@ -1,0 +1,2518 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "project-harness-v1-d01-vocabulary-r2",
+  "status": "accepted",
+  "language": "English",
+  "registerPath": "docs/design/v1-concept-register.json",
+  "registerSha256": "e541e7fe7b5a9694b360dd1ab71fa7fdbaabcb037d08db9f675414f4c2a91389",
+  "coverage": {
+    "predicate": "status != approved OR nameStatus != approved OR definitionLocation == null",
+    "registerConceptCount": 155,
+    "registerRelationCount": 230,
+    "registerConstraintCount": 61,
+    "registerCQCount": 51,
+    "registerSourceCount": 321,
+    "pendingConceptCount": 96,
+    "acceptedMeaningPendingEnglishNameCount": 12,
+    "proposedWithoutOwnerDefinitionCount": 84,
+    "pendingConceptIds": [
+      "common.loi-harness",
+      "common.tieu-chi-anh-gia",
+      "common.tieu-chi-ket-qua-du-an",
+      "common.tieu-chi-van-hanh-harness",
+      "common.yeu-cau-quyet-inh",
+      "execution.yeu-cau-cong-viec-du-an",
+      "execution.cong-viec-kiem-chung-ban-au",
+      "execution.goi-context",
+      "execution.nguon-yeu-cau-du-an",
+      "evolution.yeu-cau-phat-trien-harness",
+      "evolution.inbox-harness",
+      "evolution.luot-retro-hang-ngay",
+      "common.project",
+      "common.repository",
+      "common.native-paseo",
+      "common.workspace",
+      "common.onboarding",
+      "common.readiness-report",
+      "common.build-readiness",
+      "common.launch-readiness",
+      "common.operational-verification",
+      "execution.handover",
+      "execution.role-binding",
+      "execution.logical-owner",
+      "common.capability",
+      "common.authority",
+      "common.permission",
+      "common.effective-authority",
+      "common.resource-limit",
+      "common.delegation-mode",
+      "common.delegate",
+      "common.consult",
+      "common.workflow-mode",
+      "common.procedure",
+      "common.entry-skill",
+      "execution.result-contract",
+      "common.operating-rules",
+      "common.principle-selection",
+      "common.configuration-revision",
+      "execution.effective-configuration",
+      "execution.pinned-revision",
+      "engineering.source-drift",
+      "execution.workflow-pattern",
+      "execution.prompt-chaining",
+      "execution.routing",
+      "execution.parallelization",
+      "execution.orchestrator-workers",
+      "execution.evaluator-optimizer",
+      "execution.execution-plan",
+      "execution.stop-condition",
+      "evolution.feedback",
+      "automation.trigger",
+      "automation.trigger-binding",
+      "automation.source-event",
+      "automation.delivery",
+      "automation.cursor",
+      "automation.job-handler",
+      "automation.overlap-policy",
+      "automation.missed-occurrence-policy",
+      "automation.integration",
+      "automation.native-cadence",
+      "engineering.operation",
+      "engineering.operation-intent",
+      "engineering.receipt",
+      "engineering.idempotency-key",
+      "engineering.reconciliation",
+      "engineering.admission",
+      "engineering.retry",
+      "engineering.timeout",
+      "engineering.cancellation",
+      "engineering.interruption",
+      "engineering.run-timer",
+      "engineering.operation-journal",
+      "engineering.outbox",
+      "engineering.lease",
+      "engineering.fencing",
+      "engineering.observed-state",
+      "engineering.desired-state",
+      "engineering.unknown",
+      "evolution.hypothesis",
+      "evolution.experiment",
+      "analytics.regression",
+      "evolution.recovery-operation",
+      "engineering.recovery-executable",
+      "engineering.backup",
+      "engineering.data-compatibility",
+      "evolution.check-plan",
+      "analytics.check-result",
+      "analytics.evaluation-dataset",
+      "analytics.evaluation-suite",
+      "analytics.evaluation-environment",
+      "analytics.metric-availability",
+      "evolution.upstream-contribution",
+      "common.decision",
+      "engineering.deadline",
+      "analytics.evaluation-case"
+    ],
+    "pendingConceptIdsByOwnerGlossary": {
+      "GLOSSARY.md": [
+        "common.loi-harness",
+        "common.tieu-chi-anh-gia",
+        "common.tieu-chi-ket-qua-du-an",
+        "common.tieu-chi-van-hanh-harness",
+        "common.yeu-cau-quyet-inh",
+        "common.project",
+        "common.repository",
+        "common.native-paseo",
+        "common.workspace",
+        "common.onboarding",
+        "common.readiness-report",
+        "common.build-readiness",
+        "common.launch-readiness",
+        "common.operational-verification",
+        "common.capability",
+        "common.authority",
+        "common.permission",
+        "common.effective-authority",
+        "common.resource-limit",
+        "common.delegation-mode",
+        "common.delegate",
+        "common.consult",
+        "common.workflow-mode",
+        "common.procedure",
+        "common.entry-skill",
+        "common.operating-rules",
+        "common.principle-selection",
+        "common.configuration-revision",
+        "common.decision"
+      ],
+      "docs/domain/execution/GLOSSARY.md": [
+        "execution.yeu-cau-cong-viec-du-an",
+        "execution.cong-viec-kiem-chung-ban-au",
+        "execution.goi-context",
+        "execution.nguon-yeu-cau-du-an",
+        "execution.handover",
+        "execution.role-binding",
+        "execution.logical-owner",
+        "execution.result-contract",
+        "execution.effective-configuration",
+        "execution.pinned-revision",
+        "execution.workflow-pattern",
+        "execution.prompt-chaining",
+        "execution.routing",
+        "execution.parallelization",
+        "execution.orchestrator-workers",
+        "execution.evaluator-optimizer",
+        "execution.execution-plan",
+        "execution.stop-condition"
+      ],
+      "docs/domain/automation/GLOSSARY.md": [
+        "automation.trigger",
+        "automation.trigger-binding",
+        "automation.source-event",
+        "automation.delivery",
+        "automation.cursor",
+        "automation.job-handler",
+        "automation.overlap-policy",
+        "automation.missed-occurrence-policy",
+        "automation.integration",
+        "automation.native-cadence"
+      ],
+      "docs/domain/evolution/GLOSSARY.md": [
+        "evolution.yeu-cau-phat-trien-harness",
+        "evolution.inbox-harness",
+        "evolution.luot-retro-hang-ngay",
+        "evolution.feedback",
+        "evolution.hypothesis",
+        "evolution.experiment",
+        "evolution.recovery-operation",
+        "evolution.check-plan",
+        "evolution.upstream-contribution"
+      ],
+      "docs/domain/analytics/GLOSSARY.md": [
+        "analytics.regression",
+        "analytics.check-result",
+        "analytics.evaluation-dataset",
+        "analytics.evaluation-suite",
+        "analytics.evaluation-environment",
+        "analytics.metric-availability",
+        "analytics.evaluation-case"
+      ],
+      "docs/engineering/GLOSSARY.md": [
+        "engineering.source-drift",
+        "engineering.operation",
+        "engineering.operation-intent",
+        "engineering.receipt",
+        "engineering.idempotency-key",
+        "engineering.reconciliation",
+        "engineering.admission",
+        "engineering.retry",
+        "engineering.timeout",
+        "engineering.cancellation",
+        "engineering.interruption",
+        "engineering.run-timer",
+        "engineering.operation-journal",
+        "engineering.outbox",
+        "engineering.lease",
+        "engineering.fencing",
+        "engineering.observed-state",
+        "engineering.desired-state",
+        "engineering.unknown",
+        "engineering.recovery-executable",
+        "engineering.backup",
+        "engineering.data-compatibility",
+        "engineering.deadline"
+      ],
+      "docs/ui/GLOSSARY.md": []
+    },
+    "omittedPendingConceptIds": [],
+    "unrequestedApprovedConceptsExcluded": 59
+  },
+  "reviewClassCounts": {
+    "naming-choice": 21,
+    "source-backed-normalization": 52,
+    "external-general-term": 23
+  },
+  "materialDecisionCount": 0,
+  "reviewConventions": {
+    "authority": "Accepted owning glossaries and later accepted reviews govern meaning; the register remains an authoritative draft, not blanket approval.",
+    "scope": "One existing software project, one Paseo plugin, two persistent orchestrator responsibilities; glossary ownership is documentation ownership.",
+    "aliases": "Preserve register aliases and earlier names for traceability; all newly proposed aliases remain draft. Confirmed UI labels retain their existing scoped approval and do not become universal synonyms.",
+    "externalGeneralTerms": "Keep these IDs in the review inventory. Recommend reference or use-in-context notes under ownerGlossary, rather than automatically adding standalone domain definitions, entities or services.",
+    "relatedConceptIds": "Navigation and comparison references only; they do not assert new graph relations, types, cardinalities or universal containment.",
+    "sourceReferences": "All original concept source refs retained, with supporting refs added only from the existing register. scopeNotes disclose narrow pins and any fuller local passages used; no source pins were edited.",
+    "acceptedPolicyBoundary": "D02, D03, D04 and D05 remain approved; this review does not reopen them or the confirmed UI translation rounds.",
+    "runtimeEvidence": "No implementation, test execution, live Paseo call or runtime proof change; prototype and spike mappings are not production semantics."
+  },
+  "sourceVerification": {
+    "method": "Read local cited excerpts at the registered line ranges and compare their newline-normalized text with each stored excerpt; synthesize definitions from design/accepted sources rather than observed code.",
+    "registerPinsMatched": 321,
+    "usedExistingSourceRefs": [
+      "SRC011",
+      "SRC014",
+      "SRC015",
+      "SRC018",
+      "SRC019",
+      "SRC020",
+      "SRC021",
+      "SRC023",
+      "SRC024",
+      "SRC038",
+      "SRC039",
+      "SRC044",
+      "SRC045",
+      "SRC046",
+      "SRC047",
+      "SRC053",
+      "SRC072",
+      "SRC073",
+      "SRC074",
+      "SRC081",
+      "SRC084",
+      "SRC140",
+      "SRC145",
+      "SRC146",
+      "SRC147",
+      "SRC148",
+      "SRC149",
+      "SRC150",
+      "SRC151",
+      "SRC152",
+      "SRC153",
+      "SRC154",
+      "SRC155",
+      "SRC156",
+      "SRC157",
+      "SRC158",
+      "SRC159",
+      "SRC160",
+      "SRC161",
+      "SRC162",
+      "SRC163",
+      "SRC164",
+      "SRC165",
+      "SRC166",
+      "SRC167",
+      "SRC168",
+      "SRC169",
+      "SRC170",
+      "SRC171",
+      "SRC172",
+      "SRC173",
+      "SRC174",
+      "SRC175",
+      "SRC176",
+      "SRC179",
+      "SRC180",
+      "SRC181",
+      "SRC182",
+      "SRC183",
+      "SRC184",
+      "SRC185",
+      "SRC186",
+      "SRC187",
+      "SRC188",
+      "SRC189",
+      "SRC190",
+      "SRC191",
+      "SRC192",
+      "SRC193",
+      "SRC194",
+      "SRC195",
+      "SRC196",
+      "SRC197",
+      "SRC198",
+      "SRC199",
+      "SRC200",
+      "SRC201",
+      "SRC202",
+      "SRC203",
+      "SRC205",
+      "SRC206",
+      "SRC207",
+      "SRC208",
+      "SRC209",
+      "SRC210",
+      "SRC211",
+      "SRC237",
+      "SRC238",
+      "SRC242",
+      "SRC246",
+      "SRC249",
+      "SRC260",
+      "SRC261",
+      "SRC263",
+      "SRC266",
+      "SRC288",
+      "SRC293",
+      "SRC294",
+      "SRC295",
+      "SRC300",
+      "SRC302",
+      "SRC304",
+      "SRC306",
+      "SRC307",
+      "SRC309",
+      "SRC311",
+      "SRC313",
+      "SRC315",
+      "SRC316",
+      "SRC317",
+      "SRC318",
+      "SRC320",
+      "SRC321"
+    ],
+    "definitionSupportKinds": [
+      "accepted-glossary",
+      "accepted-policy",
+      "accepted-review",
+      "design",
+      "policy-synthesis",
+      "ui-mapping"
+    ],
+    "knownInsufficientStandalonePins": {
+      "SRC151": "Only introduces minimal onboarding configuration and the repo/workspace item; the full local configuration list and stage contract supply build scope.",
+      "SRC153": "Pins representative-task selection, not its success conditions; SRC024 supplies criteria and evidence.",
+      "SRC166": "Pins completion checks, not the full result contract; SRC145 supplies the confirmed field meaning.",
+      "SRC171": "Heading only; pattern contracts are in SRC172-SRC176 and composition in SRC242.",
+      "SRC182": "Acknowledges a committed binding/policy but does not pin source/target structure; modules.md supplies that local passage.",
+      "SRC189": "Operation-read row identifies status but not the whole operation meaning; SRC190/SRC191 supply intent and acceptance.",
+      "SRC202": "Coverage gap row, not an adopted Experiment definition or entity relationship.",
+      "SRC203": "Requires dataset/suite/environment/grader identity; it does not specify suite/case containment or universal entity types.",
+      "SRC293": "Stale reply checks do not alone define a Decision; SRC021 and SRC159 supply answer context and authority limits.",
+      "SRC295": "Does not name Evaluation Case; SRC316/SRC318 support representative and previously failing cases without defining their storage identity."
+    }
+  },
+  "entries": [
+    {
+      "conceptId": "common.loi-harness",
+      "currentName": "Harness Core",
+      "recommendedName": "Harness Core",
+      "definitionEnglish": "The shared foundation of harness capabilities that excludes rules specific to the target project. A change serving a project's own rules does not automatically belong to this foundation.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Lõi harness"
+      ],
+      "relatedConceptIds": [
+        "common.project-harness",
+        "common.project",
+        "evolution.upstream-contribution"
+      ],
+      "existingSourceRefs": [
+        "SRC015"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "English normalization of the accepted Vietnamese meaning; Core names a reusable responsibility boundary, not the whole installed harness.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Preserve the existing loi-harness anchor and Vietnamese name; no new component or package boundary is implied."
+    },
+    {
+      "conceptId": "common.tieu-chi-anh-gia",
+      "currentName": "Evaluation Criterion",
+      "recommendedName": "Evaluation Criterion",
+      "definitionEnglish": "A requirement or objective with an explicit scope and method of evaluation, used to assess project results or harness operation. Earlier evaluations retain the criterion version under which they were made.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Tiêu chí đánh giá"
+      ],
+      "relatedConceptIds": [
+        "common.tieu-chi-ket-qua-du-an",
+        "common.tieu-chi-van-hanh-harness",
+        "analytics.verdict"
+      ],
+      "existingSourceRefs": [
+        "SRC018"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "The accepted umbrella covers mandatory requirements and optimization objectives, unlike Metric, which defines a measurement.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "This is a translation of an accepted meaning, not approval of a new evaluation policy."
+    },
+    {
+      "conceptId": "common.tieu-chi-ket-qua-du-an",
+      "currentName": "Project Outcome Criterion",
+      "recommendedName": "Project Outcome Criterion",
+      "definitionEnglish": "An Evaluation Criterion stating what a project's product or work must achieve within a project, workflow or task scope.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Tiêu chí kết quả dự án"
+      ],
+      "relatedConceptIds": [
+        "common.tieu-chi-anh-gia",
+        "execution.yeu-cau-cong-viec-du-an",
+        "analytics.verdict"
+      ],
+      "existingSourceRefs": [
+        "SRC019"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Outcome qualifies the criterion's subject and separates project results from harness operating efficiency.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Outcome here does not restrict criteria to the Outcome record or introduce a new acceptance gate."
+    },
+    {
+      "conceptId": "common.tieu-chi-van-hanh-harness",
+      "currentName": "Harness Operating Criterion",
+      "recommendedName": "Harness Operating Criterion",
+      "definitionEnglish": "An Evaluation Criterion for orchestration effectiveness, including operating quality, time, cost or the need for human intervention within a stated scope.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Tiêu chí vận hành harness"
+      ],
+      "relatedConceptIds": [
+        "common.tieu-chi-anh-gia",
+        "common.harness-engineering-orchestrator",
+        "analytics.metric"
+      ],
+      "existingSourceRefs": [
+        "SRC020"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Preserves the accepted distinction between project-result criteria and harness-operation criteria.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No metric formula, fixed target or automatic cost-quality trade-off is introduced."
+    },
+    {
+      "conceptId": "common.yeu-cau-quyet-inh",
+      "currentName": "Decision Request",
+      "recommendedName": "Decision Request",
+      "definitionEnglish": "A specific issue requiring the user's decision before dependent work can continue, accompanied by evidence and a recommended course. The decision is retained with its work context.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Yêu cầu quyết định"
+      ],
+      "relatedConceptIds": [
+        "common.decision",
+        "execution.work-item",
+        "execution.evidence"
+      ],
+      "existingSourceRefs": [
+        "SRC021"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Names an existing accepted concept without confusing a decision dependency with a progress notification.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A Decision Request is the unresolved issue; Decision is its recorded answer."
+    },
+    {
+      "conceptId": "execution.yeu-cau-cong-viec-du-an",
+      "currentName": "Project Work Request",
+      "recommendedName": "Project Work Request",
+      "definitionEnglish": "A request about a project's product, work or required outcome, discussed directly with the Project Orchestrator. Its scope may be a particular task or an enduring project rule.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Yêu cầu công việc dự án"
+      ],
+      "relatedConceptIds": [
+        "common.project-orchestrator",
+        "execution.work-item",
+        "execution.nguon-yeu-cau-du-an"
+      ],
+      "existingSourceRefs": [
+        "SRC023"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Faithfully translates the accepted request meaning while keeping product requirements with their existing orchestrator.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Do not infer from R070 that every enduring project rule already has Work Item identity or a lifecycle."
+    },
+    {
+      "conceptId": "execution.cong-viec-kiem-chung-ban-au",
+      "currentName": "Initial Verification Work",
+      "recommendedName": "Initial Verification Work",
+      "definitionEnglish": "A representative project task selected by the user to establish an initial capability against explicit criteria and evidence. Capabilities outside that task's verified scope remain unverified.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Công việc kiểm chứng ban đầu"
+      ],
+      "relatedConceptIds": [
+        "common.operational-verification",
+        "execution.work-item",
+        "execution.evidence"
+      ],
+      "existingSourceRefs": [
+        "SRC024"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Keeps the actual verification task distinct from launch checks and from the evidence-based conclusion about capability.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "The task is user-selected; no real publish, merge or PR is required merely to exercise a tool."
+    },
+    {
+      "conceptId": "execution.goi-context",
+      "currentName": "Context Package",
+      "recommendedName": "Context Package",
+      "definitionEnglish": "A sourced selection of task context for an agent role and execution step, including relevant decisions, input artifacts and evaluation criteria. Its source and revision information supports traceability and handover.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Gói context"
+      ],
+      "relatedConceptIds": [
+        "execution.assignment",
+        "execution.handover",
+        "execution.artifact"
+      ],
+      "existingSourceRefs": [
+        "SRC038"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Translates the accepted contextual package without turning it into the entire conversation or an isolation mechanism.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Context selection does not grant access or isolate filesystem and Skill discovery."
+    },
+    {
+      "conceptId": "execution.nguon-yeu-cau-du-an",
+      "currentName": "Project Requirement Source",
+      "recommendedName": "Project Requirement Source",
+      "definitionEnglish": "A source designated by the user as a basis for project goals and requirements. Improvements to harness execution methods do not by themselves replace requirements from that source.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Nguồn yêu cầu dự án"
+      ],
+      "relatedConceptIds": [
+        "execution.yeu-cau-cong-viec-du-an",
+        "execution.goi-context",
+        "common.project-orchestrator"
+      ],
+      "existingSourceRefs": [
+        "SRC039"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Qualifies Source by its authority over project requirements, rather than its file type or ingestion mechanism.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep separate from Skill provenance, an automation source and a source revision used as Evidence."
+    },
+    {
+      "conceptId": "evolution.yeu-cau-phat-trien-harness",
+      "currentName": "Harness Development Request",
+      "recommendedName": "Harness Development Request",
+      "definitionEnglish": "A request to build, change or improve the harness's capabilities or operation, led by the Harness Engineering Orchestrator. It does not itself change project goals or business rules.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Yêu cầu phát triển harness"
+      ],
+      "relatedConceptIds": [
+        "common.harness-engineering-orchestrator",
+        "evolution.inbox-harness",
+        "execution.work-item"
+      ],
+      "existingSourceRefs": [
+        "SRC044"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Translates the accepted responsibility boundary between harness development and project work.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A linked capability request may unblock project work without transferring ownership of its requirements."
+    },
+    {
+      "conceptId": "evolution.inbox-harness",
+      "currentName": "Harness Inbox",
+      "recommendedName": "Harness Inbox",
+      "definitionEnglish": "The work inbox for build, repair and improvement requests addressed to the Harness Engineering Orchestrator. It is separate from the Project Orchestrator's product work queue.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Inbox harness",
+        "Hộp thư harness"
+      ],
+      "relatedConceptIds": [
+        "evolution.yeu-cau-phat-trien-harness",
+        "common.harness-engineering-orchestrator",
+        "execution.work-item"
+      ],
+      "existingSourceRefs": [
+        "SRC045",
+        "SRC081"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Aligns the proposed domain English name with the already confirmed Harness Inbox UI name while preserving the accepted domain scope.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep Inbox harness as the existing domain alias and Hộp thư harness as the confirmed UI label; this is not a new universal inbox."
+    },
+    {
+      "conceptId": "evolution.luot-retro-hang-ngay",
+      "currentName": "Daily Retro",
+      "recommendedName": "Daily Retro",
+      "definitionEnglish": "A daily review of the Harness Engineering Orchestrator's operation and the project workflows it builds, seeking improvements supported by operating evidence.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Lượt retro hằng ngày"
+      ],
+      "relatedConceptIds": [
+        "evolution.improvement-loop",
+        "automation.job",
+        "evolution.feedback"
+      ],
+      "existingSourceRefs": [
+        "SRC046",
+        "SRC047",
+        "SRC180"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Preserves the accepted review meaning; the existing Improvement Loop definition already explains why a scheduled review need not produce a change.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Daily is the review's intended cadence, not a guarantee of execution while the host is off or a mandatory nightly full suite."
+    },
+    {
+      "conceptId": "common.project",
+      "currentName": "Project",
+      "recommendedName": "Project",
+      "definitionEnglish": "The single existing software project served by a Project Harness, potentially spanning several repositories.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.project-harness",
+        "common.repository",
+        "common.project-orchestrator"
+      ],
+      "existingSourceRefs": [
+        "SRC146",
+        "SRC260"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted V1 scope identifies one existing project rather than a multi-project service or new-repository creation flow.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Older first-run examples involving empty or new repositories are historical, outside this V1 scope."
+    },
+    {
+      "conceptId": "common.repository",
+      "currentName": "Repository",
+      "recommendedName": "Repository",
+      "definitionEnglish": "A version-controlled code repository belonging to the target project. Several repositories can belong to the same Project without requiring separate Project Harnesses.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.project",
+        "common.workspace"
+      ],
+      "existingSourceRefs": [
+        "SRC146",
+        "SRC260"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Repository has its ordinary software meaning; the local distinction is project membership, not a new domain object type.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Use a contextual reference under the proposed owner, rather than a new repository manager or lifecycle."
+    },
+    {
+      "conceptId": "common.native-paseo",
+      "currentName": "Native Paseo",
+      "recommendedName": "Native Paseo",
+      "definitionEnglish": "The host product that owns native projects, workspaces, profiles, agent sessions and their management interfaces. Project Harness references those resources and adds its own work coordination and improvement capabilities.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.paseo-plugin",
+        "common.paseo-agent-profile",
+        "common.workspace",
+        "execution.agent-session"
+      ],
+      "existingSourceRefs": [
+        "SRC147",
+        "SRC148",
+        "SRC188"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "This is a reference to an external product and its local ownership boundary, not a newly invented harness subsystem.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Native Paseo is contextual wording; preserve the proper name Paseo and do not duplicate its configuration editor or active store."
+    },
+    {
+      "conceptId": "common.workspace",
+      "currentName": "Workspace",
+      "recommendedName": "Workspace",
+      "definitionEnglish": "A native Paseo execution context referenced by harness work and associated with the project's code and runtime resources.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.native-paseo",
+        "common.repository",
+        "execution.assignment"
+      ],
+      "existingSourceRefs": [
+        "SRC148"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Use the host-owned term in context; workspace is not synonymous with a repository or a harness-owned worktree manager.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Architecture.md:102 specifies isolated worktrees for writing workers; that execution rule does not redefine every Workspace as a writable worktree."
+    },
+    {
+      "conceptId": "common.onboarding",
+      "currentName": "Onboarding",
+      "recommendedName": "Onboarding",
+      "definitionEnglish": "The initial configuration and usage guidance provided through native Paseo conversation before the user starts the harness build stage.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.onboarding-agent",
+        "common.build-readiness",
+        "execution.handover"
+      ],
+      "existingSourceRefs": [
+        "SRC149",
+        "SRC261",
+        "SRC154"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted lifecycle establishes onboarding as an initial helper activity, distinct from building the Project Orchestrator and verifying real work.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Completion makes the next Spawn action available; it does not automatically start another stage or establish project competence."
+    },
+    {
+      "conceptId": "common.readiness-report",
+      "currentName": "Readiness Report",
+      "recommendedName": "Readiness Report",
+      "definitionEnglish": "A scoped assessment of required checks, blockers, optional gaps and evidence against identified configuration and dependency revisions. Its conclusion concerns a named build or launch stage rather than general project competence.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.build-readiness",
+        "common.launch-readiness",
+        "common.configuration-revision",
+        "execution.evidence"
+      ],
+      "existingSourceRefs": [
+        "SRC150"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The report's dependency scope prevents old checks and an agent's completion message from becoming permanent launch authority.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Additional local support: onboarding-contracts.md:11-12 and 22-26; concrete checks and report protocol remain proposed."
+    },
+    {
+      "conceptId": "common.build-readiness",
+      "currentName": "Build Readiness",
+      "recommendedName": "Build Readiness",
+      "definitionEnglish": "The condition in which the required project context, configuration, capabilities, authority and limits are sufficient for the intended initial harness build.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.onboarding",
+        "common.readiness-report",
+        "common.authority",
+        "common.resource-limit"
+      ],
+      "existingSourceRefs": [
+        "SRC151",
+        "SRC150",
+        "SRC159"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Build readiness is scoped to the intended build and does not require every optional integration or future specialist to exist.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC151 alone pins only the minimum-config introduction and repo/workspace bullet; fuller support is onboarding-agent.md:20-30 and onboarding-contracts.md:22. No new readiness schema is approved."
+    },
+    {
+      "conceptId": "common.launch-readiness",
+      "currentName": "Launch Readiness",
+      "recommendedName": "Launch Readiness",
+      "definitionEnglish": "The condition in which the Project Orchestrator's required configuration, references and tools are valid and its handover is saved, sufficient to offer user-initiated launch.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.readiness-report",
+        "common.project-orchestrator",
+        "execution.handover",
+        "common.operational-verification"
+      ],
+      "existingSourceRefs": [
+        "SRC152"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted launch condition is deliberately weaker than demonstrated competence on a representative project task.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Optional unused capabilities remain visible gaps; launch still requires current checks when the user chooses Spawn."
+    },
+    {
+      "conceptId": "common.operational-verification",
+      "currentName": "Operational Verification",
+      "recommendedName": "Operational Verification",
+      "definitionEnglish": "An evidence-based demonstration that a selected representative project task meets its applicable criteria within a stated capability scope.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.cong-viec-kiem-chung-ban-au",
+        "execution.evidence",
+        "common.launch-readiness"
+      ],
+      "existingSourceRefs": [
+        "SRC153",
+        "SRC024",
+        "SRC152"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Uses the accepted verification-work meaning to distinguish demonstrated task competence from valid configuration or a successful startup.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC153 pins task selection rather than its pass condition; SRC024 supplies criteria, evidence and the limit on capability claims."
+    },
+    {
+      "conceptId": "execution.handover",
+      "currentName": "Handover",
+      "recommendedName": "Handover",
+      "definitionEnglish": "Durable context and continuity information for the next responsible agent session or lifecycle stage, including relevant work, decisions, revisions and evidence. It supports continuity without itself conferring authority or replacing saved execution state.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.goi-context",
+        "execution.checkpoint",
+        "execution.role-binding",
+        "engineering.operation-journal"
+      ],
+      "existingSourceRefs": [
+        "SRC154"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Handover informs a successor, whereas Checkpoint supports execution reconciliation and a session binding identifies the current role holder.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A readable summary alone is insufficient; preserve Checkpoint and its confirmed UI label unchanged."
+    },
+    {
+      "conceptId": "execution.role-binding",
+      "currentName": "Role Binding",
+      "recommendedName": "Orchestrator Session Binding",
+      "definitionEnglish": "A revisioned association between a persistent orchestrator responsibility and its current native Agent Session, with distinguishable history across session replacements.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Role Binding"
+      ],
+      "relatedConceptIds": [
+        "execution.logical-owner",
+        "execution.agent-session",
+        "engineering.fencing"
+      ],
+      "existingSourceRefs": [
+        "SRC155"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Qualifying the two endpoints removes the collision with role-to-definition configuration bindings and automation source bindings.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Retain Role Binding as a scoped draft alias; Active Role Binding denotes the current association, not a separate concept. Spike type Binding is observed code, not the canonical generic schema."
+    },
+    {
+      "conceptId": "execution.logical-owner",
+      "currentName": "Logical Owner",
+      "recommendedName": "Orchestrator Responsibility",
+      "definitionEnglish": "The persistent responsibility for either project-work orchestration or harness engineering, independent of which Agent Session currently carries it.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Logical Owner"
+      ],
+      "relatedConceptIds": [
+        "common.project-orchestrator",
+        "common.harness-engineering-orchestrator",
+        "execution.role-binding",
+        "common.agent-role"
+      ],
+      "existingSourceRefs": [
+        "SRC156",
+        "SRC155",
+        "SRC011",
+        "SRC014"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Names what survives session replacement without implying an authenticated principal, storage owner or resource owner.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Logical Owner remains a scoped draft alias. The proposed owner glossary describes execution continuity; it does not establish a new bounded context."
+    },
+    {
+      "conceptId": "common.capability",
+      "currentName": "Capability",
+      "recommendedName": "Capability",
+      "definitionEnglish": "An ability actually supported by a host, provider, tool or integration that is needed to fulfill the requested work contract. Availability of that ability does not establish permission to use it.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.authority",
+        "common.permission",
+        "execution.result-contract"
+      ],
+      "existingSourceRefs": [
+        "SRC157"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The fallback rules require capability as well as authority, required Skills and output support; they do not equate catalog presence with usable access.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "This execution sense differs from a verified project capability described by Operational Verification."
+    },
+    {
+      "conceptId": "common.authority",
+      "currentName": "Authority",
+      "recommendedName": "Authority",
+      "definitionEnglish": "The scope granted to a caller for making decisions and causing actions on behalf of the project or harness. A role name, catalog entry or accessible tool does not by itself grant that scope.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.permission",
+        "common.effective-authority",
+        "common.agent-role"
+      ],
+      "existingSourceRefs": [
+        "SRC158",
+        "SRC160",
+        "SRC193"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Preserves the accepted boundary against self-escalation through catalog edits, prompts or caller-supplied roles.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep separate from responsibility, data ownership and technical capability; no authentication protocol is specified."
+    },
+    {
+      "conceptId": "common.permission",
+      "currentName": "Permission",
+      "recommendedName": "Permission",
+      "definitionEnglish": "Authorization for a particular action under the applicable allow, ask or deny policy and native enforcement. Approval for one action does not by itself broaden standing authority.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.authority",
+        "common.effective-authority",
+        "common.capability"
+      ],
+      "existingSourceRefs": [
+        "SRC159",
+        "SRC158",
+        "SRC238"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Distinguishes an individual action decision from the overall scope of delegated decision-making authority.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Allow does not override a native denial; unavailable enforcement is a blocker, not implicit authorization."
+    },
+    {
+      "conceptId": "common.effective-authority",
+      "currentName": "Effective Authority",
+      "recommendedName": "Effective Authority",
+      "definitionEnglish": "The authority usable for a particular action after the caller's granted scope, parent Assignment restrictions, current policies and revocations are taken into account.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.authority",
+        "common.permission",
+        "execution.assignment",
+        "common.delegation-policy"
+      ],
+      "existingSourceRefs": [
+        "SRC160",
+        "SRC238",
+        "SRC158"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Nested delegation must stay within the parent's scope and current revocations, regardless of a definition's nominal permissions.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "This is a derived action-scoped boundary, not a second source of authority or a promise of mid-session enforcement support."
+    },
+    {
+      "conceptId": "common.resource-limit",
+      "currentName": "Resource Limit",
+      "recommendedName": "Resource Limit",
+      "definitionEnglish": "An applicable ceiling on shared harness execution resources, such as concurrency, elapsed work time or measurable spending. The limit's scope includes relevant orchestrators, workers and consultations.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.admission",
+        "common.delegation-mode",
+        "execution.assignment"
+      ],
+      "existingSourceRefs": [
+        "SRC161",
+        "SRC163"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Captures the accepted shared resource boundary without inventing per-role quotas or treating missing usage as zero.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Spending ceilings require real measurement and enforcement; no default numeric budgets are proposed."
+    },
+    {
+      "conceptId": "common.delegation-mode",
+      "currentName": "Delegation Mode",
+      "recommendedName": "Delegation Mode",
+      "definitionEnglish": "A permitted way of using an Agent Definition under a caller's Delegation Policy: Delegate, Consult or Workflow. A mode describes the use of the definition without independently granting tool permissions or further delegation.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.delegate",
+        "common.consult",
+        "common.workflow-mode",
+        "common.delegation-policy"
+      ],
+      "existingSourceRefs": [
+        "SRC162",
+        "SRC237",
+        "SRC163",
+        "SRC164"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local policy permits modes per definition and caller, separately from profile settings and workflow composition.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "The mode labels and Vietnamese equivalents are already confirmed; this review supplies the domain owner definition."
+    },
+    {
+      "conceptId": "common.delegate",
+      "currentName": "Delegate",
+      "recommendedName": "Delegate",
+      "definitionEnglish": "The permitted-use mode in which a specific portion of work is assigned to an agent and its Outcome is returned.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Giao việc"
+      ],
+      "relatedConceptIds": [
+        "common.delegation-mode",
+        "execution.assignment",
+        "execution.outcome"
+      ],
+      "existingSourceRefs": [
+        "SRC162",
+        "SRC072"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The mode's English meaning and display label were already confirmed; do not interview them again as new translations.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Preserve Delegate and Giao việc; no further delegation authority follows from choosing this mode."
+    },
+    {
+      "conceptId": "common.consult",
+      "currentName": "Consult",
+      "recommendedName": "Consult",
+      "definitionEnglish": "The permitted-use mode for requesting advice, findings or options while the caller retains responsibility for carrying out the work. It grants no authority to modify project code or push, merge or release changes.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Tham vấn"
+      ],
+      "relatedConceptIds": [
+        "common.delegation-mode",
+        "common.effective-authority",
+        "execution.assignment"
+      ],
+      "existingSourceRefs": [
+        "SRC163",
+        "SRC073"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Carries the already accepted advisory-only boundary into a concise owner definition.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Preserve Consult and Tham vấn; a prompt saying consult does not prove permissions were narrowed."
+    },
+    {
+      "conceptId": "common.workflow-mode",
+      "currentName": "Workflow Mode",
+      "recommendedName": "Workflow Mode",
+      "definitionEnglish": "The permitted-use mode in which an Agent Definition can participate in a workflow coordinated by code. It does not by itself authorize the worker to start workflows or delegate further.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Workflow",
+        "Trong luồng công việc"
+      ],
+      "relatedConceptIds": [
+        "common.delegation-mode",
+        "execution.workflow",
+        "common.delegation-policy"
+      ],
+      "existingSourceRefs": [
+        "SRC164",
+        "SRC074",
+        "SRC162"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Separates permitted use inside a workflow from Workflow's accepted domain meaning and from permission to initiate child work.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep the confirmed UI label Workflow and Trong luồng công việc in mode scope; Workflow Mode is explanatory domain wording."
+    },
+    {
+      "conceptId": "common.procedure",
+      "currentName": "Procedure",
+      "recommendedName": "Agent Procedure",
+      "definitionEnglish": "The role-associated method for performing a kind of agent work, described by its entry instructions and required result. It is distinct from a running workflow or the Skill package that carries guidance.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Procedure"
+      ],
+      "relatedConceptIds": [
+        "common.agent-role",
+        "common.entry-skill",
+        "common.skill",
+        "execution.result-contract"
+      ],
+      "existingSourceRefs": [
+        "SRC165"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Qualifies Procedure so it cannot be mistaken for a code function or automatically executable Workflow Definition.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Configuration.md:36 associates procedure and result contract with the role; it does not define an independent procedure registry or lifecycle."
+    },
+    {
+      "conceptId": "common.entry-skill",
+      "currentName": "Entry Skill",
+      "recommendedName": "Entry Skill",
+      "definitionEnglish": "A Skill required as the entry guidance for an Agent Procedure and included in the Agent Definition selected for that procedure.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.procedure",
+        "common.skill",
+        "common.agent-definition"
+      ],
+      "existingSourceRefs": [
+        "SRC165"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Entry denotes the Skill's role in a procedure, not a new kind of Skill package or an executable runtime entry point.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Missing entry guidance blocks that procedure; Skills remain explicitly named and sourced, with no discovery isolation or invented prompt fallback."
+    },
+    {
+      "conceptId": "execution.result-contract",
+      "currentName": "Result Contract",
+      "recommendedName": "Result Contract",
+      "definitionEnglish": "The requirements for the content, structure and supporting evidence of returned work. Satisfying its structural requirements alone does not establish that the work meets its evaluation criteria.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Yêu cầu đầu ra"
+      ],
+      "relatedConceptIds": [
+        "common.procedure",
+        "execution.assignment",
+        "execution.outcome",
+        "execution.evidence",
+        "analytics.verdict"
+      ],
+      "existingSourceRefs": [
+        "SRC166",
+        "SRC145"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The confirmed UI field provides a direct definition that the original pin to completion checks only partially supplies.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Preserve Result Contract and the confirmed UI label Yêu cầu đầu ra; contract detail remains a specification concern."
+    },
+    {
+      "conceptId": "common.operating-rules",
+      "currentName": "Operating Rules",
+      "recommendedName": "Core Operating Rules",
+      "definitionEnglish": "The always-applicable rules governing authority, evidence and quality across agent work, independent of the selected task-specific Principles.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Operating Rules"
+      ],
+      "relatedConceptIds": [
+        "common.principle",
+        "common.principle-selection",
+        "common.authority",
+        "execution.evidence"
+      ],
+      "existingSourceRefs": [
+        "SRC167"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "The source explicitly distinguishes core operating rules from optional or selected Principles, preventing an empty Fixed list from disabling invariants.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Core here means mandatory guidance, not Harness Core as a separate implementation unit."
+    },
+    {
+      "conceptId": "common.principle-selection",
+      "currentName": "Principle Selection",
+      "recommendedName": "Principle Selection",
+      "definitionEnglish": "The policy for selecting task-specific Principles using Automatic, Fixed or Hybrid selection while retaining the Core Operating Rules.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Cách chọn nguyên tắc"
+      ],
+      "relatedConceptIds": [
+        "common.principle",
+        "common.operating-rules",
+        "common.agent-definition"
+      ],
+      "existingSourceRefs": [
+        "SRC167",
+        "SRC140"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The configuration modes and confirmed UI field already establish this policy; no new Principle quotas are needed.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Preserve Principle Selection and Cách chọn nguyên tắc; the confirmed mode labels and Vietnamese equivalents remain unchanged."
+    },
+    {
+      "conceptId": "common.configuration-revision",
+      "currentName": "Configuration Revision",
+      "recommendedName": "Configuration Revision",
+      "definitionEnglish": "An identified version of harness-owned configuration, distinguishable from earlier and later edits. Existing work retains its selected configuration rather than silently adopting a later edit.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.effective-configuration",
+        "execution.pinned-revision",
+        "common.agent-definition"
+      ],
+      "existingSourceRefs": [
+        "SRC168"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Version identity is locally necessary to explain stale edits, historical work and the difference between active settings and work-selected settings.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "The proposed graph type value does not settle whether this is a reference, retained content or a storage record; native profile ownership remains Paseo's."
+    },
+    {
+      "conceptId": "execution.effective-configuration",
+      "currentName": "Effective Configuration",
+      "recommendedName": "Effective Configuration",
+      "definitionEnglish": "The resolved native profile and harness-owned method and policy selections identified for a particular work execution. It records what that work selected rather than a second editable source of native provider settings.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.configuration-revision",
+        "common.paseo-agent-profile",
+        "common.agent-definition",
+        "execution.assignment"
+      ],
+      "existingSourceRefs": [
+        "SRC169",
+        "SRC168",
+        "SRC238"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Distinguishes reusable configuration from the work-specific selection, including its native source.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Source pinning alone does not prove what a provider actually loaded; selected policy is also subject to current revocations."
+    },
+    {
+      "conceptId": "execution.pinned-revision",
+      "currentName": "Pinned Revision",
+      "recommendedName": "Pinned Revision",
+      "definitionEnglish": "A particular revision retained as the identified basis for a work execution. Its use carries the source or retained-content evidence appropriate to that resource, without implying that an external mutable Skill has been snapshotted.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.configuration-revision",
+        "execution.workflow-definition",
+        "engineering.source-drift"
+      ],
+      "existingSourceRefs": [
+        "SRC170",
+        "SRC169"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Preserves stable work history while removing the misleading implication that every digest provides immutable, retrievable content.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "External Skills are checked for drift without fork or isolation; a changed source can require replan or a recorded compatible revision transition."
+    },
+    {
+      "conceptId": "engineering.source-drift",
+      "currentName": "Source Drift",
+      "recommendedName": "Source Drift",
+      "definitionEnglish": "A detected difference between a resource's current source or dependency identity and the version previously checked or selected for work.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.pinned-revision",
+        "execution.effective-configuration",
+        "common.readiness-report"
+      ],
+      "existingSourceRefs": [
+        "SRC170",
+        "SRC154",
+        "SRC157"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local distinction matters because a pin can remain historically identifiable while no longer supporting unchecked continuation or reuse.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Compare external Skill drift with stale readiness dependencies; neither observation establishes exact provider content isolation."
+    },
+    {
+      "conceptId": "execution.workflow-pattern",
+      "currentName": "Workflow Pattern",
+      "recommendedName": "Workflow Pattern",
+      "definitionEnglish": "A reusable structure for coordinating workflow steps and bounded agent decisions, with a contract for sequencing, routing, parallel work, dynamic work division or iterative evaluation.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow",
+        "execution.prompt-chaining",
+        "execution.routing",
+        "execution.parallelization",
+        "execution.orchestrator-workers",
+        "execution.evaluator-optimizer"
+      ],
+      "existingSourceRefs": [
+        "SRC171",
+        "SRC172",
+        "SRC173",
+        "SRC174",
+        "SRC175",
+        "SRC176",
+        "SRC242"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The five local contracts supply the meaning missing from SRC171's heading-only excerpt.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC171 and SRC265 alone entail no pattern contract; the added table and composition excerpts provide support. No new framework or DSL is implied."
+    },
+    {
+      "conceptId": "execution.prompt-chaining",
+      "currentName": "Prompt Chaining",
+      "recommendedName": "Prompt Chaining",
+      "definitionEnglish": "A Workflow Pattern in which the checked output of one step supplies a compatible input to a later step.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-pattern",
+        "execution.workflow-step",
+        "execution.result-contract"
+      ],
+      "existingSourceRefs": [
+        "SRC172"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Retains the local checked-output and compatible-input requirement rather than defining a mere sequence of prompts.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A pattern is a reusable control structure; no new execution identity or standalone service is implied."
+    },
+    {
+      "conceptId": "execution.routing",
+      "currentName": "Routing",
+      "recommendedName": "Routing",
+      "definitionEnglish": "A Workflow Pattern in which a bounded decision selects among the branches permitted by the workflow.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-pattern",
+        "execution.workflow-step",
+        "execution.execution-plan"
+      ],
+      "existingSourceRefs": [
+        "SRC173"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The source permits selection within valid branches, leaving routing decisions bounded by code-owned structure.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Routing does not grant permission to invent unauthorized branches or bypass admission."
+    },
+    {
+      "conceptId": "execution.parallelization",
+      "currentName": "Parallelization",
+      "recommendedName": "Parallelization",
+      "definitionEnglish": "A Workflow Pattern with branches that can execute concurrently under shared admission limits and an explicit Join Policy.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-pattern",
+        "execution.join-policy",
+        "engineering.admission",
+        "execution.outcome"
+      ],
+      "existingSourceRefs": [
+        "SRC174",
+        "SRC304",
+        "SRC306",
+        "SRC307",
+        "SRC309"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Uses the accepted Join Policy concept rather than restating or reopening the approved dynamic-join and failure policies.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "D03 remains fixed: closed branch set, all-required by default, bounded collection after required failure, separate aggregate Outcome and quality Verdict."
+    },
+    {
+      "conceptId": "execution.orchestrator-workers",
+      "currentName": "Orchestrator-Workers",
+      "recommendedName": "Orchestrator-Workers",
+      "definitionEnglish": "A Workflow Pattern in which work portions are determined dynamically within a selected template, required capabilities and resource limits.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-pattern",
+        "execution.execution-plan",
+        "execution.assignment",
+        "common.resource-limit"
+      ],
+      "existingSourceRefs": [
+        "SRC175",
+        "SRC263",
+        "SRC179"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Dynamic work division and pinned constraints are compatible; a pinned definition does not prohibit expansion.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "This pattern does not imply permission for every worker to delegate further or a third persistent orchestrator."
+    },
+    {
+      "conceptId": "execution.evaluator-optimizer",
+      "currentName": "Evaluator-Optimizer",
+      "recommendedName": "Evaluator-Optimizer",
+      "definitionEnglish": "A Workflow Pattern in which evaluation feedback guides revisions of a result within defined criteria, iteration limits and stopping conditions.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-pattern",
+        "execution.stop-condition",
+        "evolution.feedback",
+        "execution.quality-iteration"
+      ],
+      "existingSourceRefs": [
+        "SRC176"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Preserves feedback-driven quality iteration while separating it from retries after infrastructure failure.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Stopping because evidence or resources are insufficient does not establish a Passed Verdict."
+    },
+    {
+      "conceptId": "execution.execution-plan",
+      "currentName": "Execution Plan",
+      "recommendedName": "Execution Plan",
+      "definitionEnglish": "The selected execution structure for a particular Workflow Run, including recorded dynamic expansions permitted by its chosen definition and policies.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-definition",
+        "execution.workflow-run",
+        "execution.workflow-step",
+        "execution.pinned-revision"
+      ],
+      "existingSourceRefs": [
+        "SRC179",
+        "SRC192",
+        "SRC242"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "A reusable Workflow Definition and the plan chosen for one Run answer different questions; dynamic expansion does not create arbitrary executable code.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Workflow Step, Step Run and Attempt keep their accepted identities; R099 is not a universal claim that every Step Run dispatches an agent."
+    },
+    {
+      "conceptId": "execution.stop-condition",
+      "currentName": "Stop Condition",
+      "recommendedName": "Stop Condition",
+      "definitionEnglish": "A workflow rule identifying when an evaluation-and-revision loop must end, whether because its criteria are met or further permitted evaluation or revision is exhausted.",
+      "ownerGlossary": "docs/domain/execution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.evaluator-optimizer",
+        "common.resource-limit",
+        "analytics.verdict"
+      ],
+      "existingSourceRefs": [
+        "SRC176"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "A loop's bounded end is not equivalent to a successful evaluation, preserving the distinction between stop and pass.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No new fixed iteration counts, thresholds or mandatory sample sizes are proposed."
+    },
+    {
+      "conceptId": "evolution.feedback",
+      "currentName": "Feedback",
+      "recommendedName": "Feedback",
+      "definitionEnglish": "Sourced information about execution or evaluation that can inform diagnosis, revision or improvement.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.improvement-loop",
+        "evolution.hypothesis",
+        "execution.outcome",
+        "analytics.observation"
+      ],
+      "existingSourceRefs": [
+        "SRC180"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Feedback is input to investigation, rather than automatically a development request, verified defect or approved change.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A retro may use Feedback and conclude that no change is justified."
+    },
+    {
+      "conceptId": "automation.trigger",
+      "currentName": "Trigger",
+      "recommendedName": "Trigger",
+      "definitionEnglish": "A time, event or manual condition under which a Job or other work target becomes eligible for activation.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.job",
+        "automation.schedule",
+        "automation.source-event",
+        "automation.trigger-binding"
+      ],
+      "existingSourceRefs": [
+        "SRC181",
+        "SRC266"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Separates the activating condition from the executor, its due occurrence and delivery of resulting work.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A trigger does not itself prove admission, agent dispatch or work completion."
+    },
+    {
+      "conceptId": "automation.trigger-binding",
+      "currentName": "Trigger Binding",
+      "recommendedName": "Trigger Binding",
+      "definitionEnglish": "A revisioned association between an identified activation source and a harness work target, together with the supported delivery and admission policies.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.trigger",
+        "automation.native-cadence",
+        "execution.logical-owner",
+        "engineering.receipt"
+      ],
+      "existingSourceRefs": [
+        "SRC182",
+        "SRC184",
+        "SRC188"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The modules design binds sources to code handlers, programs, inboxes or orchestrator responsibilities, so a mandatory Job endpoint would be too narrow.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC182 covers the binding receipt, not the association endpoints; fuller support is modules.md:27 and 46-61. R132 must not require every binding target to be a Job."
+    },
+    {
+      "conceptId": "automation.source-event",
+      "currentName": "Source Event",
+      "recommendedName": "Source Event",
+      "definitionEnglish": "An identified source object or change normalized from an integration for downstream processing, with identity independent of the time it was polled.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.integration",
+        "automation.delivery",
+        "automation.cursor"
+      ],
+      "existingSourceRefs": [
+        "SRC183"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "A repeat poll of the same source change must not become new work merely because its poll timestamp differs.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Source Event is not Schedule Occurrence; source identity can exist before delivery or downstream Work acceptance."
+    },
+    {
+      "conceptId": "automation.delivery",
+      "currentName": "Delivery",
+      "recommendedName": "Work Delivery",
+      "definitionEnglish": "The tracked handoff of a source activation or change to durable harness work, whose acceptance is distinct from execution of that work.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Delivery"
+      ],
+      "relatedConceptIds": [
+        "automation.source-event",
+        "execution.work-item",
+        "engineering.receipt",
+        "engineering.outbox"
+      ],
+      "existingSourceRefs": [
+        "SRC184",
+        "SRC191"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Qualifying Delivery avoids confusing work acceptance with an external business effect or the source's occurrence.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep delivery identity separate from transport retries; the cited text does not decide a per-attempt delivery-record schema or promise exactly-once effects."
+    },
+    {
+      "conceptId": "automation.cursor",
+      "currentName": "Cursor",
+      "recommendedName": "Source Cursor",
+      "definitionEnglish": "A committed marker of progress in an integration source stream. It records source progress without by itself establishing downstream work delivery.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Cursor"
+      ],
+      "relatedConceptIds": [
+        "automation.source-event",
+        "automation.job-handler",
+        "engineering.outbox"
+      ],
+      "existingSourceRefs": [
+        "SRC183"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Cursor is a standard integration term; the local use must be qualified because pagination and native SDK cursors also appear in the design.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep the source-stream context with the owner reference; no standalone Cursor entity or shared cursor schema is proposed."
+    },
+    {
+      "conceptId": "automation.job-handler",
+      "currentName": "Job Handler",
+      "recommendedName": "Code Job Handler",
+      "definitionEnglish": "Registered, versioned code that performs a Job using validated inputs and reports its result and relevant source progress or evidence.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Job Handler"
+      ],
+      "relatedConceptIds": [
+        "automation.job",
+        "automation.job-run",
+        "automation.integration",
+        "automation.source-event"
+      ],
+      "existingSourceRefs": [
+        "SRC183",
+        "SRC188"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Makes the code execution path explicit instead of implying every scheduled Job is an agent invocation.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "An unchanged poll needs no agent work; handler registration is not arbitrary shell entry."
+    },
+    {
+      "conceptId": "automation.overlap-policy",
+      "currentName": "Overlap Policy",
+      "recommendedName": "Overlap Policy",
+      "definitionEnglish": "The per-Job rule for activations that arrive while an earlier execution is still running, allowing skipped new work, one queued execution or bounded parallel execution.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.job",
+        "automation.job-run",
+        "engineering.admission"
+      ],
+      "existingSourceRefs": [
+        "SRC185",
+        "SRC184",
+        "SRC288"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Uses the approved product alternatives rather than treating the narrower CodeJobSpec sketch as the complete policy.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Support for a native source must be demonstrated; overlap policy for accepted work does not assert identical native scheduler semantics."
+    },
+    {
+      "conceptId": "automation.missed-occurrence-policy",
+      "currentName": "Missed Occurrence Policy",
+      "recommendedName": "Missed Occurrence Policy",
+      "definitionEnglish": "The per-Job rule for due occurrences missed while execution was unavailable, allowing skips, one coalesced execution or bounded catch-up.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.job",
+        "automation.schedule-occurrence",
+        "automation.job-run"
+      ],
+      "existingSourceRefs": [
+        "SRC186",
+        "SRC184"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Keeps missed due times distinct from concurrent execution and incorporates the accepted bounded catch-up option.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Native application depends on sufficient occurrence evidence; no unsupported replay or second scheduler is implied."
+    },
+    {
+      "conceptId": "automation.integration",
+      "currentName": "Integration",
+      "recommendedName": "Integration",
+      "definitionEnglish": "An authorized connection and adapter for an external task or code-review source used by the harness, with Backlog tasks and GitLab merge requests and comments in V1.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.source-event",
+        "automation.job-handler",
+        "common.capability",
+        "common.authority"
+      ],
+      "existingSourceRefs": [
+        "SRC187"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Captures the local V1 source scope without promising every tracker or treating an integration as the Workflow Runtime itself.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A configured connection does not independently grant every action on that service."
+    },
+    {
+      "conceptId": "automation.native-cadence",
+      "currentName": "Native Cadence",
+      "recommendedName": "Paseo Cadence",
+      "definitionEnglish": "The native Paseo-owned timing, timezone and enablement of an agent schedule or heartbeat referenced by the harness.",
+      "ownerGlossary": "docs/domain/automation/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Native Cadence"
+      ],
+      "relatedConceptIds": [
+        "automation.schedule",
+        "automation.trigger-binding",
+        "common.native-paseo"
+      ],
+      "existingSourceRefs": [
+        "SRC188"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Qualifying the owner prevents a harness binding from becoming a second active schedule for the same source.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Code-job cadence remains harness-owned; the native timing reference is not another scheduler service."
+    },
+    {
+      "conceptId": "engineering.operation",
+      "currentName": "Operation",
+      "recommendedName": "Tracked Operation",
+      "definitionEnglish": "A durably tracked request for an action whose acceptance, progress and actual effects can remain distinguishable across interruption or uncertain responses.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Operation"
+      ],
+      "relatedConceptIds": [
+        "engineering.operation-intent",
+        "engineering.receipt",
+        "engineering.reconciliation",
+        "execution.work-item"
+      ],
+      "existingSourceRefs": [
+        "SRC189",
+        "SRC190",
+        "SRC191"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "Distinguishes an engineering action lifecycle from the business request, Workflow Run or worker Attempt that may contain it.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC189 identifies operation reads; SRC190 and SRC191 supply durable intent and acceptance. Tracking a native operation does not itself provide native idempotency."
+    },
+    {
+      "conceptId": "engineering.operation-intent",
+      "currentName": "Operation Intent",
+      "recommendedName": "Operation Intent",
+      "definitionEnglish": "A durable description of an intended action and its correlation to the responsible operation, distinguishable from evidence that the action actually took effect.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.operation",
+        "engineering.reconciliation",
+        "engineering.operation-journal"
+      ],
+      "existingSourceRefs": [
+        "SRC190"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The distinction between intended and observed effect is necessary when an external response is lost.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No transaction across SQLite and native or external APIs is implied."
+    },
+    {
+      "conceptId": "engineering.receipt",
+      "currentName": "Receipt",
+      "recommendedName": "Receipt",
+      "definitionEnglish": "An acknowledgement that the particular acceptance or change declared by an interface has been durably recorded. Its meaning is limited to that declared stage rather than proving downstream execution or readiness.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.operation",
+        "automation.delivery",
+        "execution.work-item"
+      ],
+      "existingSourceRefs": [
+        "SRC191",
+        "SRC182"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "Work submission, trigger-binding changes and activation each acknowledge a stated commit stage; one receipt cannot stand for all completion states.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Qualify the interface and stage in use: work-acceptance receipt, binding-change receipt or activation-acceptance receipt; no universal payload is proposed."
+    },
+    {
+      "conceptId": "engineering.idempotency-key",
+      "currentName": "Idempotency Key",
+      "recommendedName": "Idempotency Key",
+      "definitionEnglish": "A caller- and operation-scoped request identity used to recognize repeated submissions of the same intent. In this design, matching payloads refer back to the prior receipt, while a conflicting payload is a conflict.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.operation",
+        "engineering.receipt",
+        "engineering.operation-intent"
+      ],
+      "existingSourceRefs": [
+        "SRC192"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "A standard mechanism is sufficient; the local payload and scope rules belong with the transport contract rather than a new business entity.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Request identity and external effect correlation need not be the same identifier; R143 cannot guarantee native exactly-once effects."
+    },
+    {
+      "conceptId": "engineering.reconciliation",
+      "currentName": "Reconciliation",
+      "recommendedName": "Reconciliation",
+      "definitionEnglish": "Assessment of recorded intent and observations from the resource owner to establish what happened and whether work can safely continue.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.operation",
+        "engineering.operation-intent",
+        "engineering.observed-state",
+        "execution.checkpoint"
+      ],
+      "existingSourceRefs": [
+        "SRC193",
+        "SRC246"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "This local meaning separates known intent from uncertain effect and explains why timeout alone cannot justify replay.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "The glossary names the responsibility; the reconciliation protocol remains engineering work."
+    },
+    {
+      "conceptId": "engineering.admission",
+      "currentName": "Admission",
+      "recommendedName": "Execution Admission",
+      "definitionEnglish": "The code-controlled decision permitting new execution under the current pause state, resource limits, required capabilities and effective authority.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [
+        "Admission"
+      ],
+      "relatedConceptIds": [
+        "common.resource-limit",
+        "common.capability",
+        "common.effective-authority",
+        "execution.attempt"
+      ],
+      "existingSourceRefs": [
+        "SRC194",
+        "SRC302",
+        "SRC161",
+        "SRC157",
+        "SRC160"
+      ],
+      "reviewClass": "naming-choice",
+      "rationale": "The local admission boundary distinguishes blocked work from an admitted Attempt and from actual worker start.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "D02 remains approved: no Attempt for a pre-admission block; an admitted Attempt is recorded before dispatch and retained for uncertain-response reconciliation."
+    },
+    {
+      "conceptId": "engineering.retry",
+      "currentName": "Retry",
+      "recommendedName": "Retry",
+      "definitionEnglish": "Another permitted execution after a technical failure, distinct from a revision in response to quality feedback. A retry of step execution creates a new Attempt within the same Step Run.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.attempt",
+        "execution.step-run",
+        "execution.quality-iteration",
+        "engineering.reconciliation"
+      ],
+      "existingSourceRefs": [
+        "SRC195",
+        "SRC300",
+        "SRC246"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Retry is ordinary engineering vocabulary; the accepted local use rule supplies the required identity distinction without a new entity.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Reconcile uncertain effects before retry or fallback; an unanswered dispatch is not proof that nothing ran."
+    },
+    {
+      "conceptId": "engineering.timeout",
+      "currentName": "Timeout",
+      "recommendedName": "Timeout",
+      "definitionEnglish": "The expiry of the permitted waiting period for a response or result. It does not establish that the worker stopped or that its effects were undone.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.deadline",
+        "engineering.reconciliation",
+        "execution.attempt"
+      ],
+      "existingSourceRefs": [
+        "SRC196"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Uses the standard term with the explicit local limit on what expiry proves.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep timeout handling distinct from cancellation, a failed quality Verdict and permission revocation."
+    },
+    {
+      "conceptId": "engineering.cancellation",
+      "currentName": "Cancellation",
+      "recommendedName": "Cancellation",
+      "definitionEnglish": "A request to stop selected work, distinguishable from confirmation that the stop has taken effect. Prior effects, artifacts and history remain relevant to reconciliation.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.work-item",
+        "engineering.desired-state",
+        "engineering.observed-state",
+        "engineering.reconciliation"
+      ],
+      "existingSourceRefs": [
+        "SRC197"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "The generic action needs only a contextual use note; the confirmed Cancelling and Cancelled UI states already distinguish request from observed effect.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No implicit rollback, deletion of evidence or new cancellation entity is proposed."
+    },
+    {
+      "conceptId": "engineering.interruption",
+      "currentName": "Interruption",
+      "recommendedName": "Interruption",
+      "definitionEnglish": "A disruption of execution or communication, such as disconnection, process reload or crash, that can leave the state of work or effects uncertain.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.reconciliation",
+        "execution.checkpoint",
+        "engineering.operation"
+      ],
+      "existingSourceRefs": [
+        "SRC198",
+        "SRC154"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "An ordinary failure description is sufficient; the local concern is safe continuation rather than a new lifecycle object.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Treat missing live events as missing knowledge; do not infer that a worker or effect disappeared."
+    },
+    {
+      "conceptId": "engineering.run-timer",
+      "currentName": "Run Timer",
+      "recommendedName": "Run Timer",
+      "definitionEnglish": "A durable due-time associated with existing work, a step or an Attempt, whose meaning remains tied to that execution context.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.workflow-run",
+        "execution.step-run",
+        "execution.attempt",
+        "engineering.deadline"
+      ],
+      "existingSourceRefs": [
+        "SRC195"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local identity distinction keeps stale expiry from controlling a newer Attempt and separates continuation timing from creating new Jobs.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Timer expiry still depends on admission and pause policy; host-off execution is not promised."
+    },
+    {
+      "conceptId": "engineering.operation-journal",
+      "currentName": "Operation Journal",
+      "recommendedName": "Operation Journal",
+      "definitionEnglish": "A durable history of execution or operation intent, progress and observations that supports reconciliation and continuation after interruption.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.operation",
+        "engineering.operation-intent",
+        "engineering.reconciliation",
+        "execution.checkpoint"
+      ],
+      "existingSourceRefs": [
+        "SRC199",
+        "SRC179",
+        "SRC195",
+        "SRC201"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local history is needed beyond a chat summary or transient event stream, without prescribing an event-sourcing architecture.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "The original pin lists Work responsibilities; modules.md:136 and 158-160 additionally describe journaled expansion and continuation state."
+    },
+    {
+      "conceptId": "engineering.outbox",
+      "currentName": "Outbox",
+      "recommendedName": "Outbox",
+      "definitionEnglish": "Pending delivery records retained with local source progress so delivery can be resumed or reconciled without losing an accepted change.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "automation.delivery",
+        "automation.cursor",
+        "engineering.receipt"
+      ],
+      "existingSourceRefs": [
+        "SRC183"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Use the standard outbox pattern in its local integration context, rather than inventing a new business object or generic EventBus.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Atomic commitment is possible only within the same local store; external API effects are outside that transaction."
+    },
+    {
+      "conceptId": "engineering.lease",
+      "currentName": "Lease",
+      "recommendedName": "Lease",
+      "definitionEnglish": "A time-bounded claim on dispatch or operation responsibility that does not itself prove an earlier holder can no longer cause effects.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.logical-owner",
+        "engineering.fencing",
+        "engineering.admission"
+      ],
+      "existingSourceRefs": [
+        "SRC156"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Lease keeps its standard concurrency meaning; the local use note distinguishes claiming responsibility from rejecting stale writers.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No lease duration, storage schema or single-process-lock guarantee is inferred."
+    },
+    {
+      "conceptId": "engineering.fencing",
+      "currentName": "Fencing",
+      "recommendedName": "Fencing",
+      "definitionEnglish": "Enforcement that rejects commands from superseded responsibility holders or execution attempts at the boundary where effects are accepted.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.role-binding",
+        "execution.attempt",
+        "engineering.lease",
+        "common.effective-authority"
+      ],
+      "existingSourceRefs": [
+        "SRC200",
+        "SRC195"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "A standard enforcement mechanism needs a local boundary note, not another domain responsibility or an LLM instruction.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Prompt-only ownership is insufficient; direct shell or native effects require real enforcement or stopping the old session."
+    },
+    {
+      "conceptId": "engineering.observed-state",
+      "currentName": "Observed State",
+      "recommendedName": "Observed State",
+      "definitionEnglish": "The state of a resource supported by an observation at an identified time and scope, including uncertainty when a required fact has not been established.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.desired-state",
+        "engineering.unknown",
+        "analytics.observation"
+      ],
+      "existingSourceRefs": [
+        "SRC201"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Desired and observed are ordinary control-system vocabulary; their local separation prevents accepted requests from becoming claims about actual effects.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Absence of a current observation is not proof of absence or numerical zero."
+    },
+    {
+      "conceptId": "engineering.desired-state",
+      "currentName": "Desired State",
+      "recommendedName": "Desired State",
+      "definitionEnglish": "The requested target state of controlled work or a resource, distinct from what has actually been observed.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.observed-state",
+        "engineering.operation",
+        "engineering.cancellation"
+      ],
+      "existingSourceRefs": [
+        "SRC201"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Use the standard term in context so requested pause, cancellation or activation remains separate from observed completion.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No common desired-state database or new control service is implied."
+    },
+    {
+      "conceptId": "engineering.unknown",
+      "currentName": "Unknown",
+      "recommendedName": "Unknown",
+      "definitionEnglish": "A qualification indicating that a required fact has not been established by available evidence.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.readiness-report",
+        "engineering.observed-state",
+        "analytics.metric-availability",
+        "analytics.verdict"
+      ],
+      "existingSourceRefs": [
+        "SRC150",
+        "SRC201"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Unknown is an epistemic qualifier, not a universal runtime state or an automatic failure conclusion.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A required unknown readiness check blocks dependent launch; unknown measurement is not zero; an evaluation may therefore remain Inconclusive."
+    },
+    {
+      "conceptId": "evolution.hypothesis",
+      "currentName": "Hypothesis",
+      "recommendedName": "Hypothesis",
+      "definitionEnglish": "A testable proposed explanation or expected effect of an improvement, informed by feedback and observations.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.feedback",
+        "evolution.improvement-loop",
+        "evolution.candidate"
+      ],
+      "existingSourceRefs": [
+        "SRC180"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "The ordinary research term suffices for the improvement narrative; the sources do not require an independent Hypothesis lifecycle or service.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Keep proposed explanations distinct from established causes and accepted project requirements."
+    },
+    {
+      "conceptId": "evolution.experiment",
+      "currentName": "Experiment",
+      "recommendedName": "Experiment",
+      "definitionEnglish": "A planned investigation of a hypothesis using identified work, conditions and evaluation evidence. It concerns how a proposed effect is investigated, rather than the Candidate change itself.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.hypothesis",
+        "evolution.candidate",
+        "analytics.evaluation-trial"
+      ],
+      "existingSourceRefs": [
+        "SRC202",
+        "SRC180",
+        "SRC084"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "SRC202 is a gap-inventory row, not a formal definition; ordinary use plus the local improvement narrative is sufficient without inventing an Experiment aggregate.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC084 supports use on the Improvements screen only. R164 and R165 remain proposed model links, not proof of a required Experiment record or one-to-many Trial relationship."
+    },
+    {
+      "conceptId": "analytics.regression",
+      "currentName": "Regression",
+      "recommendedName": "Regression",
+      "definitionEnglish": "An evidence-supported worsening relative to an identified reference and applicable criteria under sufficiently comparable conditions.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "analytics.baseline",
+        "analytics.verdict",
+        "analytics.evaluation-trial"
+      ],
+      "existingSourceRefs": [
+        "SRC203",
+        "SRC316"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Regression keeps its ordinary evaluation meaning; the local use excludes unsupported causal claims from unrelated operational samples.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Inability to evaluate is Inconclusive rather than a demonstrated regression; a score change alone establishes neither improvement nor deterioration."
+    },
+    {
+      "conceptId": "evolution.recovery-operation",
+      "currentName": "Recovery Operation",
+      "recommendedName": "Recovery Operation",
+      "definitionEnglish": "An operation to restore runnable harness code through an independent recovery path, using a release compatible with current data and retained work.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.recovery-release",
+        "engineering.recovery-executable",
+        "engineering.data-compatibility",
+        "engineering.operation"
+      ],
+      "existingSourceRefs": [
+        "SRC205",
+        "SRC053",
+        "SRC320",
+        "SRC321"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted policy distinguishes recovery from contained Fix-forward and from an automatic restore of prior data.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "D04 is closed; no failed Fix-forward condition independently authorizes data restore, and an old working release is not automatically compatible."
+    },
+    {
+      "conceptId": "engineering.recovery-executable",
+      "currentName": "Recovery Executable",
+      "recommendedName": "Recovery Executable",
+      "definitionEnglish": "The small recovery program packaged with the plugin but able to run outside its subprocess, including while that plugin cannot boot.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.recovery-operation",
+        "engineering.data-compatibility",
+        "evolution.activation"
+      ],
+      "existingSourceRefs": [
+        "SRC206"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The separate executable is an accepted local capability boundary, not an invented generic process or cloud recovery service.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "It is started before reload and the copy protecting an activation is not replaced during that operation; full V1 runtime proof is unchanged."
+    },
+    {
+      "conceptId": "engineering.backup",
+      "currentName": "Backup",
+      "recommendedName": "Backup",
+      "definitionEnglish": "A saved copy of data whose readability has been verified for the relevant preservation purpose. Its existence does not establish successful system restoration or authorize replacing current data.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.data-compatibility",
+        "evolution.recovery-operation",
+        "evolution.activation"
+      ],
+      "existingSourceRefs": [
+        "SRC207"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Backup keeps its standard meaning with the project's explicit evidence limit; the requirement for particular changes belongs to release policy.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Required before incompatible or hard-to-reverse data changes, not before every patch; no generic restore workflow is added."
+    },
+    {
+      "conceptId": "engineering.data-compatibility",
+      "currentName": "Data Compatibility",
+      "recommendedName": "Data Compatibility",
+      "definitionEnglish": "The ability of a selected release or recovery program to operate safely with the current data format, retained work and relevant recorded effects.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.recovery-release",
+        "engineering.recovery-executable",
+        "execution.work-item"
+      ],
+      "existingSourceRefs": [
+        "SRC205",
+        "SRC053"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The current-data qualifier is locally essential because code recovery and data restoration have different consequences.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A prior pass or readable backup alone does not establish compatibility with the current state."
+    },
+    {
+      "conceptId": "evolution.check-plan",
+      "currentName": "Check Plan",
+      "recommendedName": "Check Plan",
+      "definitionEnglish": "The candidate-specific selection of required and justified additional checks, with the affected scope, inputs, limits and reasons identified.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.candidate",
+        "evolution.fast-path",
+        "evolution.deep-path",
+        "analytics.check-result"
+      ],
+      "existingSourceRefs": [
+        "SRC208",
+        "SRC249",
+        "SRC315",
+        "SRC316"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local plan represents risk-based verification without turning every release into a fixed full-suite gate.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "D04/D05 remain approved: code owns mandatory minima, goals determine evidence, and Deep is targeted by risk; R180/R181 do not prove the plan itself is the authority choosing a path."
+    },
+    {
+      "conceptId": "analytics.check-result",
+      "currentName": "Check Result",
+      "recommendedName": "Check Result",
+      "definitionEnglish": "The sourced outcome of a particular check on an identified Candidate and relevant inputs and environment. A post-activation health result also concerns the particular runtime instance and operation checked.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "evolution.check-plan",
+        "evolution.candidate",
+        "execution.evidence",
+        "engineering.operation"
+      ],
+      "existingSourceRefs": [
+        "SRC209",
+        "SRC311"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local matching scope prevents old or unrelated passing checks from being treated as activation evidence.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Release-check reuse stays within the same Candidate, check and relevant inputs/environment; health is fresh after activation. A Check Result may support Evidence without automatically becoming a quality Verdict."
+    },
+    {
+      "conceptId": "analytics.evaluation-dataset",
+      "currentName": "Evaluation Dataset",
+      "recommendedName": "Evaluation Dataset",
+      "definitionEnglish": "An identified, frozen collection of evaluation inputs with their provenance and scope, retained as an Artifact for particular evaluations.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "execution.artifact",
+        "analytics.evaluation-trial",
+        "analytics.evaluation-case",
+        "analytics.saved-view"
+      ],
+      "existingSourceRefs": [
+        "SRC201",
+        "SRC203"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The local frozen-input meaning is necessary to distinguish reproducible evaluation input from a Saved View that queries changing observations.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Freeze identifies retained inputs and run/time scope; it does not claim a completely reproducible provider, environment or all future trials."
+    },
+    {
+      "conceptId": "analytics.evaluation-suite",
+      "currentName": "Evaluation Suite",
+      "recommendedName": "Evaluation Suite",
+      "definitionEnglish": "An identified set of evaluation cases with the criteria and grading arrangements used to assess them.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "analytics.evaluation-case",
+        "analytics.evaluation-dataset",
+        "analytics.evaluation-trial",
+        "common.tieu-chi-anh-gia"
+      ],
+      "existingSourceRefs": [
+        "SRC203"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Use the ordinary evaluation term in context; the source requires suite identity and grading revisions but does not define a new suite entity or lifecycle.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Cases specify tasks; Dataset supplies inputs; a grader assesses evidence against criteria. Grader is referenced vocabulary, with no separate concept ID in this register, and its output is not automatically a trustworthy Verdict. R222/R223 are proposed modeling, not specified containment cardinalities."
+    },
+    {
+      "conceptId": "analytics.evaluation-environment",
+      "currentName": "Evaluation Environment",
+      "recommendedName": "Evaluation Environment",
+      "definitionEnglish": "The identified conditions relevant to an Evaluation Trial, including applicable program, model, Skill, tool and grader revisions that affect comparability.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "analytics.evaluation-trial",
+        "analytics.evaluation-dataset",
+        "analytics.comparison",
+        "analytics.evaluation-suite"
+      ],
+      "existingSourceRefs": [
+        "SRC203"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Environment is standard evaluation vocabulary; the local requirement is explicit comparability evidence rather than a new sandbox or deployment.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "A grading mechanism and its revision are part of the assessment conditions, distinct from the input case and from the final Verdict; fixed repetitions and universal determinism are not inferred."
+    },
+    {
+      "conceptId": "analytics.metric-availability",
+      "currentName": "Metric Availability",
+      "recommendedName": "Metric Availability",
+      "definitionEnglish": "The availability of an actual measurement for a Metric in a particular observation scope. A real numeric zero is distinct from data that is missing or cannot be measured.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "analytics.metric",
+        "analytics.observation",
+        "analytics.attribution-policy",
+        "engineering.unknown"
+      ],
+      "existingSourceRefs": [
+        "SRC210",
+        "SRC201",
+        "SRC313",
+        "SRC317"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted missing-data and attribution rules require this local distinction without prescribing a universal availability enum.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "No new provider measurement support or estimated-allocation formula is implied; D05's traceable, shared and unmeasured cost categories remain unchanged."
+    },
+    {
+      "conceptId": "evolution.upstream-contribution",
+      "currentName": "Upstream Contribution",
+      "recommendedName": "Upstream Contribution",
+      "definitionEnglish": "Separately authorized work to extract, verify and propose reusable harness improvements to an upstream project. Its acceptance is independent of applying improvements locally.",
+      "ownerGlossary": "docs/domain/evolution/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.loi-harness",
+        "common.harness-engineering-orchestrator",
+        "execution.work-item",
+        "common.effective-authority"
+      ],
+      "existingSourceRefs": [
+        "SRC211"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted local/upstream distinction prevents local activation from depending on upstream approval or causing automatic publication.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "Upstream destination and hosting remain unspecified; contribution work does not permit forking Paseo to isolate Skills."
+    },
+    {
+      "conceptId": "common.decision",
+      "currentName": "Decision",
+      "recommendedName": "Decision",
+      "definitionEnglish": "A recorded answer to a Decision Request, retained with the relevant work context and revision. It resolves that issue without automatically expanding standing authority.",
+      "ownerGlossary": "GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "common.yeu-cau-quyet-inh",
+        "execution.work-item",
+        "common.authority"
+      ],
+      "existingSourceRefs": [
+        "SRC293",
+        "SRC021",
+        "SRC159"
+      ],
+      "reviewClass": "source-backed-normalization",
+      "rationale": "The accepted request definition provides the recorded decision, while the action-policy source limits one-off approval.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC293 alone only rejects stale or unrelated replies; the fuller response meaning is supported by SRC021 and SRC159. R218/R219 remain proposed links, not a new universal decision record schema."
+    },
+    {
+      "conceptId": "engineering.deadline",
+      "currentName": "Deadline",
+      "recommendedName": "Deadline",
+      "definitionEnglish": "A time boundary for waiting for a response or for the eligibility of an execution step. Reaching it can trigger timeout handling without proving that work or external effects have stopped.",
+      "ownerGlossary": "docs/engineering/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "engineering.timeout",
+        "engineering.run-timer",
+        "execution.attempt"
+      ],
+      "existingSourceRefs": [
+        "SRC294",
+        "SRC196"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Deadline is ordinary timing vocabulary; only the local use needs clarification next to Run Timer and Timeout.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "This does not introduce a new expiry entity, fixed timeout duration or guarantee of instantaneous cancellation."
+    },
+    {
+      "conceptId": "analytics.evaluation-case",
+      "currentName": "Evaluation Case",
+      "recommendedName": "Evaluation Case",
+      "definitionEnglish": "A defined evaluation task or input situation with applicable criteria, used as an individual case within an evaluation suite.",
+      "ownerGlossary": "docs/domain/analytics/GLOSSARY.md",
+      "aliasesToPreserve": [],
+      "relatedConceptIds": [
+        "analytics.evaluation-suite",
+        "analytics.evaluation-dataset",
+        "analytics.evaluation-trial",
+        "common.tieu-chi-anh-gia"
+      ],
+      "existingSourceRefs": [
+        "SRC295",
+        "SRC316",
+        "SRC318"
+      ],
+      "reviewClass": "external-general-term",
+      "rationale": "Case has its ordinary evaluation meaning; the source's dataset/suite and grading requirement does not itself specify case identity, containment or lifecycle.",
+      "unresolvedQuestion": null,
+      "scopeNotes": "SRC295 never names a case. Local support for representative and previously failing cases is SRC316/SRC318; case-level IDs and R222/R223 are still proposed, not accepted production structure."
+    }
+  ],
+  "acceptedOn": "2026-10-23",
+  "acceptance": {
+    "sourceRef": "SRC323",
+    "scope": [
+      "canonical English names",
+      "concise definitions",
+      "documented owners",
+      "preserved aliases/anchors",
+      "contextual treatment of general terms"
+    ],
+    "excludes": [
+      "new UI translations",
+      "approval of all graph types/cardinalities",
+      "schema/API implementation",
+      "runtime proof"
+    ]
+  }
+}

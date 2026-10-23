@@ -1,0 +1,42 @@
+{
+  "purpose": "Baseline hashes before explicit D01 confirmation follow-up; not a user approval record",
+  "hashCanonicalization": "UTF-8 JSON, sorted keys, separators comma/colon, ensure_ascii=False",
+  "unchangedSemanticProjections": {
+    "concepts": "771ee3eeb7615be2bb603b51681336dc32af33c6eae30868178235c423baecf2",
+    "relations": "fd75a81df882d2df8f44a01f3885152420db46daa8d5df0f9c65f96eff6e6d4c",
+    "constraints": "621fbdd7125a693be34792097114f1c5800fd70b746920efb010336396188315",
+    "questions": "f4f567d0e5d178a62acb0fc216966bd0a51911c747b622c67355f121685d7bdb",
+    "mappings": "c4f2164fe20767ebc358dcda808dfa4d2fbb5b76dbdddbd3009ffa7cf75782ab",
+    "runtimeEvidence": "d8659fb1f776013fe6b9578ced91d76d79ffc5da33ad2b6e519a27d06d1147b5"
+  },
+  "sourceFiles": [
+    {
+      "path": "docs/design/v1-concept-register.json",
+      "sha256": "7d77c2042f4db51ac2235bd7634314332671b4e35f4ffa03bfd4dab0c851ca41"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "sha256": "251e235f7698bc9c39488962742612975a71119b8d72291859a9cc44c135aa50"
+    },
+    {
+      "path": "docs/ui/GLOSSARY.md",
+      "sha256": "b239eca22e97354489b75f9de0ff47ec0268f3d073da3fc820047aec51ff11f8"
+    },
+    {
+      "path": "docs/design/onboarding-implementation.md",
+      "sha256": "314aee6047aae742b40d519ee4de76d2a345035b57d45123559db8b7a180f718"
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "sha256": "e43d5df7e8de445eead8555a7633edc3414f3509fabd9ef5a223536baae564f5"
+    },
+    {
+      "path": "docs/design/build-v1-concept-views.py",
+      "sha256": "3beb33525c0af5b4c8c8be1235c72baf405508fbfbb597a87d057cd3804aa16d"
+    },
+    {
+      "path": "docs/design/build-v1-vocabulary-review.py",
+      "sha256": "f1193176c41cd9f8a8847fb0ff299562f4fc14a34c40f1ed5cbfa72d6b181e20"
+    }
+  ]
+}

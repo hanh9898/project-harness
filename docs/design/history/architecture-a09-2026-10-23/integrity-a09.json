@@ -1,0 +1,47 @@
+{
+  "round": "A09",
+  "acceptedPositions": [
+    2986,
+    2988
+  ],
+  "continuationPosition": 2994,
+  "acceptance": "acceptance-a09.json",
+  "validation": "validation-a09.json",
+  "nextRound": "A10: two proposed questions; no user answers yet",
+  "currentDocuments": [
+    {
+      "path": "docs/design/architecture-grill.md",
+      "sha256": "3bb282020f8bb13f1e84c25ce97361e156e35f7f5a11e6fafe4e713e666f652b"
+    },
+    {
+      "path": "docs/design/harness-composition.md",
+      "sha256": "df144fae8e5742011acf935313df069b6e1d6b48e7d8580e9c959c994d036ba4"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "sha256": "1254419c51e9272281085157e0bde5f924b5027ecfb5b2b870def74ad2236d01"
+    },
+    {
+      "path": "docs/design/modules.md",
+      "sha256": "6095b8242ff674d802f674e02432f36fe5d82b892f8b39eff7cd9232fdbbc6f4"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "sha256": "954edf74073fef75ade9317d351746521ae9b382ad9408d7ba61ca7a50e96949"
+    },
+    {
+      "path": "docs/design/README.md",
+      "sha256": "c2b93820e5552a14eb8f3296cf7b49a580fa7c4ac5f273250af35e3fc3282ea2"
+    },
+    {
+      "path": "docs/engineering/GLOSSARY.md",
+      "sha256": "9999b64b6c95e32c73233bbc50aaa6185b320f4dcb1b6b9e8e5c6efe46184216"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed",
+  "limits": [
+    "Documentation only; whole-harness architecture remains open.",
+    "A10 starter assets and automation arming remain proposed.",
+    "B9 concept-graph follow-up and F-A04 native Stop facts remain open."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "exactNativeRecords": 2,
+  "acceptedA05Choices": 3,
+  "baselineSnapshots": 7,
+  "livePinsUnchanged": 28,
+  "conceptRegisterUnchanged": true,
+  "relativeFileLinksChecked": 201,
+  "phase": "design",
+  "A06": "unanswered",
+  "runtimeTestsOrOperations": false
+}

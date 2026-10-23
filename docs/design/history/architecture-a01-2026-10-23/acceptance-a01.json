@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A01",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2813,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adaed0a8dc48191857bceade95b5d50",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adaed0a8dc48191857bceade95b5d50",
+      "createdBy": "agent",
+      "text": "Giữ nguyên các quyết định đã chốt: một plugin, hai orchestrator, chat native, TypeScript và nền lưu trữ. **Vòng A01 làm rõ hai nơi sở hữu chức năng còn thiếu Interface riêng trong bản hiện hành.**\n\n❓ **Q1 — Agent Definitions/catalog có module sở hữu riêng?**\n\nVí dụ: bạn sửa Reviewer qua UI hoặc Onboarding MCP; sau đó orchestrator chọn Reviewer để giao việc.\n\nBạn đồng ý để module **AgentDefinitions** sở hữu catalog, các revision, role/Skills/Principles bindings và cung cấp cấu hình hợp lệ cho lần giao việc?\n\n➡️ **Đề xuất: đồng ý, tách module AgentDefinitions.** UI, MCP và runtime dùng chung Interface của nó. **Work** tiếp tục sở hữu admission, Assignment và dispatch; profile/provider/model gốc vẫn thuộc Paseo.\n\nPhương án khác là đặt toàn bộ chức năng này bên trong Work, khiến Work chịu thêm vòng đời cấu hình agent.\n\n---\n\n❓ **Q2 — Analytics có module riêng?**\n\nDashboard và daily retro cần truy vấn chi phí, chất lượng, điểm nghẽn, so sánh phiên bản và Saved Views.\n\nBạn đồng ý để module **Analytics** cung cấp Interface truy vấn/tổng hợp dữ liệu từ Work, Criteria và Releases?\n\n➡️ **Đề xuất: đồng ý, tách module Analytics.** **Criteria** tiếp tục sở hữu tiêu chí và Verdict; Analytics cung cấp dữ liệu có provenance, phân biệt rõ dữ liệu thiếu. UI và agent dùng chung logic truy vấn.\n\nPhương án khác là giữ các truy vấn trong Work/Criteria và xác định rõ nơi sở hữu Saved Views.\n\nHai lựa chọn này độc lập. Các module vẫn nằm trong cùng một plugin, dùng nền lưu trữ đã chốt. [Cây quyết định và nhật ký A01](docs/design/architecture-grill.md) đã được lưu; subagent đang rà các nhánh còn lại.",
+      "updatedAt": "2026-10-23T05:13:56.500Z",
+      "jsonPointer": "/structuredResponse/items/8"
+    },
+    {
+      "position": 2815,
+      "itemId": "turn-item:message:d9eec890-511e-40d3-943f-1904b9082017",
+      "messageId": "d9eec890-511e-40d3-943f-1904b9082017",
+      "createdBy": "user",
+      "text": "Ok theo suggest'",
+      "updatedAt": "2026-10-23T05:14:48.405Z",
+      "jsonPointer": "/structuredResponse/items/9"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A01.Q1",
+      "status": "accepted",
+      "module": "AgentDefinitions",
+      "owns": [
+        "Agent Catalog",
+        "Agent Definition revisions",
+        "role/Skill/Principle bindings",
+        "valid resolved configuration for dispatch"
+      ],
+      "retains": {
+        "Work": "admission, Assignment and dispatch",
+        "Paseo": "native profile/provider/model ownership"
+      }
+    },
+    {
+      "id": "A01.Q2",
+      "status": "accepted",
+      "module": "Analytics",
+      "owns": [
+        "cross-module queries and aggregations",
+        "Saved Views",
+        "provenance and missing-data presentation"
+      ],
+      "retains": {
+        "Criteria": "criteria and Verdict authority",
+        "sourceModules": "authoritative domain writes"
+      }
+    }
+  ],
+  "scope": {
+    "includes": [
+      "two focused modules within the existing plugin",
+      "shared owner Interfaces for relevant UI/MCP/runtime callers"
+    ],
+    "excludes": [
+      "approval of every method/schema in previous sketches",
+      "additional process/database/settings group",
+      "ownership of all operating and delegation policies",
+      "production implementation or runtime proof",
+      "overall architecture or V1 acceptance gate closure"
+    ]
+  },
+  "integrityNote": "SHA-256 verifies saved bytes, not independent authorship or semantic certification.",
+  "integrity": {
+    "note": "Hashes protect saved bytes; native API positions/item IDs and exact text identify the source. They do not independently authenticate authorship.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "bytes": 14342,
+        "sha256": "fd953df80b36996c04b414b5bb3567a0fc1e4d1a7f8e2906c7a3449230dc0264"
+      },
+      {
+        "path": "baseline.json",
+        "bytes": 12782,
+        "sha256": "c851e42576c389b1e5cb6ea8df2583256da8f5a8a8a96001f55430760842fe21"
+      },
+      {
+        "path": "before/docs/design/README.md",
+        "bytes": 14792,
+        "sha256": "43e9031fd8c4d8d242dc1915ee9048bbe0b7fa78033c1857f3b7822b149b73cc"
+      },
+      {
+        "path": "before/docs/design/architecture-grill.md",
+        "bytes": 9130,
+        "sha256": "2065453964f82d0076ed82ef8fefba745273044fb534664713bd8bbd005ca3ca"
+      },
+      {
+        "path": "before/docs/design/architecture.md",
+        "bytes": 14078,
+        "sha256": "affca5f3c33b465b7903a762b3920c818bb51e0ae6cb1ab130d50f35c2681008"
+      },
+      {
+        "path": "before/docs/design/configuration.md",
+        "bytes": 11434,
+        "sha256": "1d7e7069fa6c3e5584b35e88de061b36d09f15d5e0cb21606b134e86e48a30f4"
+      },
+      {
+        "path": "before/docs/design/modules.md",
+        "bytes": 30104,
+        "sha256": "522dce1498e004bbd733c4a2e78cd8e7c2baaa59108606df4f512cb12c6aa068"
+      },
+      {
+        "path": "before/docs/design/onboarding-implementation.md",
+        "bytes": 25629,
+        "sha256": "ad034b53a44640957880eef7cd4ec983718c18a18a9fbf5ce695089505fabf99"
+      },
+      {
+        "path": "before/docs/engineering/GLOSSARY.md",
+        "bytes": 15620,
+        "sha256": "c45fc5755d37dd85b413c02ac707db70615a92e99f162e261bcd16e1ce99bafb"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A06",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2936,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adafa87da0481919e6967a3759513ed",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adafa87da0481919e6967a3759513ed",
+      "createdBy": "agent",
+      "text": "Đã lưu [A05](docs/design/history/architecture-a05-2026-10-23/acceptance-a05.json). Tiếp theo là ba lựa chọn về cách chuẩn bị và duy trì agent.\n\n❓ **Q1 — Mỗi agent/role có instructions riêng trong repo?**\n\nVí dụ: Reviewer có hướng dẫn review; Harness Engineering có hướng dẫn vận hành closed loop và daily retro.\n\n➡️ **Đề xuất: có.** Instructions là file có version, role/definition tham chiếu tới chúng. Khi giao việc, harness ghép hướng dẫn đó với luật chung và context của Assignment. Skills/Principles cung cấp phương pháp chuyên môn; native Paseo profile tiếp tục giữ model/options.\n\n---\n\n❓ **Q2 — Agent được lưu bài học để dùng lại qua nhiều công việc và Sessions?**\n\nVí dụ: sau khi sửa lỗi, agent lưu nguyên nhân thường gặp hoặc cách kiểm hiệu quả để lần sau tìm lại.\n\n➡️ **Đề xuất: có kho tri thức dùng lại**, tách khỏi transcript và execution journal. Ghi chú phải có nguồn, phạm vi và mức chắc chắn; giả thuyết vẫn được đánh dấu là giả thuyết.\n\nKhi muốn biến bài học thành instructions, Skill hoặc workflow vận hành, harness dùng quy trình kiểm/cập nhật đã chốt. Bài học không tự thay mục tiêu hay tiêu chí dự án.\n\n---\n\n❓ **Q3 — Worker bắt đầu phần việc mới bằng Session mới theo mặc định?**\n\n➡️ **Đề xuất: đồng ý.** Phần việc mới nhận Session mới với context được chuẩn bị riêng. Hỏi thêm hoặc tiếp tục cùng Assignment thì giữ phiên hiện có; retry/fallback vẫn theo quy tắc đã chốt.\n\nCó thể cho phép tái sử dụng Session bằng policy khi role/config/context phù hợp. Session mới giúp hạn chế context tích tụ, đổi lại tốn thêm khởi tạo và nạp context. Hai orchestrator vẫn giữ vòng đời Session riêng.",
+      "updatedAt": "2026-10-23T06:11:30.977Z",
+      "jsonPointer": "/structuredResponse/items/2"
+    },
+    {
+      "position": 2938,
+      "itemId": "turn-item:message:79b32a39-6d88-4b07-900d-1b75b49a3df9",
+      "messageId": "79b32a39-6d88-4b07-900d-1b75b49a3df9",
+      "createdBy": "user",
+      "text": "ok",
+      "updatedAt": "2026-10-23T06:15:35.718Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A06.Q1",
+      "status": "accepted",
+      "meaning": "Versioned instructions files for agents/roles, referenced by roles/definitions and combined with common rules and Assignment context; Skills/Principles keep methods, native profiles keep model/options."
+    },
+    {
+      "id": "A06.Q2",
+      "status": "accepted",
+      "meaning": "Persistent reusable lessons outside transcript/execution journal, with sources/scope/certainty. Promoting lessons to operating instructions/Skills/workflows uses existing candidate/check/activation; no implicit changes to goals/criteria."
+    },
+    {
+      "id": "A06.Q3",
+      "status": "accepted",
+      "meaning": "A worker starts new work in a fresh Session by default; clarification/continuation of the same Assignment retains the existing Session. Compatible reuse can be explicitly allowed; GA01 retry/fallback and orchestrator Open/Replace are preserved."
+    }
+  ],
+  "excludes": [
+    "exact instruction/knowledge schemas, directories or database choice",
+    "proof of native injection or provider enforcement",
+    "new worker pool or session concurrency/slot count",
+    "automatic task-retry semantics or orchestrator replacement",
+    "architecture closure or production implementation"
+  ],
+  "integrity": {
+    "note": "Hashes preserve saved bytes, not independent authorship/runtime proof. A07 proposals are not included in A06 acceptance.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "sha256": "542eb0f0e0a182f1bbc34ce628565b095d49f002d1efab194aff33ecd8a8cea0"
+      },
+      {
+        "path": "baseline.json",
+        "sha256": "d238a83cca37de470cae18c9ef39aa18dbde57ec7f21520f5b6fe8a1215e04e3"
+      },
+      {
+        "path": "before/GLOSSARY.md",
+        "sha256": "53a4186d0dfb8f7689cabd360fe1044181e0a08352ae63d3acf3a552b263ff7d"
+      },
+      {
+        "path": "before/docs/design/README.md",
+        "sha256": "064fd28c19bd7d21acbed432bca1461b520030c2c0c4abd2d086c5a6ec53eeda"
+      },
+      {
+        "path": "before/docs/design/architecture-grill.md",
+        "sha256": "11a7311ae27963051a71d9c5213c53e413dd76d91356e8eaf33bf71fe14d07b8"
+      },
+      {
+        "path": "before/docs/design/architecture.md",
+        "sha256": "411e53961d82914858c4df824a7df544bd076378e97af6c314396cbccdc7ad99"
+      },
+      {
+        "path": "before/docs/design/configuration.md",
+        "sha256": "c89d9f734343c9e0ec7149eb230c403c65c5ccc15ae09444c4c3bdc8e5e4bdad"
+      },
+      {
+        "path": "before/docs/design/harness-composition.md",
+        "sha256": "287b91412767af102d0113f07fe97de8e2c4def087a3e057130692e77b53fc86"
+      },
+      {
+        "path": "before/docs/design/modules.md",
+        "sha256": "447e9993edbb729f15d9e5d2ee3e79343b9cb132c4594e34beb3d3136b1b6b08"
+      },
+      {
+        "path": "validation-a06.json",
+        "sha256": "f7748ca68786bac3f6e176c9db5145d3929c580eb9a94c0d2b536dc2ee7f57dc"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "desktop": {
+    "width": 728,
+    "contentHeight": 841,
+    "capturedHeight": 841,
+    "consoleMessages": [
+      {
+        "level": "log",
+        "text": "Architecture review: 7 modules, 2 orchestrators, 3 flow selectors initialized; no runtime behavior claimed."
+      }
+    ],
+    "screenshot": {
+      "mimeType": "image/png",
+      "width": 728,
+      "height": 841
+    }
+  },
+  "mobile": {
+    "width": 375,
+    "contentHeight": 1324,
+    "capturedHeight": 1324,
+    "consoleMessages": [
+      {
+        "level": "log",
+        "text": "Architecture review: 7 modules, 2 orchestrators, 3 flow selectors initialized; no runtime behavior claimed."
+      }
+    ],
+    "screenshot": {
+      "mimeType": "image/png",
+      "width": 375,
+      "height": 1324
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "type": "runtime-baseline-steering",
+  "status": "reported-and-locally-observed",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3403,
+      "itemId": "turn-item:message:dd9c6510-3fa0-491e-ac75-b77cf8ac5332",
+      "messageId": "dd9c6510-3fa0-491e-ac75-b77cf8ac5332",
+      "createdBy": "user",
+      "text": "đã update lên v0.13.0-beta.1",
+      "updatedAt": "2026-10-23T12:08:54.600Z",
+      "jsonPointer": "/structuredResponse/items/5"
+    }
+  ],
+  "meaning": "User reports completed update to v0.13.0-beta.1; local read-only checks confirm matching CLI and daemon versions. Ongoing capability investigation is rebased to this runtime. Original 0.12 target/answers remain historical, and accepted T03/T05/T07 meanings are retained pending version-specific revalidation.",
+  "excludes": [
+    "an assistant-performed update/restart/install",
+    "proof of loaded whole-plugin/provider capabilities",
+    "automatic approval of changed product scope or new authority/private API",
+    "rewriting historical 0.12 acceptance/evidence",
+    "technical session closure or V1 pass"
+  ]
+}

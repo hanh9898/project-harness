@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-22T14:25:45.109Z",
+  "node": "v22.16.0",
+  "cli": "0.12.0",
+  "daemon": "0.11.1",
+  "host": "Mac-MN-14.local",
+  "listen": "127.0.0.1:6767",
+  "workerPid": 56104,
+  "sdk": "0.11.1",
+  "pluginSdk": "0.11.1",
+  "mcpSdk": "1.32.1",
+  "profile": {
+    "id": "agent_profile_mvj6g8mc_6xmhwd3zwgd",
+    "name": "test",
+    "provider": "codex",
+    "model": "gpt-5.6-luna",
+    "modeId": "full-access",
+    "thinkingOptionId": "low"
+  },
+  "plugins": [
+    {
+      "id": "hbu-agent-config",
+      "status": "running"
+    }
+  ],
+  "sourceHashes": {
+    "skill": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+    "principles": "36ab426be3cc41d1531587d1d34a50e9a0e402133ca9d24b900370585c2c9221"
+  }
+}

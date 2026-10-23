@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-22T14:22:56.870Z",
+  "runId": "onboarding-ef84974c-50cf-421e-b457-41b23aa7f51a",
+  "cases": [
+    {
+      "name": "plugin-installed-running",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "real-owner-blocks-missing-config",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "repeat-onboarding-spawn-same-native-session",
+      "outcome": "passed",
+      "data": {
+        "agentId": "845afb9a-66d7-40ba-8c8c-f1ba7107539a",
+        "workspaceId": "wks_c41fa7a7e53f227d"
+      }
+    },
+    {
+      "name": "real-onboarding-agent-persisted-config-check-and-handover",
+      "outcome": "passed",
+      "data": {
+        "revision": 1,
+        "handoverDigest": "cba14b2291cb768f1d6dd3ed4c2adfe5c6512842d014e89823c965621cfb3ff1"
+      }
+    },
+    {
+      "name": "real-owner-rejects-stale-revision",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "plugin-reload-reconciles-same-session-and-pinned-state",
+      "outcome": "passed",
+      "data": {
+        "oldPid": 84833,
+        "newPid": 90420,
+        "bootRoles": {
+          "onboarding": {
+            "identity": "onboarding-ef84974c-50cf-421e-b457-41b23aa7f51a:onboarding",
+            "status": "created",
+            "agentId": "845afb9a-66d7-40ba-8c8c-f1ba7107539a",
+            "workspaceId": "wks_c41fa7a7e53f227d",
+            "dispatch": "sent"
+          }
+        }
+      }
+    },
+    {
+      "name": "same-native-onboarding-session-mcp-works-after-reload",
+      "outcome": "passed",
+      "data": {}
+    }
+  ],
+  "onboardingTurn": {
+    "status": "idle",
+    "finalDigest": "b7be2a85aefc7ca3c81f3ba8252099ba854009c1f917c96b514cba1f039fcb7f"
+  },
+  "reconnectTurn": {
+    "status": "idle",
+    "finalDigest": "9266b1ba50204d156dc491efb8e1c949b6590e364375dcbd222c600caac2a8fe"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: {\"error\":\"Error: WORKSPACE_BINDING_MISMATCH\"}\n\n409 !== 200\n"
+}

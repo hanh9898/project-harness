@@ -1,0 +1,54 @@
+{
+  "round": "A10",
+  "acceptedPositions": [
+    3019,
+    3021
+  ],
+  "acceptance": "acceptance-a10.json",
+  "validation": "validation-a10.json",
+  "nextRound": "A11: explicit Pause and pause scope; both proposed/unanswered",
+  "currentDocuments": [
+    {
+      "path": "docs/design/architecture-grill.md",
+      "sha256": "061442927bdfa740d742fbe017341b62f569395143995946a5428a318774b678"
+    },
+    {
+      "path": "docs/design/harness-composition.md",
+      "sha256": "65597af08fb87fb2ddc4674fb23fb044dbe438e17744f1beeda591b38ca9799f"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "sha256": "acf1c65c02bc6f3f025a1bb3ce54a9c8bc371cbb7c6524dba381fe641c534fa1"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "sha256": "7502e502486397b918892f4209fb9922582718615d3a72821c75ce0eaf90de3a"
+    },
+    {
+      "path": "docs/design/first-run-ux.md",
+      "sha256": "a2cdbebdee9efa89dc9ef94547855f80165f0b455f168f41864f48e89392f1d6"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "sha256": "b12c821dca9bf2e675d0a0ab1a3ddad1d7711468d47bb5d886fa0078c5c244a0"
+    },
+    {
+      "path": "docs/design/README.md",
+      "sha256": "d18d75c8e36749d5dcc8fee0e505f73a408e70e0f88f531878784100a6c0b690"
+    },
+    {
+      "path": "docs/design/autonomous-team-proposal.md",
+      "sha256": "62367636c65cacc2e4947b8c2e98043c052c38173f2feebd0abaed5a5ef3a343"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed",
+  "factualMemo": {
+    "path": "docs/design/orchestrator-stop-pause-facts-r4.md",
+    "sha256": "0505cae39dc9e6fcdb4483e1a3155d17566b03a871fa9fd81144c3329b332111"
+  },
+  "limits": [
+    "Documentation only; architecture and aggregate V1 gate remain open.",
+    "B9 graph follow-up and F-A05 whole-kit coverage review remain open.",
+    "No new glossary meanings or prototype controls were accepted by A10."
+  ]
+}

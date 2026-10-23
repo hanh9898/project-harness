@@ -1,0 +1,302 @@
+{
+  "at": "2026-10-22T14:25:54.455Z",
+  "runId": "onboarding-ebeeb9e4-a7f9-43b1-bd4a-3e7d9196f840",
+  "cases": [
+    {
+      "name": "plugin-installed-running",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "real-owner-blocks-missing-config",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "repeat-onboarding-spawn-same-native-session",
+      "outcome": "passed",
+      "data": {
+        "agentId": "4e66b5c4-e28c-4dee-8eba-f2dc7dc1b2cd",
+        "workspaceId": "wks_1cdba013584be0bb"
+      }
+    },
+    {
+      "name": "real-onboarding-agent-persisted-config-check-and-handover",
+      "outcome": "passed",
+      "data": {
+        "revision": 1,
+        "handoverDigest": "dbd58ea98a429dd4d426310f26510c65b9ab43eca7e25cf5aa1242add906f4ce"
+      }
+    },
+    {
+      "name": "real-owner-rejects-stale-revision",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "plugin-reload-reconciles-same-session-and-pinned-state",
+      "outcome": "passed",
+      "data": {
+        "oldPid": 95930,
+        "newPid": 98140,
+        "bootRoles": {
+          "onboarding": {
+            "identity": "onboarding-ebeeb9e4-a7f9-43b1-bd4a-3e7d9196f840:onboarding",
+            "status": "created",
+            "agentId": "4e66b5c4-e28c-4dee-8eba-f2dc7dc1b2cd",
+            "workspaceId": "wks_1cdba013584be0bb",
+            "dispatch": "sent"
+          }
+        }
+      }
+    },
+    {
+      "name": "same-native-onboarding-session-mcp-works-after-reload",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "user-command-spawns-real-engineering-session-and-exact-handover-ack",
+      "outcome": "passed",
+      "data": {
+        "agentId": "ffcfe6a4-1792-4b57-a4d6-dd6085a3188a",
+        "handoverDigest": "dbd58ea98a429dd4d426310f26510c65b9ab43eca7e25cf5aa1242add906f4ce"
+      }
+    },
+    {
+      "name": "exactly-two-native-role-sessions-after-repeated-spawn",
+      "outcome": "passed",
+      "data": {}
+    }
+  ],
+  "onboardingTurn": {
+    "status": "idle",
+    "finalDigest": "1fc184d5cce47a3868b4e93586b76bf4fba533e888c9b5aaffed4317dcda5f54"
+  },
+  "reconnectTurn": {
+    "status": "idle",
+    "finalDigest": "a96010b8bcbe8f46f3b863c608ed438d891fe40a135e2c60a4d4e892506525b2"
+  },
+  "engineeringTurn": {
+    "status": "idle",
+    "finalDigest": "b6175fa10e4721434a3d3a468d97a397ec14ace1d6bc8e7bba2549742b799578"
+  },
+  "handover": {
+    "revision": 1,
+    "config": {
+      "goal": "Validate the bounded Onboarding MCP to Harness Engineering handover for Project Harness; do not build production workflows.",
+      "profileId": "agent_profile_mvj6g8mc_6xmhwd3zwgd",
+      "skillSources": [
+        "/Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/codebase-design/SKILL.md"
+      ],
+      "principleSources": [
+        "/Users/hanhnt2/.t3/scratch/2026-10-21-h-ng-d-n-orchestration-6d026007/docs/design/paseo-boundary.md"
+      ],
+      "limits": {
+        "maxSessions": 2,
+        "maxTurnSeconds": 180,
+        "authority": "bounded-smoke-no-project-writes"
+      }
+    },
+    "context": {
+      "host": "Mac-MN-14.local",
+      "projectId": "prj_08681ba4e1bb62f0",
+      "workspaceId": "wks_1cdba013584be0bb",
+      "projectRoot": "/Users/hanhnt2/.t3/scratch/2026-10-21-h-ng-d-n-orchestration-6d026007"
+    },
+    "dependencyDigest": "9c6eb580602907a66f51ae8156bd9a8479fbdaba46ec160fb12bbebafeae4039",
+    "reportId": "cbf236031f28c2433f7dcd44fb2bc6e8cba106acd6db7da83a6e890565cf0768",
+    "optionalGaps": [
+      "Backlog/GitLab/polling/specialists not configured; not required by smoke"
+    ],
+    "verification": "build-ready-smoke-only"
+  },
+  "audit": [
+    {
+      "at": "2026-10-22T14:26:02.168Z",
+      "role": "onboarding",
+      "action": "check",
+      "revision": 0
+    },
+    {
+      "at": "2026-10-22T14:26:03.036Z",
+      "role": "driver",
+      "action": "spawn:onboarding",
+      "revision": 0
+    },
+    {
+      "at": "2026-10-22T14:26:03.122Z",
+      "role": "driver",
+      "action": "dispatch:onboarding",
+      "revision": 0
+    },
+    {
+      "at": "2026-10-22T14:26:24.066Z",
+      "role": "onboarding",
+      "action": "configure",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-22T14:26:25.555Z",
+      "role": "onboarding",
+      "action": "check",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-22T14:26:27.218Z",
+      "role": "onboarding",
+      "action": "complete",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-22T14:26:52.949Z",
+      "role": "driver",
+      "action": "spawn:engineering",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-22T14:26:52.993Z",
+      "role": "driver",
+      "action": "dispatch:engineering",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-22T14:27:14.607Z",
+      "role": "engineering",
+      "action": "acknowledge-exact-handover",
+      "revision": 1
+    }
+  ],
+  "boots": [
+    {
+      "at": "2026-10-22T14:26:01.644Z",
+      "pid": 95930,
+      "roles": {}
+    },
+    {
+      "at": "2026-10-22T14:26:37.329Z",
+      "pid": 98140,
+      "roles": {
+        "onboarding": {
+          "identity": "onboarding-ebeeb9e4-a7f9-43b1-bd4a-3e7d9196f840:onboarding",
+          "status": "created",
+          "agentId": "4e66b5c4-e28c-4dee-8eba-f2dc7dc1b2cd",
+          "workspaceId": "wks_1cdba013584be0bb",
+          "dispatch": "sent"
+        }
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "role": "onboarding",
+      "agentId": "4e66b5c4-e28c-4dee-8eba-f2dc7dc1b2cd",
+      "workspaceId": "wks_1cdba013584be0bb",
+      "runtime": {
+        "provider": "codex",
+        "sessionId": "01a16401-33e2-7771-8455-74e0e25b37c1",
+        "model": "gpt-5.6-luna",
+        "thinkingOptionId": "low",
+        "modeId": "full-access"
+      },
+      "mcpCalls": [
+        {
+          "name": "onboarding.guidance_read",
+          "status": "completed",
+          "callId": "exec-f5219ed7-d586-430f-adec-03eea997b99b",
+          "inputOutputDigest": "776f60ae95cd590e197600a329783362acdaccddf2836c3afd40d2baebae459c"
+        },
+        {
+          "name": "onboarding.onboarding_inspect",
+          "status": "completed",
+          "callId": "exec-410bd5ac-3b28-47a0-a902-63dbd7616487",
+          "inputOutputDigest": "f2a84f8af58b81abc45fea75e27958988ee956e00eaf82596417543989a7288f"
+        },
+        {
+          "name": "onboarding.onboarding_configure",
+          "status": "completed",
+          "callId": "exec-679fae9d-8b91-4603-b592-b48e6fe390e4",
+          "inputOutputDigest": "8d251b9fa9ff87d605f24a2cc4b5a6806e40c1037508abd22c0a60de8ac624c5"
+        },
+        {
+          "name": "onboarding.onboarding_check",
+          "status": "completed",
+          "callId": "exec-97030d2b-e3f5-47f7-9830-eb24906f1fd6",
+          "inputOutputDigest": "353879ae2cb1b2b3019d4896a397f06b3c39086640ee97d96006477e81168519"
+        },
+        {
+          "name": "onboarding.onboarding_complete",
+          "status": "completed",
+          "callId": "exec-fb02ac1d-5173-40df-888f-d3b93f83320f",
+          "inputOutputDigest": "0a66358a20f866fd2554be27a81359c89b07515aec5158f7f80584bac580993f"
+        },
+        {
+          "name": "onboarding.onboarding_inspect",
+          "status": "completed",
+          "callId": "exec-aaa632c6-7372-4cf6-9f07-994767091800",
+          "inputOutputDigest": "9c00d216ca7bc093fbbbc6f74003092f59092c35bd2a0ceaf9ce49580468ace0"
+        },
+        {
+          "name": "onboarding.handover_read",
+          "status": "completed",
+          "callId": "exec-d1838324-d2ea-4d96-91e0-4904c7089ff6",
+          "inputOutputDigest": "2e1aefafbacfbd6fe6007af5b94798d73163cc6dcd195cc8b2c6ca888f4bd749"
+        }
+      ],
+      "assignedSourceReadCalls": [
+        {
+          "command": "sed -n '1,240p' /Users/hanhnt2/.codex/plugins/cache/mattpocock/mattpocock-skills/1.3.1/skills/engineering/codebase-design/SKILL.md && printf '\\\\n--- PRINCIPLES ---\\\\n' && sed -n '1,240p' /Users/hanhnt2/.t3/scratch/2026-10-21-h-ng-d-n-orchestration-6d026007/docs/design/paseo-boundary.md",
+          "exitCode": 0,
+          "status": "completed"
+        }
+      ],
+      "timelineDigest": "70a9913c6350320365d4d421f212a8777bdf064b02724387c06e9c9840c7d9d9",
+      "hasOlder": false,
+      "hasNewer": false
+    },
+    {
+      "role": "engineering",
+      "agentId": "ffcfe6a4-1792-4b57-a4d6-dd6085a3188a",
+      "workspaceId": "wks_1cdba013584be0bb",
+      "runtime": {
+        "provider": "codex",
+        "sessionId": "01a16401-f710-7fb1-a5b3-1cb9b71ec4a7",
+        "model": "gpt-5.6-luna",
+        "thinkingOptionId": "low",
+        "modeId": "full-access"
+      },
+      "mcpCalls": [
+        {
+          "name": "onboarding.onboarding_inspect",
+          "status": "completed",
+          "callId": "exec-eedfb2eb-c7ab-45c8-9d8c-8e535ba3511e",
+          "inputOutputDigest": "6371ab1165d6a95154f3efd282a15e0be1da42e9ad744fec6de3fda8b1592584"
+        },
+        {
+          "name": "onboarding.handover_read",
+          "status": "completed",
+          "callId": "exec-922f07f6-bf41-4276-96f2-6a3ebe2c0f8c",
+          "inputOutputDigest": "aabf765aef400665526afb8e087103e98d477498db46c8e03f114b287bb87adf"
+        },
+        {
+          "name": "onboarding.handover_acknowledge",
+          "status": "completed",
+          "callId": "exec-174fed1c-1f9c-4394-85cb-cfd55280a78b",
+          "inputOutputDigest": "4ee83e9c9f6d74addf6a0a3a1ee72fa5ef5e7069d7819eade09a14f53d2e7ece"
+        }
+      ],
+      "assignedSourceReadCalls": [],
+      "timelineDigest": "093c19e4a333501f0adb55e5edef067f274ad60369e772fef7654ba9af31d25b",
+      "hasOlder": false,
+      "hasNewer": false
+    }
+  ],
+  "untested": [
+    "Actual transport response loss between native create commit and SDK receipt",
+    "Daemon restart",
+    "Profile/provider CRUD",
+    "Native stale-role fencing and Replace Session",
+    "UI button/rendering",
+    "Project Orchestrator build/operation"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-22T14:20:48.938Z",
+  "runId": "onboarding-4fe1353c-bccd-4734-be15-916bdc74e822",
+  "cases": [
+    {
+      "name": "plugin-installed-running",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "real-owner-blocks-missing-config",
+      "outcome": "passed",
+      "data": {}
+    },
+    {
+      "name": "repeat-onboarding-spawn-same-native-session",
+      "outcome": "passed",
+      "data": {
+        "agentId": "fe3d72c4-9226-480a-9ecf-3e99ef7b29e5",
+        "workspaceId": "wks_a2e4f9ed8517419c"
+      }
+    }
+  ],
+  "onboardingTurn": {
+    "status": "idle",
+    "finalDigest": "959720854c216a72115d175d76edb6b82c614b28b21b686dbd03d3f1cb682f07"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Real agent did not save handover",
+  "diagnosis": {
+    "nativeAgentId": "fe3d72c4-9226-480a-9ecf-3e99ef7b29e5",
+    "failedTools": [
+      "onboarding.onboarding_inspect",
+      "onboarding.guidance_read"
+    ],
+    "nativeToolError": "MCP tool call requires approval, but approval policy is never",
+    "configurationRevisionRemained": 0,
+    "handoverSaved": false,
+    "sourceReadTool": {
+      "name": "shell",
+      "status": "completed",
+      "exitCode": 0
+    },
+    "resolution": "Exact native toolPolicy.preapproved rules for this plugin MCP only; retain approval_policy never and shell read-only. New bounded run after cleanup, distinct run identity."
+  }
+}

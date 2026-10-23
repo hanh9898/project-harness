@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A10",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3019,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb0b4c81e88191b68e986877076f1b",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb0b4c81e88191b68e986877076f1b",
+      "createdBy": "agent",
+      "text": "Đã lưu [quyết định A09 và bằng chứng](docs/design/history/architecture-a09-2026-10-23/acceptance-a09.json). Tiếp theo là hai quyết định về bộ khởi đầu.\n\n❓ **Q1 — Repo base cung cấp sẵn các agent presets, workflow mẫu và bộ kiểm dùng chung?**\n\n➡️ **Đề xuất: đồng ý.** Bộ có sẵn:\n\n- Instructions/definitions cho Onboarding và Harness Engineering.\n- Presets theo trách nhiệm: **Observe/Retro, Investigate, Design/Plan, Implement, Verify**.\n- Các workflow blocks/templates và validation/eval fixtures tương ứng.\n\nOnboarding liên kết chúng với **native profiles đã tạo** và Skills/Principles đã cài. Harness Engineering khảo sát dự án rồi chọn, chỉnh và bổ sung để dựng Project Orchestrator.\n\nCác presets là điểm xuất phát có thể cải tiến; mỗi task chỉ dùng những vai cần thiết. Phương án khác là để Harness Engineering sinh gần như toàn bộ catalog/templates từ đầu cho từng dự án.\n\n---\n\n❓ **Q2 — Automations chỉ bắt đầu tự chạy khi đúng giai đoạn đã được khởi động và cấu hình đủ?**\n\n➡️ **Đề xuất: đồng ý**, theo trình tự:\n\n- **Mới cài/đang Onboarding:** chưa tự chạy vòng LLM hoặc polling dịch vụ thật.\n- **Sau khi người dùng Spawn Harness Engineering:** daily retro đã bật được chạy khi đủ profile, Skills, lịch và quyền.\n- **Jobs kéo task/rà PR:** chỉ chạy khi đã cấu hình connection, bộ lọc, lịch và bật job.\n- **Sau reload/restart:** tiếp tục trạng thái đã lưu; job bị tắt vẫn tắt, không tự Spawn/Replace orchestrator.\n\nKhông cần duyệt lại từng lượt chạy đã được cấp quyền. Phương án khác là yêu cầu người dùng bật thủ công riêng từng automation sau khi bootstrap xong.",
+      "updatedAt": "2026-10-23T07:23:05.481Z",
+      "jsonPointer": "/structuredResponse/items/2"
+    },
+    {
+      "position": 3021,
+      "itemId": "turn-item:message:99086704-6d03-46b2-8057-b39686b7193c",
+      "messageId": "99086704-6d03-46b2-8057-b39686b7193c",
+      "createdBy": "user",
+      "text": "ok",
+      "updatedAt": "2026-10-23T07:24:17.620Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A10.Q1",
+      "status": "accepted",
+      "meaning": "The base ships versioned Onboarding/Harness Engineering instructions and definitions, starter specialist presets for Observe/Retro, Investigate, Design/Plan, Implement and Verify, reusable workflow blocks/templates and corresponding validation/eval fixtures. Onboarding binds pre-existing native profiles and installed Skills/Principles; Engineering adapts these to construct the Project Orchestrator and project-specific capabilities."
+    },
+    {
+      "id": "A10.Q2",
+      "status": "accepted",
+      "meaning": "No LLM loop or real service polling on fresh install/Onboarding. Enabled daily retro becomes eligible after user Spawn Engineering with required bindings/cadence/authority; polling jobs need configured connection/filter/cadence and enabled state. Restart reconciles retained state without re-enabling disabled jobs or automatically spawning/replacing an orchestrator. Authorized recurring executions need no per-run approval."
+    }
+  ],
+  "excludes": [
+    "exact source directories, installer/build/distribution or immutable role count",
+    "native profile creation/editor duplication, hard-coded models or all presets on every task",
+    "fixtures as proof of arbitrary provider/model capability",
+    "unverified cadence bridge, native Stop-to-logical-Pause mapping or OS startup guarantee",
+    "production implementation, architecture closure or aggregate V1 acceptance"
+  ]
+}

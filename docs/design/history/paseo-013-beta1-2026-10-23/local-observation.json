@@ -1,0 +1,34 @@
+{
+  "type": "read-only-local-runtime-observation",
+  "recordedAt": "2026-10-23T12:18:01.030Z",
+  "commands": [
+    {
+      "cmd": "/Users/hanhnt2/.local/bin/paseo --version",
+      "exitCode": 0,
+      "stdout": "0.13.0-beta.1"
+    },
+    {
+      "cmd": "/Users/hanhnt2/.local/bin/paseo daemon status --json",
+      "exitCode": 0,
+      "selectedFields": {
+        "home": "/Users/hanhnt2/.paseo",
+        "pid": 90627,
+        "workerPid": 90629,
+        "startedAt": "2026-10-23T12:06:31.730Z",
+        "listen": "127.0.0.1:6767",
+        "serverId": "srv_-iiRgPCwc4-X",
+        "hostname": "Mac-MN-14",
+        "desktopManaged": true,
+        "localDaemon": "running",
+        "daemonVersion": "0.13.0-beta.1",
+        "connectedDaemon": "reachable",
+        "daemonNode": "/Applications/Paseo.app/Contents/Frameworks/Paseo Helper.app/Contents/MacOS/Paseo Helper"
+      }
+    }
+  ],
+  "limitations": [
+    "Local CLI/default Paseo home, not every connected remote host",
+    "Version/availability observation only; no provider operation, inference or plugin compatibility test"
+  ],
+  "runtimeMutated": false
+}

@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "5ce56d165cf0cf8e23772b576c5223e98108e9995637fbdee4672ae2cdef2bee"
+    },
+    {
+      "originalPath": "docs/design/harness-composition.md",
+      "snapshotPath": "before/docs/design/harness-composition.md",
+      "sha256": "acb9a87a7c2f7d00cccbb8c319b189fdf16fef9918145e65b6934b824a32b99d"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "acf1c65c02bc6f3f025a1bb3ce54a9c8bc371cbb7c6524dba381fe641c534fa1"
+    },
+    {
+      "originalPath": "docs/design/modules.md",
+      "snapshotPath": "before/docs/design/modules.md",
+      "sha256": "6095b8242ff674d802f674e02432f36fe5d82b892f8b39eff7cd9232fdbbc6f4"
+    },
+    {
+      "originalPath": "docs/design/configuration.md",
+      "snapshotPath": "before/docs/design/configuration.md",
+      "sha256": "7502e502486397b918892f4209fb9922582718615d3a72821c75ce0eaf90de3a"
+    },
+    {
+      "originalPath": "docs/design/first-run-ux.md",
+      "snapshotPath": "before/docs/design/first-run-ux.md",
+      "sha256": "a2cdbebdee9efa89dc9ef94547855f80165f0b455f168f41864f48e89392f1d6"
+    },
+    {
+      "originalPath": "docs/design/verification.md",
+      "snapshotPath": "before/docs/design/verification.md",
+      "sha256": "b12c821dca9bf2e675d0a0ab1a3ddad1d7711468d47bb5d886fa0078c5c244a0"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "eb70a440e8c41ac4a6539e6d0e84ee3f2a7a1caa6212e94543b8f69e8ff05671"
+    },
+    {
+      "originalPath": "docs/ui/GLOSSARY.md",
+      "snapshotPath": "before/docs/ui/GLOSSARY.md",
+      "sha256": "52cac0ab43b1b4e316240b8be0d021611dd3b68e71549988fd2b3e9a1e0f2aff"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC479",
+      "path": "docs/design/first-run-ux.md",
+      "startLine": 41,
+      "endLine": 41,
+      "excerpt": "Người dùng trao đổi sản phẩm, mục tiêu, quy tắc, task và tiêu chí trực tiếp với Project Orchestrator sau bước dựng/khởi chạy. V1 khảo sát codebase hiện có từ nguồn đã cấp; luồng ý tưởng đến repo rỗng nằm ngoài V1. Project Orchestrator giữ cuộc trao đổi/context xuyên suốt, không chờ harness khám phá hết nghiệp vụ rồi mới bàn giao.",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC482",
+      "path": "docs/design/configuration.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "> **Yêu cầu Skills hiện hành:** Agent Definition chọn bộ Skills cần dùng; khi giao việc, Orchestrator Agent chỉ định tường minh tên và nguồn Skill trong instructions. Agent Session có thể thấy các Skills khác từ môi trường dùng chung. Không yêu cầu per-agent catalog isolation; không cần fork, monkey patch hoặc đổi môi trường discovery để đáp ứng yêu cầu này. Phải kiểm nguồn Skill truy cập được và đánh giá kết quả công việc.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC484",
+      "path": "docs/design/configuration.md",
+      "startLine": 66,
+      "endLine": 66,
+      "excerpt": "Git giữ definitions/templates/skills/principles và catalog đội có version. SQLite dự kiến giữ mutable settings revisions, work/checkpoint/decision, receipts/cursors và active definition references. Artifacts lớn có reference/digest; secrets không nằm trong export/chat/log.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC492",
+      "path": "docs/design/verification.md",
+      "startLine": 50,
+      "endLine": 52,
+      "excerpt": "11. Các overlap policy đúng; nhiều trigger cùng sửa repo vẫn chịu admission tài nguyên chung.\n12. Pause/sửa/retire cạnh tranh callback cũ đúng mốc commit; runOnce retry cùng ID không tạo hai lượt; work đã nhận giữ revisions.\n13. Wake dồn khi orchestrator busy hoặc thay agent: chỉ một active owner, context/handoff đúng.",
+      "kind": "test-requirement"
+    },
+    {
+      "id": "SRC493",
+      "path": "docs/design/verification.md",
+      "startLine": 62,
+      "endLine": 62,
+      "excerpt": "23. Config export/log không chứa secret value; boot settings đọc được khi registry chưa mở mà không tạo hai nguồn active policy.",
+      "kind": "test-requirement"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+}

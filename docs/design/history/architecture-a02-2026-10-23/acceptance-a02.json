@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A02",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2852,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adaefd13cb0819180d1f3c9994b689f",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adaefd13cb0819180d1f3c9994b689f",
+      "createdBy": "agent",
+      "text": "Đã lưu bằng chứng A01 và đồng bộ tài liệu. [Nhật ký kiến trúc](docs/design/architecture-grill.md) ghi ba câu tiếp theo:\n\n❓ **Q1 — Work sở hữu chính sách quyền và giới hạn?**\n\nVí dụ: Reviewer có trong catalog, nhưng Project Orchestrator chỉ được tham vấn; người dùng giảm trần worker hoặc thu hồi quyền push.\n\n➡️ **Đề xuất: đồng ý.** Work sở hữu revisions và Interface chỉnh **Actions, Limits, Delegation Policy**, rồi kiểm chúng khi thực thi. AgentDefinitions quản lý definitions/năng lực. Triggers và Releases áp dụng cùng chính sách hiện hành.\n\n---\n\n❓ **Q2 — Chat chỉ xác nhận nhận việc sau khi đã lưu bền vững?**\n\nBạn nhắn “sửa lỗi checkout”. Orchestrator diễn giải rồi gọi Tool để nộp việc vào Work; trao đổi thông thường vẫn là hội thoại.\n\n➡️ **Đề xuất: đồng ý.** Chỉ xác nhận “đã nhận việc” sau khi có Receipt và mã công việc. Quyết định hoặc cấu hình được ghi qua Interface sở hữu tương ứng. Nếu agent dừng trước bước ghi nhận, yêu cầu chưa được runtime nhận trách nhiệm tiếp tục.\n\nPhương án khác là ghi mọi đầu vào chat trước khi agent diễn giải; khả năng capture/replay của Paseo cần được kiểm chứng thêm.\n\n---\n\n❓ **Q3 — V1 dùng cơ chế khởi động Paseo hiện có?**\n\nSau reboot, lịch và công việc cần Paseo host/plugin chạy trở lại.\n\n➡️ **Đề xuất: đồng ý.** Dùng cơ chế startup của Paseo/máy hoặc người dùng mở Paseo; plugin tự đối soát và tiếp tục từ trạng thái đã lưu. Executable recovery độc lập vẫn bảo vệ từng lần tự cập nhật.\n\nNếu bạn yêu cầu hệ thống **tự bật lại cả Paseo sau crash/reboot mà không cần người**, cần đưa cơ chế bootstrap đó vào phạm vi V1 và kiểm chứng riêng.",
+      "updatedAt": "2026-10-23T05:25:48.992Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    },
+    {
+      "position": 2854,
+      "itemId": "turn-item:message:39341040-0361-4e90-9ae1-eb16d73a0276",
+      "messageId": "39341040-0361-4e90-9ae1-eb16d73a0276",
+      "createdBy": "user",
+      "text": "Ok",
+      "updatedAt": "2026-10-23T05:30:46.784Z",
+      "jsonPointer": "/structuredResponse/items/4"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A02.Q1",
+      "status": "accepted",
+      "meaning": "Work owns revisions/edit Interfaces for Actions, Limits and per-orchestrator Delegation Policy; Triggers/Releases use the same effective policy; AgentDefinitions keeps catalog/capability configuration."
+    },
+    {
+      "id": "A02.Q2",
+      "status": "accepted",
+      "meaning": "Orchestrator interprets native chat and submits actionable work or decisions/config via owner Tools; acknowledgement follows durable Receipt and reference. Native chat arrival alone does not establish accepted Work."
+    },
+    {
+      "id": "A02.Q3",
+      "status": "accepted",
+      "meaning": "Rely on existing Paseo/machine/operator startup, then plugin automatic reconciliation. Independent executable still protects activation operations; V1 does not add a separate unattended OS bootstrap promise."
+    }
+  ],
+  "scope": {
+    "includes": [
+      "architecture ownership and acceptance/startup contracts stated in the asked recommendations"
+    ],
+    "excludes": [
+      "exact method/schema/transaction designs",
+      "automatic durable capture/replay of every native message",
+      "proof of provider enforcement or scheduler capabilities",
+      "extra host supervisor or OS service",
+      "overall architecture shared-understanding closure",
+      "aggregate V1 acceptance",
+      "production implementation"
+    ]
+  },
+  "integrityNote": "Native API IDs and exact text identify source records. SHA-256 protects saved bytes, not independent authorship or semantic certification.",
+  "integrity": {
+    "note": "Hashes preserve saved bytes and document versions; they do not independently authenticate source authorship or runtime behavior. Closing review documents are proposed, not part of A02 acceptance.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "bytes": 9730,
+        "sha256": "6a35446ab60abae1ed72f3602773384a2bf3f30058b436e3714ca9a4b0f669ec"
+      },
+      {
+        "path": "baseline.json",
+        "bytes": 5832,
+        "sha256": "a7cfb56ccdb380c481fe3b58e69c48c4ce14d157cf8eca5cd3d7bcc7e3be14cf"
+      },
+      {
+        "path": "before/docs/design/README.md",
+        "bytes": 14979,
+        "sha256": "129e927c607ee375e0cae6da8a74337d46d80f20a652eca1c78b38976ce6f8e0"
+      },
+      {
+        "path": "before/docs/design/architecture-grill.md",
+        "bytes": 14486,
+        "sha256": "11ff451e098fc6b7cdd2831b2d966279ed2524be1910b63ab985109f0c01be30"
+      },
+      {
+        "path": "before/docs/design/architecture.md",
+        "bytes": 15258,
+        "sha256": "2156679e28231b524d00bcb276abe0a883aa32cc11ad6072bc501a7ad3c10fca"
+      },
+      {
+        "path": "before/docs/design/configuration.md",
+        "bytes": 12289,
+        "sha256": "d48446241a9fe39fddac2687bbc2e72dc4ea51390cb3e5add5af404981273f7d"
+      },
+      {
+        "path": "before/docs/design/interaction-model.md",
+        "bytes": 6685,
+        "sha256": "8007d9c163fd5bec8c09b537e8eaab7a304fd09aa817860f9daf9064fbc27030"
+      },
+      {
+        "path": "before/docs/design/modules.md",
+        "bytes": 36300,
+        "sha256": "da87706b9cc6d2495fa6b3780f014067b8806e3f989c3a6814f310be4cdd7ca4"
+      },
+      {
+        "path": "before/docs/design/onboarding-implementation.md",
+        "bytes": 26017,
+        "sha256": "027ae6487125fcab13d515201cd295c39b150ed3206171d1b72a7cf3924675a0"
+      },
+      {
+        "path": "before/docs/design/release-execution.md",
+        "bytes": 12717,
+        "sha256": "b1e27c68a7569e7ca3f42f1a8015d0fe2dc424f8224e8330ab4fcab1c5fe5e69"
+      },
+      {
+        "path": "before/docs/design/verification.md",
+        "bytes": 14687,
+        "sha256": "50973fc54f478be141e1e0ae4f60a8943f070c27cf027851d834234a91509d89"
+      },
+      {
+        "path": "html-preview.json",
+        "bytes": 777,
+        "sha256": "d8370d213cfae78f2efb4825a8b2824af6cf845a15a7dc68d711e23025eefbe9"
+      },
+      {
+        "path": "validation-a02.json",
+        "bytes": 3465,
+        "sha256": "6d8e9baf23a7351bcd1253d777367c01d18fd12476d1020d8c73dd6b49d174af"
+      }
+    ]
+  }
+}

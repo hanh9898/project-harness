@@ -1,0 +1,40 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/v1-acceptance-grill.md",
+      "snapshot": "before/docs/design/v1-acceptance-grill.md",
+      "sha256": "eee06a1d0fc428d77aad216d106901f739f554938be79bfb655af68623660780"
+    },
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "c0205731da5b19553225353a27160b8ae08538d971ff5facc78a5ba84bf65258"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "989a259829985b071e090dfa499afbcc11f351c1be863d946c338897a4675a6b"
+    },
+    {
+      "path": "docs/design/scope-80-20.md",
+      "snapshot": "before/docs/design/scope-80-20.md",
+      "sha256": "2d3c0e5721d5a5228aa0036bb143370585e2ded9d969a3ac2fb112ec5a5f0a42"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "snapshot": "before/docs/design/verification.md",
+      "sha256": "0aac2488ce178139ca466a65a69407d5fa23df1dbfbbc1d50e11c13e970b0750"
+    },
+    {
+      "path": "docs/design/v1-acceptance-matrix.md",
+      "snapshot": "before/docs/design/v1-acceptance-matrix.md",
+      "sha256": "beb77546e711bea7da09530438ed0bc55c6d603c84a3dbf9e2c1c49f41684533"
+    },
+    {
+      "path": "docs/design/grill-session-closure-audit.md",
+      "snapshot": "before/docs/design/grill-session-closure-audit.md",
+      "sha256": "2ca2305454c30603bea10bef5b510560d8961d7ba90dd87adc2df4d789b759f0"
+    }
+  ],
+  "protectedConceptRegisterSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+}

@@ -1,0 +1,109 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "bytes": 14486,
+      "sha256": "11ff451e098fc6b7cdd2831b2d966279ed2524be1910b63ab985109f0c01be30"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "bytes": 15258,
+      "sha256": "2156679e28231b524d00bcb276abe0a883aa32cc11ad6072bc501a7ad3c10fca"
+    },
+    {
+      "originalPath": "docs/design/modules.md",
+      "snapshotPath": "before/docs/design/modules.md",
+      "bytes": 36300,
+      "sha256": "da87706b9cc6d2495fa6b3780f014067b8806e3f989c3a6814f310be4cdd7ca4"
+    },
+    {
+      "originalPath": "docs/design/configuration.md",
+      "snapshotPath": "before/docs/design/configuration.md",
+      "bytes": 12289,
+      "sha256": "d48446241a9fe39fddac2687bbc2e72dc4ea51390cb3e5add5af404981273f7d"
+    },
+    {
+      "originalPath": "docs/design/interaction-model.md",
+      "snapshotPath": "before/docs/design/interaction-model.md",
+      "bytes": 6685,
+      "sha256": "8007d9c163fd5bec8c09b537e8eaab7a304fd09aa817860f9daf9064fbc27030"
+    },
+    {
+      "originalPath": "docs/design/onboarding-implementation.md",
+      "snapshotPath": "before/docs/design/onboarding-implementation.md",
+      "bytes": 26017,
+      "sha256": "027ae6487125fcab13d515201cd295c39b150ed3206171d1b72a7cf3924675a0"
+    },
+    {
+      "originalPath": "docs/design/verification.md",
+      "snapshotPath": "before/docs/design/verification.md",
+      "bytes": 14687,
+      "sha256": "50973fc54f478be141e1e0ae4f60a8943f070c27cf027851d834234a91509d89"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "bytes": 14979,
+      "sha256": "129e927c607ee375e0cae6da8a74337d46d80f20a652eca1c78b38976ce6f8e0"
+    },
+    {
+      "originalPath": "docs/design/release-execution.md",
+      "snapshotPath": "before/docs/design/release-execution.md",
+      "bytes": 12717,
+      "sha256": "b1e27c68a7569e7ca3f42f1a8015d0fe2dc424f8224e8330ab4fcab1c5fe5e69"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC481",
+      "path": "docs/design/interaction-model.md",
+      "startLine": 9,
+      "endLine": 9,
+      "excerpt": "Đó là ba hành động khởi chạy theo vòng đời, không phải ba loại màn chat. Đề xuất một chat router chung thay cho hai mục chat cũng không phải yêu cầu đã chốt. Đã có Session thì Open Session; tạo Session thay thế là Replace Session tường minh với Handover và chuyển authority. [Implementation specification](onboarding-implementation.md) quy định receipt, revision và reconcile; chưa có menu tích hợp production.",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC482",
+      "path": "docs/design/configuration.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "> **Yêu cầu Skills hiện hành:** Agent Definition chọn bộ Skills cần dùng; khi giao việc, Orchestrator Agent chỉ định tường minh tên và nguồn Skill trong instructions. Agent Session có thể thấy các Skills khác từ môi trường dùng chung. Không yêu cầu per-agent catalog isolation; không cần fork, monkey patch hoặc đổi môi trường discovery để đáp ứng yêu cầu này. Phải kiểm nguồn Skill truy cập được và đánh giá kết quả công việc.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC484",
+      "path": "docs/design/configuration.md",
+      "startLine": 66,
+      "endLine": 66,
+      "excerpt": "Git giữ definitions/templates/skills/principles và catalog đội có version. SQLite dự kiến giữ mutable settings revisions, work/checkpoint/decision, receipts/cursors và active definition references. Artifacts lớn có reference/digest; secrets không nằm trong export/chat/log.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC492",
+      "path": "docs/design/verification.md",
+      "startLine": 50,
+      "endLine": 52,
+      "excerpt": "11. Các overlap policy đúng; nhiều trigger cùng sửa repo vẫn chịu admission tài nguyên chung.\n12. Pause/sửa/retire cạnh tranh callback cũ đúng mốc commit; runOnce retry cùng ID không tạo hai lượt; work đã nhận giữ revisions.\n13. Wake dồn khi orchestrator busy hoặc thay agent: chỉ một active owner, context/handoff đúng.",
+      "kind": "test-requirement"
+    },
+    {
+      "id": "SRC493",
+      "path": "docs/design/verification.md",
+      "startLine": 62,
+      "endLine": 62,
+      "excerpt": "23. Config export/log không chứa secret value; boot settings đọc được khi registry chưa mở mà không tạo hai nguồn active policy.",
+      "kind": "test-requirement"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+}

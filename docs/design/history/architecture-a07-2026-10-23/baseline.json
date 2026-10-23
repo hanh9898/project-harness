@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "138452f590c3e342b6da9d08364f7e07cb98acfb90d7c536a431f444ad9eec00"
+    },
+    {
+      "originalPath": "docs/design/harness-composition.md",
+      "snapshotPath": "before/docs/design/harness-composition.md",
+      "sha256": "b3bbc39c33e2ef4824ae41111e1ca4bc7c4fd82ea1b1312d70e0ea9428a09c12"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "b3da00763cbdcbd7e1636c81bff8a88c7119728775afc2a3d3d82e6a832cb901"
+    },
+    {
+      "originalPath": "docs/design/modules.md",
+      "snapshotPath": "before/docs/design/modules.md",
+      "sha256": "005f83e9df5c79592d4046154a4ba3b48f739cf81e8272f94ee5ca55bd7cb3c9"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "7a7a791b81edf4bff1be626c938ec7a7ca5668f3b758fc34b594e508c8bff546"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+}

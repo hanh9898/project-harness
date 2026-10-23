@@ -1,0 +1,65 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "887c64081f80b191b50a49e7b83efd791c85531f0e2d5fb081b3bd2d5640b746"
+    },
+    {
+      "path": "docs/design/technical-session-authority.md",
+      "snapshot": "before/docs/design/technical-session-authority.md",
+      "sha256": "0d946274272cd32c60cfc1f4fb2fb7b95e70697b98b2da8c2fc4411b5063f67e"
+    },
+    {
+      "path": "docs/design/technical-owner-ingress.md",
+      "snapshot": "before/docs/design/technical-owner-ingress.md",
+      "sha256": "a09a305a5d6e1c72894fea7537221968905468cd04bea66ed162f88cda6a51c1"
+    },
+    {
+      "path": "docs/design/technical-workflow-execution.md",
+      "snapshot": "before/docs/design/technical-workflow-execution.md",
+      "sha256": "59d6c2f0f504bf5c748ba82630b185512a80ecced27d374ca3e4f75aa7bba498"
+    },
+    {
+      "path": "docs/design/technical-scheduling.md",
+      "snapshot": "before/docs/design/technical-scheduling.md",
+      "sha256": "10e23202d2346e01bff2354f83ec9ff69495724f5e8c20d90e0921b627380ac4"
+    },
+    {
+      "path": "docs/design/technical-evaluation-release.md",
+      "snapshot": "before/docs/design/technical-evaluation-release.md",
+      "sha256": "27504bf2ee3bc7ce29e62d70116d3ac7aad68fb8fe8577b11155de4059638ca3"
+    },
+    {
+      "path": "docs/design/technical-plugin-deployment.md",
+      "snapshot": "before/docs/design/technical-plugin-deployment.md",
+      "sha256": "caec32294dba495f20431f80bdea5ba36a621e324783bf6fac51a9cd3b8a574f"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "3c697941bfae37876342a73b67cae0e006007c1e39e9f220599993e5622de567"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "snapshot": "before/docs/design/architecture.md",
+      "sha256": "90610800369873243b526ea6463492fd6aa0f23048f496c01980cf410ed84fe1"
+    },
+    {
+      "path": "docs/design/scope-80-20.md",
+      "snapshot": "before/docs/design/scope-80-20.md",
+      "sha256": "7da1896ff2b59937a4981292ed631514891f7962252c25148e5dab5ca24741b8"
+    },
+    {
+      "path": "docs/design/v1-acceptance-matrix.md",
+      "snapshot": "before/docs/design/v1-acceptance-matrix.md",
+      "sha256": "cae56a855ff7e72b659311c7650e4858b5e90edf4928ccac4cbd3b6bb8fa9849"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "snapshot": "before/docs/design/verification.md",
+      "sha256": "c4bd56d72463d715ed0cb29cb9fe852ef0b35569ff658d2bcf5ffeb79690f4c7"
+    }
+  ],
+  "protectedConceptRegisterSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642"
+}

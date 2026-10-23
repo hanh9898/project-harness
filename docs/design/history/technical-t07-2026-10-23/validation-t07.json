@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "documentation/provenance and graph payload checks only",
+  "nativeRecordsVerified": 2,
+  "beforeSnapshotsVerified": 15,
+  "relativeFileLinksVerified": 1392,
+  "originalConceptsRelationsConstraintsSourcesRequirementsMappingsPreserved": true,
+  "runtimeEvidenceChanged": false,
+  "addedSource": "SRC515",
+  "addedConstraint": "K76",
+  "updatedQuestion": "CQ24",
+  "graphSourcePinsVerifiedByBuilder": 515,
+  "embeddedGraphModelEquality": "passed via Node vm",
+  "graphHtmlCharacters": 507233,
+  "modelSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642",
+  "newRuntimeTests": 0,
+  "v1CasesUnexecuted": 14,
+  "technicalClosure": false
+}

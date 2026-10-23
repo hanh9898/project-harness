@@ -1,0 +1,32 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-session-authority.md",
+      "snapshot": "before/docs/design/technical-session-authority.md",
+      "sha256": "0d946274272cd32c60cfc1f4fb2fb7b95e70697b98b2da8c2fc4411b5063f67e"
+    },
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "887c64081f80b191b50a49e7b83efd791c85531f0e2d5fb081b3bd2d5640b746"
+    },
+    {
+      "path": "docs/design/technical-owner-ingress.md",
+      "snapshot": "before/docs/design/technical-owner-ingress.md",
+      "sha256": "a09a305a5d6e1c72894fea7537221968905468cd04bea66ed162f88cda6a51c1"
+    },
+    {
+      "path": "docs/design/onboarding-implementation.md",
+      "snapshot": "before/docs/design/onboarding-implementation.md",
+      "sha256": "260c6e921ceb34b7c630be8ad72cec49c27bc6e744cd78691400f3e6691789c2"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "3c697941bfae37876342a73b67cae0e006007c1e39e9f220599993e5622de567"
+    }
+  ],
+  "report": "docs/design/paseo-012-dispatch-facts-r5.md",
+  "reportSha256": "ca73459ecbb718e6921d7cd219a9f8e24bc1def40b5decaa9439a4f167b0e89d",
+  "protectedConceptRegisterSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642"
+}

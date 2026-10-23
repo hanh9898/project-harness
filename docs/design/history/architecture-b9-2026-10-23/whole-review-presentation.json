@@ -1,0 +1,68 @@
+{
+  "phase": "design",
+  "preview": [
+    {
+      "width": 728,
+      "contentHeight": 3303,
+      "capturedHeight": 3303,
+      "consoleMessages": [
+        {
+          "level": "log",
+          "text": "architecture review ready 4 operating traces 8 module boundaries"
+        }
+      ],
+      "screenshot": {
+        "mimeType": "image/png",
+        "width": 728,
+        "height": 3303
+      }
+    }
+  ],
+  "render": {
+    "htmlRender": {
+      "attachmentId": "53d0b426-056c-4920-a3df-13786d026007-cd3e1dc6-aeae-448e-be78-1dd54cdfd954-html",
+      "title": "Project Harness · Whole-system architecture",
+      "height": 2000,
+      "heights": [
+        [
+          320,
+          5760
+        ],
+        [
+          375,
+          5321
+        ],
+        [
+          430,
+          4814
+        ],
+        [
+          520,
+          4468
+        ],
+        [
+          640,
+          3465
+        ],
+        [
+          728,
+          3303
+        ],
+        [
+          860,
+          3090
+        ],
+        [
+          1000,
+          2948
+        ],
+        [
+          1144,
+          2799
+        ]
+      ]
+    },
+    "message": "Shown to the reader above your reply. Don't mention or describe the page; reply with only what it doesn't already say."
+  },
+  "scope": "Current whole-harness synthesis presented for A12 confirmation; not a production UI/runtime or architecture acceptance."
+}

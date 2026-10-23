@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "threadTitleAtExport": "Hướng dẫn orchestration trong T3 Code",
+  "tool": "mcp__t3_code__t3_thread_read",
+  "view": "messages",
+  "sourcePagesSavedByUtc": "2026-10-23T02:31:53Z",
+  "cutoffPosition": 2584,
+  "cutoffItemId": "turn-item:message:425366e2-b93b-4b69-b3fc-fcd9c068ecc6",
+  "firstPosition": 0,
+  "pageCount": 7,
+  "sourcePageItemCount": 682,
+  "includedItemCount": 681,
+  "countsByType": {
+    "user_message": 196,
+    "assistant_message": 485
+  },
+  "userEventCount": 196,
+  "classificationCounts": {
+    "question_or_instruction": 11,
+    "research_or_spike_requested": 23,
+    "explicit_requirement": 15,
+    "accepted_scoped": 88,
+    "rejected_or_redirected": 11,
+    "continue_or_repitch_requested": 8,
+    "accepted_with_exception": 3,
+    "artifact_work_requested": 13,
+    "status_or_audit_requested": 14,
+    "clarification_requested": 7,
+    "informational_reply": 1,
+    "corrected_typo": 1,
+    "ambiguous_approval_scope": 1
+  },
+  "lastResponseHasMore": false,
+  "lastResponseNextPosition": 2585,
+  "truncatedItems": 0,
+  "excludedAfterCutoffPositions": [
+    2585
+  ],
+  "redactionsApplied": [],
+  "completenessScope": "All messages-view items returned by seven consecutive API pages, from position 0 through this user's request P2584. Numeric position gaps are activity omitted by this view, not missing message pages.",
+  "limitations": [
+    "Paginated read is not an atomic database snapshot; export is bounded to an already-present user item.",
+    "Structured API responses are preserved; transport bytes and provider-native transcripts are not captured.",
+    "Messages view excludes tool requests/results, reasoning, child-thread transcripts and attachment bytes.",
+    "API updatedAt is retained as updatedAt; original send timestamps not returned are not invented.",
+    "No claim about deleted/edited content that the API did not return.",
+    "SHA-256 verifies local byte integrity, not independent authenticity or approval semantics.",
+    "Round labels, classification and claim assessments are this audit's interpretation; original text remains separate."
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5012,
+      "sha256": "81bc3931f3f78a60c6870dceaafa5b198f64a78401b42e0f4a4be02f7be40355"
+    },
+    {
+      "path": "build-evidence.py",
+      "bytes": 12358,
+      "sha256": "b50a614b9edb0d3ac7816beb7c8da179f3126c64f8982b58b5258eeb72691745"
+    },
+    {
+      "path": "decision-ledger.md",
+      "bytes": 15956,
+      "sha256": "56cc5bdcd503b9464f4fdbd803a106931397457734a40b0cae57e7baa02c3d9e"
+    },
+    {
+      "path": "document-comparison.json",
+      "bytes": 13689,
+      "sha256": "28d8747fa1aec7419c3c2b8e55d51fcbced79bbf7782985f458fe088c199b17f"
+    },
+    {
+      "path": "messages.jsonl",
+      "bytes": 857483,
+      "sha256": "a0a368f0ddae0d44fa6650afd0d31eed9927c933e36a7f73080523ab4420b0e7"
+    },
+    {
+      "path": "review-notes.json",
+      "bytes": 57551,
+      "sha256": "fdd4c0ccd096a06b4748784f117f9bac93a457d528c60b8ec442fe7d887e0342"
+    },
+    {
+      "path": "rounds.json",
+      "bytes": 159563,
+      "sha256": "5b100f9a988ad345673e043b7b2a8edc4d9b9ec8c21c8a72880850a5a50af577"
+    },
+    {
+      "path": "rounds.md",
+      "bytes": 418819,
+      "sha256": "a2ade4d1400e619dc4cce164f5021780a0b9a219f068039e0f016bd700f2cb34"
+    },
+    {
+      "path": "source-pages/messages-01.json",
+      "bytes": 160794,
+      "sha256": "abcf41556822709a54eae4ff48d32ae1173769f81f57a32e2806821340ddc4d4"
+    },
+    {
+      "path": "source-pages/messages-02.json",
+      "bytes": 136486,
+      "sha256": "a062711e783e3269ab1784df1a9dc4b78130e7791bfeaf7fd148cc42eea6620e"
+    },
+    {
+      "path": "source-pages/messages-03.json",
+      "bytes": 118662,
+      "sha256": "79def7b7e14c77381a8dfc0a02327c0457fa5fc9edcb4bc6a748ac37d8919189"
+    },
+    {
+      "path": "source-pages/messages-04.json",
+      "bytes": 131314,
+      "sha256": "78a6af27f259eb678e3fde47f5359bf65271e16a2f76ceff27d6aabf8f68b738"
+    },
+    {
+      "path": "source-pages/messages-05.json",
+      "bytes": 124750,
+      "sha256": "110a80103b6d5bef54df8328945293479ac9d98972343b5531e39aea02b01223"
+    },
+    {
+      "path": "source-pages/messages-06.json",
+      "bytes": 114942,
+      "sha256": "9ca0c942efcbeb6e14f48ddf6339cdf71cfa9150cc38606c84d90f928ea680d4"
+    },
+    {
+      "path": "source-pages/messages-07.json",
+      "bytes": 104530,
+      "sha256": "dbce345c1af4148050ef06c781aba1781288fbc520733ba09571e2024560d2df"
+    },
+    {
+      "path": "transcript.md",
+      "bytes": 636156,
+      "sha256": "2435383fd28a0338cf9e74d39751b0c6b8e6ba91111f7bfbae1dbc665f280314"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "local-daemon-upgrade-verification",
+  "date": "2026-10-23",
+  "targetVersion": "0.12.0",
+  "host": "Mac-MN-14.local",
+  "installTopology": "Paseo Desktop-managed local daemon",
+  "beforeVersion": "0.11.1",
+  "afterVersion": "0.12.0",
+  "cliVersion": "0.12.0",
+  "method": "paseo daemon restart --timeout 60 --json; app and CLI were already 0.12.0",
+  "health": "ok",
+  "configUnchanged": true,
+  "sameServerId": true,
+  "sameSupervisor": true,
+  "workerReplaced": true,
+  "agentSnapshotBeforeCount": 32,
+  "agentSnapshotAfterCount": 32,
+  "previouslyVisibleAgentIdsMissing": [],
+  "previousRunningAgentsAfter": [
+    "idle",
+    "idle",
+    "idle"
+  ],
+  "pluginCompatibilityIssue": {
+    "id": "hbu-agent-config",
+    "status": "failed",
+    "declaredPaseoRange": ">=0.11.0 <0.12.0",
+    "actualError": "Plugin requires Paseo >=0.11.0 <0.12.0; daemon is 0.12.0.",
+    "resolution": "Requires compatible plugin/migration; no compatibility guard bypass, HBU source edit or automatic agent prompt was performed."
+  },
+  "privateBackup": "/Users/hanhnt2/.paseo-upgrade-backups/daemon-0.11.1-to-0.12.0-20261023T090617Z",
+  "backupScope": "Config copy and observed status/agent/plugin snapshots; not a full point-in-time runtime state backup.",
+  "scope": "Daemon/version/reachability/config/ID observations only; no claim that prior work continued without interruption or that HBU/plugin workflows are operational."
+}

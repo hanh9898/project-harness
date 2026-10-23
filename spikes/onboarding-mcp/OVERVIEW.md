@@ -1,0 +1,3 @@
+Disposable Project Harness experiment for one project. It injects a configuration MCP into two labeled native Codex sessions and saves revisioned configuration and handover outside chat. A deterministic driver simulates the user's separate Spawn action.
+
+Requires daemon 0.11.1 and an existing Codex profile. This spike uses trusted local plugin code and a loopback MCP endpoint. It reads that profile and assigned sources, stores only spike state, and never edits native profiles. Build-ready is limited to the bounded smoke contract; production workflows, role fencing and profile CRUD are unverified.

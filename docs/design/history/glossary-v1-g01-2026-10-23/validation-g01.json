@@ -1,0 +1,30 @@
+{
+  "scope": "Document/data verification after explicit D01 confirmation; no runtime or browser test claim",
+  "registerSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed",
+  "checks": {
+    "sourcePinsExact": 493,
+    "owningDefinitionsMatch": 155,
+    "reviewEntriesMatchAcceptedRegister": 96,
+    "runtimeEvidenceUnchanged": true,
+    "semanticRecordProjectionsUnchanged": [
+      "concepts",
+      "relations",
+      "constraints",
+      "questions",
+      "mappings"
+    ],
+    "packedHtmlMatchesRegister": true,
+    "htmlJavaScriptSyntax": "pass",
+    "localMarkdownLinksAndAnchorsChecked": 500,
+    "localLinkErrors": 0,
+    "frozenHistoryBundleVerifier": "pass",
+    "explicitQAPointersAndFrozenReviewHashes": "pass"
+  },
+  "graphHtmlCharacters": 511218,
+  "notes": [
+    "Source pin validation checks exact excerpt consistency, not independent entailment of every relation.",
+    "A source-backed model is not runtime proof.",
+    "Browser layout was not re-tested for this data/provenance follow-up.",
+    "Session closure G02 remains a user decision."
+  ]
+}

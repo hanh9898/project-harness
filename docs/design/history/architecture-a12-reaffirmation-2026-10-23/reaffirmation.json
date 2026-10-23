@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-session-closure-reaffirmation",
+  "session": "S01 Overall architecture",
+  "round": "A12",
+  "sourceClosure": "../architecture-a12-2026-10-23/closure-a12.json",
+  "sourceQuestionPosition": 3116,
+  "originalClosureAnswerPosition": 3118,
+  "sourcePage": "api-page.json",
+  "record": {
+    "position": 3149,
+    "itemId": "turn-item:message:5be50fdb-819f-437f-bc2e-ad60fbfbedab",
+    "messageId": "5be50fdb-819f-437f-bc2e-ad60fbfbedab",
+    "createdBy": "user",
+    "text": "Q1: ok",
+    "updatedAt": "2026-10-23T09:14:28.468Z",
+    "jsonPointer": "/structuredResponse/items/6"
+  },
+  "meaning": "Explicit Q1 reaffirmation of the previously accepted architecture-session closure. Original accepted scope, technical/proof deferrals and separate V1 gate remain unchanged.",
+  "excludes": [
+    "new implementation authorization",
+    "HBU plugin migration authorization inferred from a generic Q1 answer",
+    "aggregate V1 acceptance or new runtime proof"
+  ]
+}

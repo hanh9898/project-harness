@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": {
+    "originalRecordsUnchanged": {
+      "sources": true,
+      "contexts": true,
+      "concepts": true,
+      "relations": true,
+      "constraints": true,
+      "questions": true,
+      "mappings": true,
+      "conflicts": true,
+      "decisions": true
+    },
+    "requirementMeaningsAndPriorTracesUnchanged": true,
+    "baselineFiles": 14,
+    "localMarkdownLinks": 2197,
+    "sourcePinsValidatedByBuilder": 513,
+    "newRelationStatusesConservative": true,
+    "inlineHtmlChars": 502872,
+    "headroom": 9128
+  },
+  "errors": [],
+  "scope": "Concept/document consistency, not runtime proof or architecture closure."
+}

@@ -1,0 +1,75 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/v1-concept-register.json",
+      "snapshotPath": "before/docs/design/v1-concept-register.json",
+      "sha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+    },
+    {
+      "originalPath": "docs/design/v1-concept-graph-audit.json",
+      "snapshotPath": "before/docs/design/v1-concept-graph-audit.json",
+      "sha256": "09739af0a68f1baa0d0366d21b75bf6291d0dd0ec170660e3a5ea98ca83e16b8"
+    },
+    {
+      "originalPath": "docs/design/v1-concept-graph-audit.md",
+      "snapshotPath": "before/docs/design/v1-concept-graph-audit.md",
+      "sha256": "ef5d958904427232923ccbae994fa4c03d54fad6fe824a9aee7bc094253dd875"
+    },
+    {
+      "originalPath": "docs/design/build-v1-concept-views.py",
+      "snapshotPath": "before/docs/design/build-v1-concept-views.py",
+      "sha256": "3beb33525c0af5b4c8c8be1235c72baf405508fbfbb597a87d057cd3804aa16d"
+    },
+    {
+      "originalPath": "docs/design/v1-concept-browser.template.html",
+      "snapshotPath": "before/docs/design/v1-concept-browser.template.html",
+      "sha256": "cc204a39472b093cddcb4873c29f9c827633914a3f3894937e5fe428a11ed0fc"
+    },
+    {
+      "originalPath": "docs/design/v1-concept-graph.html",
+      "snapshotPath": "before/docs/design/v1-concept-graph.html",
+      "sha256": "7b5f6145e06c5ddbc1c31ef8194348fcfaf0ebff7c0ad42a34786ccc7b305371"
+    },
+    {
+      "originalPath": "docs/design/v1-competency-ledger.md",
+      "snapshotPath": "before/docs/design/v1-competency-ledger.md",
+      "sha256": "4596ac3ebdb8d323a0558c03563351fcdd68a798710cf8c4c833c64d580fc60b"
+    },
+    {
+      "originalPath": "docs/design/v1-concept-validation.md",
+      "snapshotPath": "before/docs/design/v1-concept-validation.md",
+      "sha256": "1dc7a0e136f332d211a656440fb5b23b40aed333b9378f0d11887c7e425a36f6"
+    },
+    {
+      "originalPath": "docs/design/v1-glossary-completion-plan.md",
+      "snapshotPath": "before/docs/design/v1-glossary-completion-plan.md",
+      "sha256": "82c986d36bd99ddfe2fb7ee92dbf34f95b56cfb3558b0951269384a5bfdcbc4c"
+    },
+    {
+      "originalPath": "GLOSSARY-MAP.md",
+      "snapshotPath": "before/GLOSSARY-MAP.md",
+      "sha256": "1433d6694c53fcd453da838ba45d0c254fd8437c27aed4dc66dd2dab6ff73e8d"
+    },
+    {
+      "originalPath": "GLOSSARY.md",
+      "snapshotPath": "before/GLOSSARY.md",
+      "sha256": "b16fba2a090001517339cd3e78e5b142a4a849a6688ca98c6ef20219a572b605"
+    },
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "c1ca4c138316975b27ab127049f9232965894bf3cf0c48b127eb0e1d16101dc5"
+    },
+    {
+      "originalPath": "docs/design/harness-composition.md",
+      "snapshotPath": "before/docs/design/harness-composition.md",
+      "sha256": "342f615d18d5320ebf201abbb2dd57d45a35a70aa7a108c940a6e3b59aef56a9"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "433f3023b013ec8d18f4913466b5bcc062afcd7fa28450cfafd01544412d8e56"
+    }
+  ],
+  "scope": "Before B9 documentation graph synchronization after A11; original glossary closure and source evidence stay historical."
+}

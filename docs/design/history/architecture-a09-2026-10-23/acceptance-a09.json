@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A09",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2986,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb0514332481919ee364dd1c05eb48",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb0514332481919ee364dd1c05eb48",
+      "createdBy": "agent",
+      "text": "Đã lưu [A08](docs/design/history/architecture-a08-2026-10-23/acceptance-a08.json). Tiếp theo có hai quyết định.\n\n❓ **Q1 — Kho tri thức có module `Knowledge` sở hữu Interface riêng?**\n\nModule này quản lý ghi/đọc/tìm kiếm bài học, phạm vi, nguồn, lịch sử và trạng thái cần kiểm lại.\n\n➡️ **Đề xuất: đồng ý.** MCP, daily retro và runtime dùng cùng Interface. Work tiếp tục giữ trạng thái thực thi/context snapshots; AgentDefinitions giữ cấu hình agent; Criteria giữ tiêu chí và Verdict.\n\nĐây là module trong cùng plugin, dùng nền lưu trữ đã chốt.\n\n---\n\n❓ **Q2 — Project Orchestrator được ghép workflow cho từng task mà không phải phát hành plugin?**\n\nVí dụ: ghép routing → các nhánh review song song → sửa và đánh giá, bằng những khối/Tools đã đăng ký.\n\n➡️ **Đề xuất: đồng ý.** Runtime kiểm cấu trúc, contracts, quyền và giới hạn; lưu/pin kế hoạch rồi chạy. Mỗi cách ghép mới không cần chờ Harness Engineering phát hành lại plugin.\n\nKhi muốn đăng ký thành workflow tái sử dụng, hoặc thêm/sửa code step, Tool, Skill hay hành vi vận hành lâu dài, thay đổi mới đi qua candidate → kiểm → activation.",
+      "updatedAt": "2026-10-23T06:56:29.205Z",
+      "jsonPointer": "/structuredResponse/items/2"
+    },
+    {
+      "position": 2988,
+      "itemId": "turn-item:message:e29453f7-e606-4b4e-971b-ca8c8355e45e",
+      "messageId": "e29453f7-e606-4b4e-971b-ca8c8355e45e",
+      "createdBy": "user",
+      "text": "đồng ý",
+      "updatedAt": "2026-10-23T06:58:34.613Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A09.Q1",
+      "status": "accepted",
+      "meaning": "Knowledge is the owning module/Interface for sourced scoped learned-note lifecycle, history/qualification/recheck and retrieval. Work retains execution/context snapshots, AgentDefinitions agent bindings and Criteria criteria/Verdicts. Same plugin/storage foundation."
+    },
+    {
+      "id": "A09.Q2",
+      "status": "accepted",
+      "meaning": "Project Orchestrator can compose a task-specific workflow from registered blocks/Tools, validate contracts/structure/authority/bounds, pin its plan version and run without plugin release. Reusable registration or persistent code/Tool/Skill/operating behavior changes use candidate/check/activation."
+    }
+  ],
+  "excludes": [
+    "exact Knowledge methods/backend/schema or new service/database",
+    "execution of arbitrary unverified generated code",
+    "bypass of output/criteria/effect permissions or GA01/checkpoint rules",
+    "fixed run-scoped definition identity/storage or installer/version choice",
+    "architecture closure, V1 acceptance or production implementation"
+  ],
+  "continuation": {
+    "sourcePage": "continuation-page.json",
+    "jsonPointer": "/structuredResponse/items/1",
+    "position": 2994,
+    "itemId": "turn-item:message:1cb028d2-b388-4ab8-8ddb-d6f43e9b80b5",
+    "createdBy": "user",
+    "text": "Tiếp tục",
+    "meaning": "Continue the active design interview; no replacement objective or new architecture acceptance."
+  }
+}

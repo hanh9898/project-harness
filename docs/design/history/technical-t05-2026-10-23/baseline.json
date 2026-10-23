@@ -1,0 +1,27 @@
+{
+  "snapshots": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "4098baa1144d398f2dc4ceb1daca357d29c771a7be349eeab8fcdc650618027e"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "ff8eb48aab09a32ece27478de299a3d16264288e91bf76840123f96d230c5e9c"
+    },
+    {
+      "path": "docs/design/modules.md",
+      "snapshot": "before/docs/design/modules.md",
+      "sha256": "89b547ce89f02b92a9c87f786b4470f07fc2dba6865da1cc17ca5643919945b2"
+    },
+    {
+      "path": "docs/design/paseo-boundary.md",
+      "snapshot": "before/docs/design/paseo-boundary.md",
+      "sha256": "36ab426be3cc41d1531587d1d34a50e9a0e402133ca9d24b900370585c2c9221"
+    }
+  ],
+  "report": "docs/design/paseo-012-scheduling-facts-r3.md",
+  "reportSha256": "851dd80127e11d99b5bae034057e6fc752441b2fb0cb90859fafbdb9db5657e2",
+  "protectedConceptRegisterSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+}

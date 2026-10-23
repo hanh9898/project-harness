@@ -1,0 +1,53 @@
+{
+  "host": "Mac-MN-14.local",
+  "daemonVersion": "0.11.1",
+  "sdkVersion": "0.11.1",
+  "profile": {
+    "id": "agent_profile_mvj6g8mc_6xmhwd3zwgd",
+    "name": "test",
+    "provider": "codex",
+    "model": "gpt-5.6-luna",
+    "modeId": "full-access",
+    "thinkingOptionId": "low"
+  },
+  "requestId": "native-skill-r2",
+  "agentId": "034b9569-6b13-4206-a3e6-3686d9b4a615",
+  "workspaceId": "wks_ebf50e875dc771db",
+  "beforeReload": {
+    "status": "running",
+    "updatedAt": "2026-10-22T06:50:17.614Z"
+  },
+  "afterReload": {
+    "status": "running",
+    "updatedAt": "2026-10-22T06:50:22.392Z"
+  },
+  "pluginPids": [
+    1839,
+    8107
+  ],
+  "providerPolicy": {
+    "model": "gpt-5.6-luna",
+    "effort": "low",
+    "approval_policy": "never",
+    "sandbox_policy": {
+      "type": "read-only"
+    }
+  },
+  "result": {
+    "status": "completed",
+    "skillName": "mattpocock-skills:codebase-design",
+    "skillDigest": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+    "quote": "**Depth is a property of the interface, not the implementation.**"
+  },
+  "commandCount": 70,
+  "skillCount": 68,
+  "lastTimelineTimestamp": "2026-10-22T06:50:31.679Z",
+  "limits": [
+    "One Codex profile only",
+    "Manual SKILL.md path, not per-agent skill isolation",
+    "Plugin reload only, not daemon crash",
+    "Final result consumed by explicit CLI reconcile",
+    "No write/network bypass test",
+    "No native UI interaction verification"
+  ]
+}

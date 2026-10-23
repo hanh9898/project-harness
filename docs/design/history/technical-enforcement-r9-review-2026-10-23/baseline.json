@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-23T12:44:47.778922+00:00",
+  "snapshots": [
+    {
+      "path": "docs/design/technical-session-authority.md",
+      "snapshot": "before/docs/design/technical-session-authority.md",
+      "sha256": "f10b4f8f6236bc96725969dd02ac43ccfa0aa9eea74566841290b88d34419fa9"
+    },
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "f78a1a4938931fe950f1c47e1b5e3ac9a6e05a3a2a8df1f3e74d53a92fb49cda"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "93da37feaab0dde10033cf14c637bf79c2a7401f7c79ea7c4e303bd480f4b5e7"
+    }
+  ],
+  "protectedConceptRegisterSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642"
+}

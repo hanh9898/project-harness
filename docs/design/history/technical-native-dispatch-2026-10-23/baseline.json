@@ -1,0 +1,27 @@
+{
+  "createdAt": "2026-10-23T12:36:04.092812+00:00",
+  "scope": "Further technical design after beta rebase; no production implementation or new policy acceptance",
+  "snapshots": [
+    {
+      "path": "docs/design/technical-session-authority.md",
+      "snapshot": "before/docs/design/technical-session-authority.md",
+      "sha256": "22d70879d9af6dfe28458acce14a6c725c0afe24bd435a29255a8f00762cb285"
+    },
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "snapshot": "before/docs/design/technical-design-grill.md",
+      "sha256": "48b15ce2cf3d45c0cf0e140d0ee54f23a0ee144f8a3c9f9979fc4c4511e21360"
+    },
+    {
+      "path": "docs/design/README.md",
+      "snapshot": "before/docs/design/README.md",
+      "sha256": "4182f6c14f85b0dfb3985fd4d92b94aa1b457705428620ee72065347e62b65c9"
+    },
+    {
+      "path": "docs/design/onboarding-implementation.md",
+      "snapshot": "before/docs/design/onboarding-implementation.md",
+      "sha256": "260c6e921ceb34b7c630be8ad72cec49c27bc6e744cd78691400f3e6691789c2"
+    }
+  ],
+  "protectedConceptRegisterSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642"
+}

@@ -1,0 +1,50 @@
+{
+  "round": "A11",
+  "acceptedPositions": [
+    3047,
+    3058,
+    3060
+  ],
+  "acceptance": "acceptance-a11.json",
+  "validation": "validation-a11.json",
+  "currentDocuments": [
+    {
+      "path": "docs/design/architecture-grill.md",
+      "sha256": "c1ca4c138316975b27ab127049f9232965894bf3cf0c48b127eb0e1d16101dc5"
+    },
+    {
+      "path": "docs/design/harness-composition.md",
+      "sha256": "342f615d18d5320ebf201abbb2dd57d45a35a70aa7a108c940a6e3b59aef56a9"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "sha256": "dd6ecfadbe9b6489b39706b017dec3d6bf86b3afdb2b7e4f1704e86efee9d27d"
+    },
+    {
+      "path": "docs/design/modules.md",
+      "sha256": "89b547ce89f02b92a9c87f786b4470f07fc2dba6865da1cc17ca5643919945b2"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "sha256": "8ea0cd5d1574e6f8b154695c70b68e88177775163187b1d4cc419594ab85c1ba"
+    },
+    {
+      "path": "docs/design/first-run-ux.md",
+      "sha256": "d3befc530b23cce2f00f2a71b156db34e3af3f46595c7707f4719a8559fa51d2"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "sha256": "7ccc16b206177298df4dfb9efad790292dbb866d158280eb46296c27427d30b7"
+    },
+    {
+      "path": "docs/design/README.md",
+      "sha256": "433f3023b013ec8d18f4913466b5bcc062afcd7fa28450cfafd01544412d8e56"
+    },
+    {
+      "path": "docs/ui/GLOSSARY.md",
+      "sha256": "20b241120424ff902016078608e4952a82908a15e51cb9dcb33bad615aeb40a6"
+    }
+  ],
+  "nextWork": "B9 graph sync and current whole-harness synthesis, then separate explicit shared-understanding confirmation.",
+  "closure": false
+}

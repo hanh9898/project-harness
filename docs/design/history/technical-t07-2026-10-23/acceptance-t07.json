@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-technical-design-decision",
+  "round": "T07",
+  "session": "Detailed technical design — Paseo 0.12",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3362,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb4667be34819183aef352c089ef94",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb4667be34819183aef352c089ef94",
+      "createdBy": "agent",
+      "text": "Khảo sát đã xong. Có một lựa chọn về cách cài để giữ đúng chính sách tự cập nhật:\n\n❓ **Q1 — V1 cài plugin từ một thư mục triển khai local do Releases quản lý?**\n\n➡️ **Đề xuất: đồng ý.**\n\n- Cài qua Paseo một lần, giữ nguyên plugin ID và đường dẫn.\n- Code phát triển nằm trong repo fork; Releases chuẩn bị từng patch rồi publish và yêu cầu Paseo reload.\n- SQLite, credentials và executable recovery nằm ngoài phần source được thay.\n- Các patch vẫn tự chạy trong quyền đã cấp, không thêm bước duyệt tay.\n\nLý do: managed Git/npm update của Paseo có cơ chế tự khôi phục runtime khi startup lỗi và dọn bản cũ. Harness cần phối hợp việc đó với migration và dữ liệu hiện tại. [Nguồn Paseo](https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/plugins/index.ts#L696).\n\nPhương án khác là dùng managed update và thiết kế recovery tương thích với cơ chế ấy. [Đề xuất T07](docs/design/technical-plugin-deployment.md) đã ghi rõ hai hướng; chưa cài hoặc đổi cấu hình thật.",
+      "updatedAt": "2026-10-23T11:35:11.888Z",
+      "jsonPointer": "/structuredResponse/items/6"
+    },
+    {
+      "position": 3364,
+      "itemId": "turn-item:message:ab435cc5-e52c-4b7a-b3b8-ae2b35145cfe",
+      "messageId": "ab435cc5-e52c-4b7a-b3b8-ae2b35145cfe",
+      "createdBy": "user",
+      "text": "ok",
+      "updatedAt": "2026-10-23T11:39:53.471Z",
+      "jsonPointer": "/structuredResponse/items/7"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "T07.Q1",
+      "status": "accepted",
+      "meaning": "V1 installs the self-updating plugin through Paseo from its prepared local deployment directory, retaining a stable plugin runtime ID/path. The fork holds development source; Releases prepares/publishes checked patches and requests native reload. SQLite, credentials and the operation-pinned independent Recovery Executable remain outside replaced source. Authorized patches retain Fast/Deep and need no extra per-patch manual approval."
+    }
+  ],
+  "retains": [
+    "Paseo owns native lifecycle, Sessions, profiles and selected native cadence",
+    "data-aware compatible independent recovery and bounded Fix-forward",
+    "one plugin, one project, no additional permanent service",
+    "T03/T05, gate V01/V02 and explicit orchestrator lifecycle/arming/Pause"
+  ],
+  "excludes": [
+    "live install/configuration/native operations or automatic conversion of an existing managed installation",
+    "approval/proof of a particular filesystem swap, symlink, SDK/private API or whole-plugin hash mechanism",
+    "T0 technical session closure, V1 pass or full production implementation",
+    "HBU operations or broader agent authority"
+  ]
+}

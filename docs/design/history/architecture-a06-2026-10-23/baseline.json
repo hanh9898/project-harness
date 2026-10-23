@@ -1,0 +1,426 @@
+{
+  "files": [
+    {
+      "originalPath": "GLOSSARY.md",
+      "snapshotPath": "before/GLOSSARY.md",
+      "sha256": "53a4186d0dfb8f7689cabd360fe1044181e0a08352ae63d3acf3a552b263ff7d"
+    },
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "11a7311ae27963051a71d9c5213c53e413dd76d91356e8eaf33bf71fe14d07b8"
+    },
+    {
+      "originalPath": "docs/design/harness-composition.md",
+      "snapshotPath": "before/docs/design/harness-composition.md",
+      "sha256": "287b91412767af102d0113f07fe97de8e2c4def087a3e057130692e77b53fc86"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "411e53961d82914858c4df824a7df544bd076378e97af6c314396cbccdc7ad99"
+    },
+    {
+      "originalPath": "docs/design/modules.md",
+      "snapshotPath": "before/docs/design/modules.md",
+      "sha256": "447e9993edbb729f15d9e5d2ee3e79343b9cb132c4594e34beb3d3136b1b6b08"
+    },
+    {
+      "originalPath": "docs/design/configuration.md",
+      "snapshotPath": "before/docs/design/configuration.md",
+      "sha256": "c89d9f734343c9e0ec7149eb230c403c65c5ccc15ae09444c4c3bdc8e5e4bdad"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "064fd28c19bd7d21acbed432bca1461b520030c2c0c4abd2d086c5a6ec53eeda"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC324",
+      "path": "GLOSSARY.md",
+      "startLine": 14,
+      "endLine": 14,
+      "excerpt": "An agent given MCP Tools to configure the project's initial harness settings and explain plugin usage through native Paseo conversation before the user starts Harness Engineering. It handles initial setup rather than the detailed project work owned by the Project Orchestrator.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC325",
+      "path": "GLOSSARY.md",
+      "startLine": 22,
+      "endLine": 22,
+      "excerpt": "The Project Harness's shared catalog of reusable Agent Definitions and selectable capabilities. It describes available configurations rather than running Agent Sessions and does not itself authorize every orchestrator to use every definition.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC326",
+      "path": "GLOSSARY.md",
+      "startLine": 30,
+      "endLine": 30,
+      "excerpt": "An orchestrator's policy specifying the Agent Definitions it may use and the permitted modes of use. It is separate from capability descriptions in the Agent Catalog and does not replace authority or execution limits.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC327",
+      "path": "GLOSSARY.md",
+      "startLine": 38,
+      "endLine": 38,
+      "excerpt": "A native Paseo-managed profile containing supported agent launch settings such as provider, model, thinking, mode and related options.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC328",
+      "path": "GLOSSARY.md",
+      "startLine": 46,
+      "endLine": 46,
+      "excerpt": "A responsibility assigned to an agent, identifying the kind of work it accepts, when it should receive that work and the result it must return. Changing execution configuration does not by itself change the Role's responsibility.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC329",
+      "path": "GLOSSARY.md",
+      "startLine": 54,
+      "endLine": 54,
+      "excerpt": "A project-plugin-managed agent configuration referencing ordered primary and fallback Paseo Agent Profiles, selected Skills and a Principle Selection policy; native profiles supply provider and model settings. Skills are explicitly named when work is assigned without requiring an isolated Skill catalog for the Agent Session.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC330",
+      "path": "GLOSSARY.md",
+      "startLine": 62,
+      "endLine": 62,
+      "excerpt": "A package of instructions, methods and resources for a kind of agent work, potentially including scripts, references or assets. Reading its guidance is distinct from executing an action.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC331",
+      "path": "GLOSSARY.md",
+      "startLine": 70,
+      "endLine": 70,
+      "excerpt": "A rule of thought used to reason, choose and evaluate decisions. A Principle supplies decision guidance while a Skill supplies a method; packaging a Principle as a Skill does not remove that distinction.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC332",
+      "path": "GLOSSARY.md",
+      "startLine": 78,
+      "endLine": 78,
+      "excerpt": "A callable capability through which an agent performs an action or obtains a result from its environment. A CLI command, MCP tool or another interface can expose that capability.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC333",
+      "path": "GLOSSARY.md",
+      "startLine": 86,
+      "endLine": 86,
+      "excerpt": "The component that executes workflows under defined structure and rules, coordinating transitions, parallel work, continuation, retries and recovery. In this project it is part of the Paseo Plugin and carries out agent decisions within the workflow's permitted scope.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC334",
+      "path": "GLOSSARY.md",
+      "startLine": 94,
+      "endLine": 94,
+      "excerpt": "The component within Project Harness responsible for coordinating project work, consisting of an Orchestrator Agent and work-queue and workflow-execution mechanisms. It has its own work lifecycle and is distinct from its agent's current Session.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC335",
+      "path": "GLOSSARY.md",
+      "startLine": 102,
+      "endLine": 102,
+      "excerpt": "The agent responsible for reasoning and decisions within an orchestrator, including clarifying requirements, planning and delegation. Both orchestrators contain an Orchestrator Agent, while durable work state is not confined to that agent's Session.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC336",
+      "path": "GLOSSARY.md",
+      "startLine": 110,
+      "endLine": 110,
+      "excerpt": "The initial state of the Project Orchestrator, prepared to receive and explore project requirements directly with the user and gain capabilities through harness development. It remains the same project-work responsibility rather than a third orchestrator.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC337",
+      "path": "GLOSSARY.md",
+      "startLine": 118,
+      "endLine": 118,
+      "excerpt": "The component within Project Harness responsible for building, verifying and improving that harness, including constructing the Project Orchestrator. It combines an Orchestrator Agent with harness-development work management and execution, informed by operating feedback and retrospectives.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC338",
+      "path": "GLOSSARY.md",
+      "startLine": 127,
+      "endLine": 127,
+      "excerpt": "The shared foundation of harness capabilities that excludes rules specific to the target project. A change serving a project's own rules does not automatically belong to this foundation.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC339",
+      "path": "GLOSSARY.md",
+      "startLine": 136,
+      "endLine": 136,
+      "excerpt": "The Paseo extension used to implement Project Harness in this project.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC340",
+      "path": "GLOSSARY.md",
+      "startLine": 144,
+      "endLine": 144,
+      "excerpt": "The system built for one project, including the Project Orchestrator, Harness Engineering Orchestrator and their workflows, tools, skills and related capabilities. It supports both doing project work and developing how that work is performed.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC341",
+      "path": "GLOSSARY.md",
+      "startLine": 153,
+      "endLine": 153,
+      "excerpt": "A requirement or objective with an explicit scope and method of evaluation, used to assess project results or harness operation. Earlier evaluations retain the criterion version under which they were made.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC342",
+      "path": "GLOSSARY.md",
+      "startLine": 163,
+      "endLine": 163,
+      "excerpt": "An Evaluation Criterion stating what a project's product or work must achieve within a project, workflow or task scope.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC343",
+      "path": "GLOSSARY.md",
+      "startLine": 173,
+      "endLine": 173,
+      "excerpt": "An Evaluation Criterion for orchestration effectiveness, including operating quality, time, cost or the need for human intervention within a stated scope.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC344",
+      "path": "GLOSSARY.md",
+      "startLine": 183,
+      "endLine": 183,
+      "excerpt": "A specific issue requiring the user's decision before dependent work can continue, accompanied by evidence and a recommended course. The decision is retained with its work context.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC390",
+      "path": "GLOSSARY.md",
+      "startLine": 192,
+      "endLine": 192,
+      "excerpt": "The single existing software project served by a Project Harness, potentially spanning several repositories.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC391",
+      "path": "GLOSSARY.md",
+      "startLine": 308,
+      "endLine": 308,
+      "excerpt": "- **Repository** — A version-controlled code repository belonging to the target project. Several repositories can belong to the same Project without requiring separate Project Harnesses.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC392",
+      "path": "GLOSSARY.md",
+      "startLine": 312,
+      "endLine": 312,
+      "excerpt": "- **Native Paseo** — The host product that owns native projects, workspaces, profiles, agent sessions and their management interfaces. Project Harness references those resources and adds its own work coordination and improvement capabilities.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC393",
+      "path": "GLOSSARY.md",
+      "startLine": 316,
+      "endLine": 316,
+      "excerpt": "- **Workspace** — A native Paseo execution context referenced by harness work and associated with the project's code and runtime resources.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC394",
+      "path": "GLOSSARY.md",
+      "startLine": 197,
+      "endLine": 197,
+      "excerpt": "The initial configuration and usage guidance provided through native Paseo conversation before the user starts the harness build stage.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC395",
+      "path": "GLOSSARY.md",
+      "startLine": 202,
+      "endLine": 202,
+      "excerpt": "A scoped assessment of required checks, blockers, optional gaps and evidence against identified configuration and dependency revisions. Its conclusion concerns a named build or launch stage rather than general project competence.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC396",
+      "path": "GLOSSARY.md",
+      "startLine": 207,
+      "endLine": 207,
+      "excerpt": "The condition in which the required project context, configuration, capabilities, authority and limits are sufficient for the intended initial harness build.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC397",
+      "path": "GLOSSARY.md",
+      "startLine": 212,
+      "endLine": 212,
+      "excerpt": "The condition in which the Project Orchestrator's required configuration, references and tools are valid and its handover is saved, sufficient to offer user-initiated launch.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC398",
+      "path": "GLOSSARY.md",
+      "startLine": 217,
+      "endLine": 217,
+      "excerpt": "An evidence-based demonstration that a selected representative project task meets its applicable criteria within a stated capability scope.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC402",
+      "path": "GLOSSARY.md",
+      "startLine": 222,
+      "endLine": 222,
+      "excerpt": "An ability actually supported by a host, provider, tool or integration that is needed to fulfill the requested work contract. Availability of that ability does not establish permission to use it.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC403",
+      "path": "GLOSSARY.md",
+      "startLine": 227,
+      "endLine": 227,
+      "excerpt": "The scope granted to a caller for making decisions and causing actions on behalf of the project or harness. A role name, catalog entry or accessible tool does not by itself grant that scope.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC404",
+      "path": "GLOSSARY.md",
+      "startLine": 232,
+      "endLine": 232,
+      "excerpt": "Authorization for a particular action under the applicable allow, ask or deny policy and native enforcement. Approval for one action does not by itself broaden standing authority.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC405",
+      "path": "GLOSSARY.md",
+      "startLine": 237,
+      "endLine": 237,
+      "excerpt": "The authority usable for a particular action after the caller's granted scope, parent Assignment restrictions, current policies and revocations are taken into account.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC406",
+      "path": "GLOSSARY.md",
+      "startLine": 242,
+      "endLine": 242,
+      "excerpt": "An applicable ceiling on shared harness execution resources, such as concurrency, elapsed work time or measurable spending. The limit's scope includes relevant orchestrators, workers and consultations.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC407",
+      "path": "GLOSSARY.md",
+      "startLine": 247,
+      "endLine": 247,
+      "excerpt": "A permitted way of using an Agent Definition under a caller's Delegation Policy: Delegate, Consult or Workflow. A mode describes the use of the definition without independently granting tool permissions or further delegation.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC408",
+      "path": "GLOSSARY.md",
+      "startLine": 252,
+      "endLine": 252,
+      "excerpt": "The permitted-use mode in which a specific portion of work is assigned to an agent and its Outcome is returned.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC409",
+      "path": "GLOSSARY.md",
+      "startLine": 258,
+      "endLine": 258,
+      "excerpt": "The permitted-use mode for requesting advice, findings or options while the caller retains responsibility for carrying out the work. It grants no authority to modify project code or push, merge or release changes.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC410",
+      "path": "GLOSSARY.md",
+      "startLine": 264,
+      "endLine": 264,
+      "excerpt": "The permitted-use mode in which an Agent Definition can participate in a workflow coordinated by code. It does not by itself authorize the worker to start workflows or delegate further.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC411",
+      "path": "GLOSSARY.md",
+      "startLine": 271,
+      "endLine": 271,
+      "excerpt": "The role-associated method for performing a kind of agent work, described by its entry instructions and required result. It is distinct from a running workflow or the Skill package that carries guidance.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC412",
+      "path": "GLOSSARY.md",
+      "startLine": 277,
+      "endLine": 277,
+      "excerpt": "A Skill required as the entry guidance for an Agent Procedure and included in the Agent Definition selected for that procedure.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC414",
+      "path": "GLOSSARY.md",
+      "startLine": 283,
+      "endLine": 283,
+      "excerpt": "The always-applicable rules governing authority, evidence and quality across agent work, independent of the selected task-specific Principles.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC415",
+      "path": "GLOSSARY.md",
+      "startLine": 289,
+      "endLine": 289,
+      "excerpt": "The policy for selecting task-specific Principles using Automatic, Fixed or Hybrid selection while retaining the Core Operating Rules.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC416",
+      "path": "GLOSSARY.md",
+      "startLine": 295,
+      "endLine": 295,
+      "excerpt": "An identified version of harness-owned configuration, distinguishable from earlier and later edits. Existing work retains its selected configuration rather than silently adopting a later edit.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC475",
+      "path": "GLOSSARY.md",
+      "startLine": 300,
+      "endLine": 300,
+      "excerpt": "A recorded answer to a Decision Request, retained with the relevant work context and revision. It resolves that issue without automatically expanding standing authority.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC482",
+      "path": "docs/design/configuration.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "> **Yêu cầu Skills hiện hành:** Agent Definition chọn bộ Skills cần dùng; khi giao việc, Orchestrator Agent chỉ định tường minh tên và nguồn Skill trong instructions. Agent Session có thể thấy các Skills khác từ môi trường dùng chung. Không yêu cầu per-agent catalog isolation; không cần fork, monkey patch hoặc đổi môi trường discovery để đáp ứng yêu cầu này. Phải kiểm nguồn Skill truy cập được và đánh giá kết quả công việc.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC484",
+      "path": "docs/design/configuration.md",
+      "startLine": 66,
+      "endLine": 66,
+      "excerpt": "Git giữ definitions/templates/skills/principles và catalog đội có version. SQLite dự kiến giữ mutable settings revisions, work/checkpoint/decision, receipts/cursors và active definition references. Artifacts lớn có reference/digest; secrets không nằm trong export/chat/log.",
+      "kind": "accepted-design-policy"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+}

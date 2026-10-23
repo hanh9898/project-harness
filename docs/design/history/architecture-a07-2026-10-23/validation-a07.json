@@ -1,0 +1,12 @@
+{
+  "exactNativeRecords": 2,
+  "acceptedChoices": 3,
+  "snapshotHashes": 5,
+  "existingLivePinsUnchanged": 1,
+  "conceptRegisterUnchanged": true,
+  "relativeFileLinksChecked": 151,
+  "phase": "design",
+  "A08": "unanswered",
+  "F-A03": "running; no dependent decision taken",
+  "runtimeOperationsOrTests": false
+}

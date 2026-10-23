@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A05",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2918,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adaf847c54c81919808c1c842680f97",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adaf847c54c81919808c1c842680f97",
+      "createdBy": "agent",
+      "text": "Giữ A01/A02. Mình hỏi ba quyết định nền trước; các câu về context, Skills và vòng vận hành sẽ đi tiếp theo câu trả lời.\n\n❓ **Q1 — Mỗi Project Harness có một repo chứa đủ source để tự phát triển?**\n\nCó hai cách tổ chức:\n\n- Fork repo base, chứa cả source plugin và tài sản theo dự án.\n- Repo dự án chỉ chứa phần tùy chỉnh, còn lõi plugin là dependency phát hành riêng.\n\n➡️ **Đề xuất: fork một repo base.** Trong repo phân rõ phần dùng chung và phần theo dự án: instructions, definitions, workflows, Skills riêng, job handlers, evaluators. Harness Engineering sửa → kiểm → cập nhật từ đây; phần dùng chung có thể đóng góp upstream. Codebase sản phẩm được tham chiếu từ harness.\n\n---\n\n❓ **Q2 — MCP là interface chính để agents điều khiển harness?**\n\nVí dụ, orchestrator cần đọc inbox, giao việc, tìm Skill, lưu Evidence, truy vấn Analytics hoặc yêu cầu activation.\n\n➡️ **Đề xuất: dùng MCP Tools cho Onboarding, hai orchestrator và specialists**, cấp theo vai trò, gọi cùng owner services với UI.\n\nCLI phục vụ recovery và scripts cần thiết; code jobs gọi Interface nội bộ. Shell/Git và Tools native vẫn được dùng phù hợp. Quyền được kiểm tại server/owner, không chỉ bằng cách ẩn Tools.\n\n---\n\n❓ **Q3 — Harness chỉ trực tiếp tự sửa những tài sản do chính bộ đó sở hữu?**\n\nVí dụ, nó có thể cải tiến Skill riêng của dự án, nhưng pstack/matt đang được nhiều agent trên máy dùng chung.\n\n➡️ **Đề xuất: đồng ý.** Harness tự sửa code plugin, instructions, workflows, Skills/Principles riêng, handlers, evaluators và schema qua quy trình kiểm/phát hành đã chốt.\n\nVới pstack/matt, native Paseo profiles hoặc công cụ cài chung, harness giữ nguồn/revision và thay đổi qua đúng cơ chế quản trị của chúng trong quyền đã cấp; không tự ghi đè cài đặt dùng chung vì đang cải tiến một dự án.",
+      "updatedAt": "2026-10-23T06:01:59.016Z",
+      "jsonPointer": "/structuredResponse/items/1"
+    },
+    {
+      "position": 2920,
+      "itemId": "turn-item:message:794615b1-2841-46b4-94d5-de7c08c5db2e",
+      "messageId": "794615b1-2841-46b4-94d5-de7c08c5db2e",
+      "createdBy": "user",
+      "text": "q1: ok q2: ok q3: ok",
+      "updatedAt": "2026-10-23T06:02:54.805Z",
+      "jsonPointer": "/structuredResponse/items/2"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A05.Q1",
+      "status": "accepted",
+      "meaning": "Fork repo base with source plugin and versioned operational/project assets, distinguish common and project parts, reference the target product codebase; build/install from that source and extract reusable upstream contributions."
+    },
+    {
+      "id": "A05.Q2",
+      "status": "accepted",
+      "meaning": "MCP is the primary agent access interface for harness operations for Onboarding, orchestrators and specialists, through shared owner services and role authority. CLI serves recovery/scripts; code handlers use internal Interfaces. Native tools and other MCP integrations remain usable."
+    },
+    {
+      "id": "A05.Q3",
+      "status": "accepted",
+      "meaning": "Direct self-mutation targets harness-owned code/assets. Shared external Skills/Principles, Paseo profiles and provider/tool installations retain their own owners and update/configuration paths; no implicit overwriting of shared machine installations."
+    }
+  ],
+  "scopeExclusions": [
+    "approval of exact repo paths/installer or Tool catalog/schema",
+    "new process/store or mandatory MCP wrapper for all external tools",
+    "new approval for every authorized local improvement",
+    "changes to previously authorized native Onboarding operations",
+    "architecture closure, production implementation or capability proof"
+  ],
+  "integrity": {
+    "note": "Hashes preserve saved bytes, not independent authorship or production proof. A06 proposals are not accepted by A05.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "sha256": "e6a2f654ae938c2816ffee712cf6ec12f08d7685c5b037c6045e1a77c9765ffb"
+      },
+      {
+        "path": "baseline.json",
+        "sha256": "2c28e7180bdfbb7c44bce7cc6ae3a94796bca6c671d148a7d913e5be47b5a8f8"
+      },
+      {
+        "path": "before/docs/design/README.md",
+        "sha256": "6bedb60de2d8592dcf56e29e04885006acce511c03619903ca147e9b18558476"
+      },
+      {
+        "path": "before/docs/design/architecture-grill.md",
+        "sha256": "cdf75d4ad6a0bfeb327884d8a303753188e0a8c046e0cdf7198fc31cc689dbfd"
+      },
+      {
+        "path": "before/docs/design/architecture.md",
+        "sha256": "088ac7d1181e37918f25b0098672066cc3628218cdd213cdc637971cfc842073"
+      },
+      {
+        "path": "before/docs/design/configuration.md",
+        "sha256": "bdde5f2932fb5179d2fdc2d14e94f10016882f64ea9906eea6c6e634e196eefa"
+      },
+      {
+        "path": "before/docs/design/modules.md",
+        "sha256": "75b535ec0b38a29a904cdf875275ffc865aa8f55717664ff3b2eee5e2007bfdf"
+      },
+      {
+        "path": "before/docs/design/onboarding-agent.md",
+        "sha256": "07f37a52c6fe9e52e1ce1a68d51f9eb230067c95ea9f9b2c0fba8f36ac08281b"
+      },
+      {
+        "path": "before/docs/engineering/GLOSSARY.md",
+        "sha256": "e6de3fb39cf98af98d3109a2b10f85659b63f6ba84980a63aed3a7bfa65c6048"
+      },
+      {
+        "path": "validation-a05.json",
+        "sha256": "72cf9ee3e60579ee3c12a1e13ff50b37551761075d4fd575b0d0c62378588cd4"
+      }
+    ]
+  }
+}

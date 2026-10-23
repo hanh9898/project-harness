@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "type": "explicit-current-user-confirmation",
+  "decisionId": "D01",
+  "round": "G01",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "capturedByUtc": "2026-10-23T04:26:22Z",
+  "sourceTool": "mcp__t3_code__t3_thread_read",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2710,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adacf0a26a881919506d09d9ecfb147",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adacf0a26a881919506d09d9ecfb147",
+      "index": 18,
+      "text": "Vòng đầu làm rõ **D01**. Các quyết định D02–D05 và GA01 giữ nguyên.\n\n❓ **Q1 — Chốt bộ English vocabulary D01 cho V1?**\n\nBạn có đồng ý chấp nhận **tên tiếng Anh chuẩn, định nghĩa và glossary sở hữu** của 96 mục trong [bản review D01](docs/design/v1-vocabulary-review.md), gồm:\n\n- **73 mục vocabulary** của hệ thống.\n- **23 thuật ngữ phổ thông/bên ngoài** chỉ giữ làm contextual references.\n\n➡️ **Đề xuất: đồng ý trong phạm vi trên.** Giữ aliases, anchors và các nhãn tiếng Việt đã duyệt. Việc này chưa phê duyệt toàn bộ quan hệ/cardinality trong graph, schema kỹ thuật hoặc khả năng runtime.\n\nCâu trả lời lần này sẽ được ghi thành **xác nhận mới, có phạm vi rõ ràng**. [Cây quyết định và nhật ký phiên](docs/design/glossary-v1-grill.md) đã được lưu; việc rà graph/CQs đang chạy song song.",
+      "updatedAt": "2026-10-23T03:05:52.267Z",
+      "jsonPointer": "/structuredResponse/items/18"
+    },
+    {
+      "position": 2720,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adad0b57d9481918d56cd53b789d890",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adad0b57d9481918d56cd53b789d890",
+      "index": 20,
+      "text": "Đã đọc và đối chiếu báo cáo: trong phạm vi rà soát, **chưa có thêm câu hỏi ngữ nghĩa cần chốt ngoài D01**.\n\n❓ **Q1 — Bạn đồng ý chốt tên tiếng Anh, định nghĩa và glossary sở hữu của 96 mục trong [bản review D01](docs/design/v1-vocabulary-review.md)?**\n\n➡️ **Đề xuất: đồng ý**, gồm 73 mục vocabulary và 23 contextual references; giữ các nhãn UI đã duyệt. Phạm vi này không bao gồm phê duyệt toàn bộ graph/cardinality hoặc runtime.\n\nPhiên vẫn chờ câu trả lời này, chưa kết thúc.",
+      "updatedAt": "2026-10-23T03:12:56.621Z",
+      "jsonPointer": "/structuredResponse/items/20"
+    },
+    {
+      "position": 2722,
+      "itemId": "turn-item:message:67d5036f-d3e0-47a5-a52f-1790abd4b024",
+      "messageId": "67d5036f-d3e0-47a5-a52f-1790abd4b024",
+      "index": 21,
+      "text": "ok",
+      "updatedAt": "2026-10-23T04:23:07.188Z",
+      "jsonPointer": "/structuredResponse/items/21"
+    }
+  ],
+  "scope": {
+    "reviewedEntryCount": 96,
+    "localVocabularyCount": 73,
+    "contextualReferenceCount": 23,
+    "includes": [
+      "canonical English names",
+      "concise definitions",
+      "owning glossary",
+      "preserved aliases and anchors",
+      "previously approved UI labels retained"
+    ],
+    "excludes": [
+      "approval of all graph relations/types/cardinalities",
+      "schema/API implementation",
+      "provider/runtime capability proof",
+      "whole-session closure"
+    ]
+  },
+  "integrity": {
+    "note": "SHA-256 protects saved bytes, not independent authorship or semantic certification.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "bytes": 31592,
+        "sha256": "37e22af727373a461e4cb02a912b94a6c82b6a08f8b2eb5fd6b24b79d1eee87a"
+      },
+      {
+        "path": "v1-vocabulary-review.md",
+        "bytes": 77787,
+        "sha256": "609c4d061b89a2034d31028654a1c6534b1c550f493a450605d71688d1ef2e27"
+      },
+      {
+        "path": "v1-vocabulary-review.json",
+        "bytes": 112139,
+        "sha256": "44db096c9b0b4df97a94d987659620de05dc13d83686df88d756d7910076b5f9"
+      },
+      {
+        "path": "baseline.json",
+        "bytes": 1823,
+        "sha256": "ff152f2b2867f0cadf6fc2fbf7173b5bcf5b4c11bf460d882632cc5c3191848c"
+      }
+    ]
+  }
+}

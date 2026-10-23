@@ -1,0 +1,16 @@
+{
+  "type": "bounded-factual-parent-review",
+  "report": "docs/design/paseo-012-technical-baseline-facts-r1.md",
+  "reportSha256": "b467b02f7a8243d9ab1380a9453b237de83150b87b9ea8723046c2ded9729af1",
+  "taskId": "node:delegated-task:command%3Amcp%3A8bec9096-70b2-40c9-a8b9-91d1f5f4fbac%3Adelegate-task%3Atechnical-paseo-012-runtime-contracts-r1-20261023",
+  "status": "completed-and-read",
+  "scope": "Version-pinned package/source contracts plus standalone runtime/module availability; not live MCP/SQLite/provider integration proof.",
+  "findings": [
+    "0.12.0 packages published and bundled runtime exposes node:sqlite; shell Node 20 does not.",
+    "Public plugin RPC/hooks do not register MCP Tools. Transport/auth is separate engineering.",
+    "Low-level plugin RPC requires daemon.manage and is not a scoped agent credential.",
+    "Timeout/reload/idempotency fields do not replace durable owner receipts/reconciliation/fencing."
+  ],
+  "decisionsChosen": false,
+  "hbuMutated": false
+}

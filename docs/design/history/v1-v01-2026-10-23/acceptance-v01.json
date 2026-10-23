@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-v1-acceptance-decision",
+  "round": "V01",
+  "session": "S02 V1 scope and acceptance",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3168,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb27c76c3081919147aec2805931a2",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb27c76c3081919147aec2805931a2",
+      "createdBy": "agent",
+      "text": "Tiếp theo chốt **cổng nghiệm thu V1**, trong khi subagent rà các hợp đồng kỹ thuật của Paseo 0.12.\n\n❓ **Q1 — Dùng sáu nhóm bằng chứng sau để công nhận V1 hoàn thành trên một dự án thật?**\n\n➡️ **Đề xuất: đồng ý.**\n\n1. **Bootstrap:** Onboarding → Harness Engineering → Project Orchestrator; người dùng cấu hình qua chat, không phải viết workflow code.\n2. **Công việc thật:** xử lý task từ chat/Backlog và comment GitLab, có kết quả/bằng chứng, polling lặp không tạo việc trùng.\n3. **Workflow/agents:** kiểm đủ năm pattern, có workflow tổ hợp chạy thật; Claude/Codex, Skills/Principles, fallback và continuation đúng hợp đồng.\n4. **Scheduling:** code/agent/workflow jobs; once/interval/cron, timezone, overlap/missed và phục hồi sau gián đoạn.\n5. **Self-improvement/update:** tự tạo và áp dụng thay đổi; kiểm cập nhật UI/runtime/schema cùng ca lỗi chứng minh recovery độc lập.\n6. **Analytics:** dữ liệu thật, Saved Views và drill-down tới evidence; dữ liệu thiếu được thể hiện rõ.\n\nĐây là cổng cho **V1 đầu tiên**. Các patch sau vẫn theo Fast/Deep policy đã chốt.\n\n---\n\n❓ **Q2 — Chứng minh self-improvement bằng ca có kiểm soát, không bắt đợi nhiều tuần số liệu vận hành trước khi nghiệm thu V1?**\n\n➡️ **Đề xuất: đồng ý.** Ít nhất một ca chứng minh harness tự phát hiện vấn đề → sửa → kiểm → kích hoạt. Ví dụ: cùng điều kiện, xử lý sự kiện trùng thất bại trước sửa và đạt sau sửa.\n\nĐiều đó chứng minh cải thiện trong phạm vi ca kiểm. Những tuyên bố rộng hơn về chi phí/chất lượng dài hạn vẫn phải chờ đủ dữ liệu; dashboard có thể ghi **chưa đủ kết luận**.",
+      "updatedAt": "2026-10-23T09:24:36.138Z",
+      "jsonPointer": "/structuredResponse/items/5"
+    },
+    {
+      "position": 3170,
+      "itemId": "turn-item:message:62d8649d-d2ac-43b4-b6c5-fc0073cf09df",
+      "messageId": "62d8649d-d2ac-43b4-b6c5-fc0073cf09df",
+      "createdBy": "user",
+      "text": "ok",
+      "updatedAt": "2026-10-23T09:25:32.721Z",
+      "jsonPointer": "/structuredResponse/items/6"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "V01.Q1",
+      "status": "accepted",
+      "meaning": "The aggregate first-V1 gate requires six evidence groups on one actual project and target Paseo 0.12: bootstrap without user workflow coding; real chat/Backlog/GitLab work and dedupe; all five patterns plus Claude/Codex/fallback/continuation contracts; general schedules and interruption handling; self-improvement/whole-plugin UI-runtime-schema update and independent compatible recovery; real-data deep Analytics/Saved Views/evidence. Later patches retain Fast/Deep policy."
+    },
+    {
+      "id": "V01.Q2",
+      "status": "accepted",
+      "meaning": "At least one controlled first-V1 case demonstrates the harness observe a defect, form/implement a change, verify comparable before/after behavior against the same criterion, and activate within authority. No mandatory multi-week live trend before V1; broader quality/cost claims remain limited by actual data and may be inconclusive."
+    }
+  ],
+  "excludes": [
+    "V1 test pass, product readiness or production implementation",
+    "closure of S02 before explicit shared-understanding confirmation",
+    "relaxation of mandatory quality/authority/recovery checks or every patch requiring a full gate",
+    "selection of exact SDK/runtime/SQLite/MCP implementation",
+    "migration or resumption of HBU"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "type": "documentation-model-followup",
+  "notUserAcceptance": true,
+  "scope": "B9 synchronization of scoped accepted A06–A11 meanings/rules, preserving the original glossary closure and runtime evidence.",
+  "delegation": {
+    "taskId": "node:delegated-task:command%3Amcp%3A8bec9096-70b2-40c9-a8b9-91d1f5f4fbac%3Adelegate-task%3Ab9-architecture-graph-delta-r6-20261023",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A8bec9096-70b2-40c9-a8b9-91d1f5f4fbac%3Adelegate-task%3Ab9-architecture-graph-delta-r6-20261023",
+    "status": "failed",
+    "reason": "Selected model is at capacity. Please try a different model.",
+    "resolution": "Parent performed the source extraction, conservative model delta and validation; no child artifact/result is claimed."
+  },
+  "changes": {
+    "concepts": [
+      "Instructions",
+      "Learned Knowledge"
+    ],
+    "newQuestions": [
+      "CQ52",
+      "CQ53",
+      "CQ54",
+      "CQ55",
+      "CQ56",
+      "CQ57"
+    ],
+    "uiMappings": [
+      "Pause (Orchestrator)",
+      "Resume (Orchestrator)"
+    ],
+    "engineeringMapping": "Knowledge module",
+    "relations": "12 inferred directed relations with unknown cardinalities; existing records unchanged",
+    "constraints": "11 scoped accepted architecture constraints",
+    "sourcePins": "20 narrow acceptance/definition excerpts",
+    "packing": "Lossless repeated-string interning based on actual JSON character savings; no payload fields removed."
+  },
+  "limits": [
+    "No new domain entity/service/database for Knowledge module or UI controls.",
+    "Original 155 concepts and CQ01–CQ51 preserved, including runtime evidence and earlier inferred/proposed status.",
+    "No complete native input inventory, Skill isolation, provider parity or Stop interception promise.",
+    "No architecture closure, aggregate V1 acceptance or production implementation."
+  ],
+  "validation": {
+    "builder": "passed",
+    "losslessPayload": "passed",
+    "inlineHtmlChars": 502872,
+    "inlineLimitChars": 512000,
+    "graphBrowserChecks": {
+      "desktop": {
+        "width": 728,
+        "checks": 24,
+        "result": "passed"
+      },
+      "mobile": {
+        "width": 375,
+        "checks": 24,
+        "result": "passed"
+      },
+      "existingBrowserSmoke": "passed; search/status/focus/inspection/CQ/reset",
+      "consoleErrors": 0
+    },
+    "overviewBrowserChecks": {
+      "desktop": {
+        "width": 728,
+        "checks": 17,
+        "result": "passed"
+      },
+      "mobile": {
+        "width": 375,
+        "checks": 17,
+        "result": "passed"
+      },
+      "consoleErrors": 0
+    }
+  },
+  "registerSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf",
+  "validationFile": "validation-b9.json",
+  "currentFiles": [
+    {
+      "path": "docs/design/v1-concept-graph-audit.md",
+      "sha256": "ae6a3fe610d5aa5f688e3d5867671e66943f40a41fe348b6b18192c533116c10"
+    },
+    {
+      "path": "docs/design/v1-competency-ledger.md",
+      "sha256": "e806220b70656ca3197f875ab8c6f4a5da82e733e128b19af3ce3225209fe01b"
+    },
+    {
+      "path": "docs/design/v1-concept-validation.md",
+      "sha256": "49ee777b82f6e8bf415be5cf00c1f204c829fefd5bfed59e5f667af821bcda48"
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "sha256": "8525b73cb0b7fa6299ff1aafe4aff7e800abd2279016582efd40dddc189d9a4c"
+    },
+    {
+      "path": "GLOSSARY-MAP.md",
+      "sha256": "876fa11b4ac77d38af15d5255e41c7c39d3702e77b882c6f38a9faa7e3d48491"
+    },
+    {
+      "path": "GLOSSARY.md",
+      "sha256": "d92675451a69f5ebeb1ba270f1040097a7bf639292d0214eb1af6edd57b573f4"
+    },
+    {
+      "path": "docs/design/architecture-grill.md",
+      "sha256": "e913ea52a18e237028572e56b4bf2bdb3fedb41849750291897e1fbb2cd8b71e"
+    },
+    {
+      "path": "docs/design/harness-composition.md",
+      "sha256": "a0629dff9b41910b4365ec709c1a48b878b9cd521d6401f45505aebb33b291dc"
+    },
+    {
+      "path": "docs/design/README.md",
+      "sha256": "27f330322977003ca499e645df1726c0c2c769791cf9f565d5bcd523c7bdfb64"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "sha256": "a6402c148b9861526d422213c4b0d9cab30af08feb5755136c7200be4aaa175e"
+    },
+    {
+      "path": "docs/design/modules.md",
+      "sha256": "89b547ce89f02b92a9c87f786b4470f07fc2dba6865da1cc17ca5643919945b2"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "sha256": "8ea0cd5d1574e6f8b154695c70b68e88177775163187b1d4cc419594ab85c1ba"
+    },
+    {
+      "path": "docs/design/first-run-ux.md",
+      "sha256": "d3befc530b23cce2f00f2a71b156db34e3af3f46595c7707f4719a8559fa51d2"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "sha256": "7ccc16b206177298df4dfb9efad790292dbb866d158280eb46296c27427d30b7"
+    },
+    {
+      "path": "docs/ui/GLOSSARY.md",
+      "sha256": "20b241120424ff902016078608e4952a82908a15e51cb9dcb33bad615aeb40a6"
+    },
+    {
+      "path": "docs/design/architecture-whole-harness-review.md",
+      "sha256": "9ffa8b66fced1f7a030077e67b14cb185f32f27144dec8491ab736f43a2a2743"
+    },
+    {
+      "path": "docs/design/v1-concept-register.json",
+      "sha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+    },
+    {
+      "path": "docs/design/v1-concept-graph-audit.json",
+      "sha256": "32219d16872a21f402f2c192d17528984907d689dd2e95ee8f6946a1338033b2"
+    },
+    {
+      "path": "docs/design/build-v1-concept-views.py",
+      "sha256": "78fb1edd8bab7c89c145d9bbb86fd25b96bc9b0deecbf4b7ee31b18f31636bb5"
+    },
+    {
+      "path": "docs/design/v1-concept-browser.template.html",
+      "sha256": "153e7ec1e7528b2f4ede773db79a65f06acef442df4146df9d4e686730d0525e"
+    },
+    {
+      "path": "docs/design/v1-concept-graph.html",
+      "sha256": "b1d70d16800ff75c8515963e02139bb64766b0e171540729a86fd56e79ed670f"
+    },
+    {
+      "path": "docs/design/architecture-whole-harness-review.html",
+      "sha256": "bfecac5bb968ea0651a8ac7e9a881a1e38e6dca649a1a9b295074db78a9ed975"
+    }
+  ]
+}

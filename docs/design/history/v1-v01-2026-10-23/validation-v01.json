@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": {
+    "nativeRecords": 2,
+    "beforeSnapshots": 4,
+    "localLinks": 126,
+    "matrixBundles": 14,
+    "allBundlesUnexecuted": true,
+    "conceptRegisterUnchanged": true,
+    "s02ClosureStillPending": true
+  },
+  "errors": [],
+  "scope": "Documentation/provenance/trace consistency only. No V1 case executed or technical runtime choice approved."
+}

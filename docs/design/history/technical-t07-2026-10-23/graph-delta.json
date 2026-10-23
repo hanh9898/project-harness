@@ -1,0 +1,15 @@
+{
+  "beforeSha256": "ea6f356020c84d7ea7b8f23a0527578891af9f75f445d22995d6acd412c2c122",
+  "afterSha256": "215a0f227dd9345a45db63041f866248e09f11e6ddcc1b144f47e889702f9642",
+  "added": {
+    "sources": [
+      "SRC515"
+    ],
+    "constraints": [
+      "K76"
+    ]
+  },
+  "changedQuestion": "CQ24",
+  "vocabularyChanged": false,
+  "runtimeEvidenceChanged": false
+}

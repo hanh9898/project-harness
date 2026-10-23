@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "documentation/provenance only",
+  "beforeSnapshotsVerified": 4,
+  "reportDigestVerified": true,
+  "relativeFileLinksVerified": 140,
+  "protectedConceptRegisterSha256": "ea6f356020c84d7ea7b8f23a0527578891af9f75f445d22995d6acd412c2c122",
+  "graphSourcePinsVerifiedByBuilder": 514,
+  "pendingDecision": "T07.Q1",
+  "newRuntimeTests": 0,
+  "v1CasesUnexecuted": 14
+}

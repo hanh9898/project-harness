@@ -1,0 +1,19 @@
+{
+  "beforeSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf",
+  "afterSha256": "ea6f356020c84d7ea7b8f23a0527578891af9f75f445d22995d6acd412c2c122",
+  "added": {
+    "sources": [
+      "SRC514"
+    ],
+    "constraints": [
+      "K75"
+    ],
+    "relations": [
+      "R249"
+    ]
+  },
+  "changedQuestion": "CQ17",
+  "frozenSource": "SRC188",
+  "vocabularyChanged": false,
+  "runtimeEvidenceChanged": false
+}

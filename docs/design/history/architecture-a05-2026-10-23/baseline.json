@@ -1,0 +1,266 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/architecture-grill.md",
+      "snapshotPath": "before/docs/design/architecture-grill.md",
+      "sha256": "cdf75d4ad6a0bfeb327884d8a303753188e0a8c046e0cdf7198fc31cc689dbfd"
+    },
+    {
+      "originalPath": "docs/design/architecture.md",
+      "snapshotPath": "before/docs/design/architecture.md",
+      "sha256": "088ac7d1181e37918f25b0098672066cc3628218cdd213cdc637971cfc842073"
+    },
+    {
+      "originalPath": "docs/design/modules.md",
+      "snapshotPath": "before/docs/design/modules.md",
+      "sha256": "75b535ec0b38a29a904cdf875275ffc865aa8f55717664ff3b2eee5e2007bfdf"
+    },
+    {
+      "originalPath": "docs/design/configuration.md",
+      "snapshotPath": "before/docs/design/configuration.md",
+      "sha256": "bdde5f2932fb5179d2fdc2d14e94f10016882f64ea9906eea6c6e634e196eefa"
+    },
+    {
+      "originalPath": "docs/design/onboarding-agent.md",
+      "snapshotPath": "before/docs/design/onboarding-agent.md",
+      "sha256": "07f37a52c6fe9e52e1ce1a68d51f9eb230067c95ea9f9b2c0fba8f36ac08281b"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "6bedb60de2d8592dcf56e29e04885006acce511c03619903ca147e9b18558476"
+    },
+    {
+      "originalPath": "docs/engineering/GLOSSARY.md",
+      "snapshotPath": "before/docs/engineering/GLOSSARY.md",
+      "sha256": "e6de3fb39cf98af98d3109a2b10f85659b63f6ba84980a63aed3a7bfa65c6048"
+    }
+  ],
+  "liveSourcePins": [
+    {
+      "id": "SRC388",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 14,
+      "endLine": 14,
+      "excerpt": "A command-line interface through which users or scripts call Project Harness functions from a terminal. It is an access interface introduced for a concrete need rather than the harness itself.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC389",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 22,
+      "endLine": 22,
+      "excerpt": "A component exposing Project Harness capabilities as Tools through Model Context Protocol. It is an access interface; V1 uses it for the Onboarding Agent's configuration and usage-guidance needs.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC419",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 30,
+      "endLine": 30,
+      "excerpt": "A detected difference between a resource's current source or dependency identity and the version previously checked or selected for work.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC442",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 36,
+      "endLine": 36,
+      "excerpt": "A durably tracked request for an action whose acceptance, progress and actual effects can remain distinguishable across interruption or uncertain responses.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC443",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 42,
+      "endLine": 42,
+      "excerpt": "A durable description of an intended action and its correlation to the responsible operation, distinguishable from evidence that the action actually took effect.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC444",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 47,
+      "endLine": 47,
+      "excerpt": "An acknowledgement that the particular acceptance or change declared by an interface has been durably recorded. Its meaning is limited to that declared stage rather than proving downstream execution or readiness.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC445",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 87,
+      "endLine": 87,
+      "excerpt": "- **Idempotency Key** — A caller- and operation-scoped request identity used to recognize repeated submissions of the same intent. In this design, matching payloads refer back to the prior receipt, while a conflicting payload is a conflict.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC446",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 52,
+      "endLine": 52,
+      "excerpt": "Assessment of recorded intent and observations from the resource owner to establish what happened and whether work can safely continue.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC447",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 58,
+      "endLine": 58,
+      "excerpt": "The code-controlled decision permitting new execution under the current pause state, resource limits, required capabilities and effective authority.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC448",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 91,
+      "endLine": 91,
+      "excerpt": "- **Retry** — Another permitted execution after a technical failure, distinct from a revision in response to quality feedback. A retry of step execution creates a new Attempt within the same Step Run.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC449",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 95,
+      "endLine": 95,
+      "excerpt": "- **Timeout** — The expiry of the permitted waiting period for a response or result. It does not establish that the worker stopped or that its effects were undone.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC450",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 99,
+      "endLine": 99,
+      "excerpt": "- **Cancellation** — A request to stop selected work, distinguishable from confirmation that the stop has taken effect. Prior effects, artifacts and history remain relevant to reconciliation.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC451",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 103,
+      "endLine": 103,
+      "excerpt": "- **Interruption** — A disruption of execution or communication, such as disconnection, process reload or crash, that can leave the state of work or effects uncertain.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC452",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 64,
+      "endLine": 64,
+      "excerpt": "A durable due-time associated with existing work, a step or an Attempt, whose meaning remains tied to that execution context.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC453",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 69,
+      "endLine": 69,
+      "excerpt": "A durable history of execution or operation intent, progress and observations that supports reconciliation and continuation after interruption.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC454",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 107,
+      "endLine": 107,
+      "excerpt": "- **Outbox** — Pending delivery records retained with local source progress so delivery can be resumed or reconciled without losing an accepted change.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC455",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 111,
+      "endLine": 111,
+      "excerpt": "- **Lease** — A time-bounded claim on dispatch or operation responsibility that does not itself prove an earlier holder can no longer cause effects.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC456",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 115,
+      "endLine": 115,
+      "excerpt": "- **Fencing** — Enforcement that rejects commands from superseded responsibility holders or execution attempts at the boundary where effects are accepted.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC457",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 119,
+      "endLine": 119,
+      "excerpt": "- **Observed State** — The state of a resource supported by an observation at an identified time and scope, including uncertainty when a required fact has not been established.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC458",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 123,
+      "endLine": 123,
+      "excerpt": "- **Desired State** — The requested target state of controlled work or a resource, distinct from what has actually been observed.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC459",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 127,
+      "endLine": 127,
+      "excerpt": "- **Unknown** — A qualification indicating that a required fact has not been established by available evidence.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC465",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 74,
+      "endLine": 74,
+      "excerpt": "The small recovery program packaged with the plugin but able to run outside its subprocess, including while that plugin cannot boot.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC466",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 131,
+      "endLine": 131,
+      "excerpt": "- **Backup** — A saved copy of data whose readability has been verified for the relevant preservation purpose. Its existence does not establish successful system restoration or authorize replacing current data.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC467",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 79,
+      "endLine": 79,
+      "excerpt": "The ability of a selected release or recovery program to operate safely with the current data format, retained work and relevant recorded effects.",
+      "kind": "accepted-glossary"
+    },
+    {
+      "id": "SRC476",
+      "path": "docs/engineering/GLOSSARY.md",
+      "startLine": 135,
+      "endLine": 135,
+      "excerpt": "- **Deadline** — A time boundary for waiting for a response or for the eligibility of an execution step. Reaching it can trigger timeout handling without proving that work or external effects have stopped.",
+      "kind": "accepted-context-reference"
+    },
+    {
+      "id": "SRC480",
+      "path": "docs/design/architecture.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "Settings chỉ còn Agents/Limits/Actions/Automations theo [configuration.md](configuration.md). Catalog đội có version mô tả role/when-to-use/procedure/result và tham chiếu agent definition; definition tham chiếu các native profile chính/fallback và quản lý bindings Skills/Principles trong harness; provider/model/thinking/options vẫn thuộc Paseo, worker chọn principles theo policy task và giữ bundle/revision trong work. Harness cải tiến definitions qua candidate nhưng không nới authority/settings. MAPE-K dùng chung kho tri thức này, không sinh thêm orchestrator; chi tiết tại [autonomous-team-proposal.md](autonomous-team-proposal.md).",
+      "kind": "design-alignment"
+    },
+    {
+      "id": "SRC482",
+      "path": "docs/design/configuration.md",
+      "startLine": 28,
+      "endLine": 28,
+      "excerpt": "> **Yêu cầu Skills hiện hành:** Agent Definition chọn bộ Skills cần dùng; khi giao việc, Orchestrator Agent chỉ định tường minh tên và nguồn Skill trong instructions. Agent Session có thể thấy các Skills khác từ môi trường dùng chung. Không yêu cầu per-agent catalog isolation; không cần fork, monkey patch hoặc đổi môi trường discovery để đáp ứng yêu cầu này. Phải kiểm nguồn Skill truy cập được và đánh giá kết quả công việc.",
+      "kind": "accepted-design-policy"
+    },
+    {
+      "id": "SRC484",
+      "path": "docs/design/configuration.md",
+      "startLine": 66,
+      "endLine": 66,
+      "excerpt": "Git giữ definitions/templates/skills/principles và catalog đội có version. SQLite dự kiến giữ mutable settings revisions, work/checkpoint/decision, receipts/cursors và active definition references. Artifacts lớn có reference/digest; secrets không nằm trong export/chat/log.",
+      "kind": "accepted-design-policy"
+    }
+  ],
+  "conceptRegisterSha256": "bdc1e584cf5e9eb3b1c8632c12ee9ae4cc4014e1327085bff01dc3c8f47ffbed"
+}

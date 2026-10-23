@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": {
+    "apiRecords": 2,
+    "beforeSnapshots": 8,
+    "unchangedLiveSourcePins": 6,
+    "conceptRegisterUnchanged": true,
+    "factualMemoUnchanged": true,
+    "fileLinks": 195,
+    "fileLinksWithLineSuffix": 2,
+    "conceptViewGenerator": "passed: 155 concepts / 236 relations / 63 constraints / 14 requirements / 51 questions / 110 mappings / 493 sources"
+  },
+  "errors": [],
+  "validationNote": "Initial link check treated two valid :line local file links as filenames. Corrected parsing and rechecked actual files; no source edits were needed.",
+  "scope": "Documentation/evidence consistency only; no runtime, live Paseo or behavior tests."
+}

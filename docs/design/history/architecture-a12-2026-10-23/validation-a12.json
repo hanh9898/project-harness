@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "apiRecords": 2,
+  "beforeSnapshots": 6,
+  "localLinks": 198,
+  "conceptRegisterUnchanged": true,
+  "sourcePinBuilderCheck": "passed, 513 pins",
+  "errors": [],
+  "scope": "Architecture closure evidence/doc consistency only. Live upgrade observations are separately scoped; HBU plugin remains incompatible."
+}

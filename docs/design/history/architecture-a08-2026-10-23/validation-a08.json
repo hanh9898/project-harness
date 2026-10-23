@@ -1,0 +1,16 @@
+{
+  "exactNativeRecords": 2,
+  "acceptedChoices": 3,
+  "snapshotHashesValid": 5,
+  "existingLivePinsUnchanged": 1,
+  "conceptRegisterUnchanged": true,
+  "relativeFileLinksChecked": 157,
+  "F-A03": {
+    "status": "completed and parent reviewed",
+    "path": "docs/design/instructions-context-facts-r3.md",
+    "sha256": "6995ec9387623f8c03bd7e7a045d30a59542ae3ce5e35135feaaead45a6d2121"
+  },
+  "phase": "design",
+  "A09": "both unanswered",
+  "runtimeOperationsOrTests": false
+}

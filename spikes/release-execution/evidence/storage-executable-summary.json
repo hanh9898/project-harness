@@ -1,0 +1,14 @@
+{
+  "testsRun": 10,
+  "failures": 0,
+  "errors": 0,
+  "sqliteVersion": "3.49.1",
+  "success": true,
+  "limits": [
+    "Temporary fixture schemas",
+    "No host reboot",
+    "Offline restore assumes exclusive ownership",
+    "Generation triggers track only fixture work table; not untracked tables or external effects",
+    "Executable version switch model; not production executable packaging"
+  ]
+}

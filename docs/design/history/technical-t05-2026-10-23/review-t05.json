@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "type": "bounded-factual-parent-review",
+  "report": "docs/design/paseo-012-scheduling-facts-r3.md",
+  "taskId": "node:delegated-task:command%3Amcp%3A8bec9096-70b2-40c9-a8b9-91d1f5f4fbac%3Adelegate-task%3Atechnical-native-schedules-facts-r3-20261023",
+  "status": "completed-and-read",
+  "sourcePin": "cafe4b01c8522ff39560241c5deb01427dc8dc5b",
+  "parentVerification": [
+    "Read target/cadence/run records and public SDK/CLI surface.",
+    "Read native manual run-once and tick guards at service.ts:557\u2013586.",
+    "Read restart settlement/cursor advancement at service.ts:612\u2013663.",
+    "Read atomic automatic claim at service.ts:780\u2013810 and completion advancement at 865\u2013895.",
+    "Compared against accepted V1 general scheduling, A11 Pause and code-only ownership baseline."
+  ],
+  "findings": [
+    "Native cadence, finite runs, run-once and native history already exist.",
+    "No code/workflow target or at-instant schedule was found in the inspected contract; SDK/plugin and heartbeat-control gaps remain.",
+    "Native primitives do not establish configurable bounded catch-up, shared Work admission, logical Pause or rebinding.",
+    "The earlier unconditional code-only harness scheduler assumption needs a scoped ownership decision; the requirement to reuse adequate native capabilities and avoid duplicate active schedulers remains."
+  ],
+  "primarySources": [
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/protocol/src/schedule/types.ts",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/schedule/service.ts#L557",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/schedule/service.ts#L612",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/schedule/service.ts#L780",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/client/src/index.ts",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/cli/src/commands/schedule/shared.ts#L48"
+  ],
+  "decisionFrontier": [
+    {
+      "id": "T05.Q1",
+      "status": "pending",
+      "recommendation": "Allow Triggers-owned schedules for harness agent/workflow Jobs when native contracts cannot meet required behavior, retaining native ownership where sufficient and one active scheduler per Job."
+    }
+  ],
+  "proposal": "docs/design/technical-scheduling.md",
+  "limits": [
+    "Static pinned source/package review, not live contract tests.",
+    "No native schedule migration, live operations or implementation.",
+    "No changed domain meaning/graph or T05 user acceptance.",
+    "T03 one-time SDK connection is separate from unsupported schedule methods.",
+    "Technical T0 and V1 proof remain open."
+  ],
+  "hbuMutated": false,
+  "decisionsChosen": false,
+  "reportSha256": "851dd80127e11d99b5bae034057e6fc752441b2fb0cb90859fafbdb9db5657e2",
+  "proposalSha256": "976b41479d562f59a2af66cdd74c33646665b54eb863ba9042add03d1f352891"
+}

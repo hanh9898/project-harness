@@ -1,0 +1,86 @@
+{
+  "purpose": "Document claims/open sections compared at audit; not evidence of user approval",
+  "documents": [
+    {
+      "path": "docs/design/scope-80-20.md",
+      "startLine": 90,
+      "endLine": 99,
+      "mustContain": "đề xuất chờ xác nhận",
+      "finding": "Aggregate acceptance gate remains unconfirmed.",
+      "sha256AtAudit": "e7fdbf44f8b80fc6b159c7ae074b5c735b6503b315acb23f34f5d931e51c40b2",
+      "exactExcerpt": "## 4. Nghiệm thu V1 — đề xuất chờ xác nhận\n\n1. Từ plugin mới cài và native profiles có sẵn, người dùng cung cấp context dự án; Harness Engineering Orchestrator dựng Project Orchestrator mà người dùng không viết workflow code.\n2. Một công việc thật đi từ chat hoặc Backlog qua workflow/workers, kiểm kết quả và bàn giao evidence; luồng GitLab nhận và xử lý comment mới đúng quyền, không tạo việc trùng khi polling lặp.\n3. Cả năm pattern có kiểm chứng, cùng ít nhất một workflow tổ hợp chạy thật. Codex/Claude, fallback và resume được kiểm theo hợp đồng đã chốt.\n4. Code Job, công việc agent và Workflow Run được quản lý lịch; once/interval/cron/timezone cùng overlap/missed policy được kiểm, gồm trường hợp host gián đoạn.\n5. Improvement Loop tạo và áp dụng thay đổi có bằng chứng. Tự cập nhật code plugin được kiểm bằng thay đổi UI, runtime và schema dữ liệu; có ca bản cập nhật lỗi để chứng minh recovery độc lập và trạng thái tiếp tục được bảo toàn.\n6. Dashboard dùng dữ liệu vận hành thật, lưu view và drill-down tới evidence; phân biệt quan sát với đánh giá có kiểm soát, hiển thị thiếu dữ liệu khi chưa có.\n\nCác mục này là yêu cầu nghiệm thu, chưa là test pass. SDK, scheduler implementation, storage schema và migration protocol vẫn cần thiết kế/kiểm chứng; không đổi yêu cầu sản phẩm chỉ vì spike chưa có capability."
+    },
+    {
+      "path": "docs/design/agent-delegation.md",
+      "startLine": 60,
+      "endLine": 67,
+      "mustContain": "Đang mở",
+      "finding": "Schemas/enforcement/context/resources remain technical design work.",
+      "sha256AtAudit": "af0e49e9ad503f398f33739548ad8d5bef65964d21a5c11e67ce737c6b464c70",
+      "exactExcerpt": "\n## Đang mở\n\n- Schema/validation cho allowed definitions và modes; điều kiện thực thi delegate tiếp.\n- Cưỡng chế Consult trên provider/host; cách phân slot và đo/enforce từng loại tài nguyên.\n- Nơi lưu/pin/evaluate policy và cách nhận diện thay đổi mở rộng authority; protocol revoke/stop/chuyển phiên theo provider.\n- Chi tiết context/result contract và identity của yêu cầu bổ sung/escalation; lưu/đối soát kết quả về muộn.\n- Tooltip/state labels của editor; schema/implementation tương ứng với các nhãn đã chốt."
+    },
+    {
+      "path": "docs/design/modules.md",
+      "startLine": 3,
+      "endLine": 5,
+      "mustContain": "TypeScript sketches",
+      "finding": "Module sketches are design, not implementation or blanket acceptance.",
+      "sha256AtAudit": "522dce1498e004bbd733c4a2e78cd8e7c2baaa59108606df4f512cb12c6aa068",
+      "exactExcerpt": "# Thiết kế deep modules\n\nThiết kế interface • 2026-10-23 • [Mục lục](README.md). Các TypeScript sketches là hợp đồng của harness, không phải SDK Paseo hoặc implementation đã chạy. [verification.md](verification.md) sở hữu ca kiểm và spike."
+    },
+    {
+      "path": "docs/design/modules.md",
+      "startLine": 304,
+      "endLine": 308,
+      "mustContain": "concurrency per Session",
+      "finding": "GA01 does not resolve per-Session concurrency.",
+      "sha256AtAudit": "522dce1498e004bbd733c4a2e78cd8e7c2baaa59108606df4f512cb12c6aa068",
+      "exactExcerpt": "## Bổ sung đã chốt — GA01 allocation identity\n\nWork giữ một Assignment cho mỗi lần giao agent work cụ thể. Khi retry/fallback được phép thực sự redispatch, tạo Assignment mới và giữ predecessor; retry kỹ thuật giữ Step Run và tạo Attempt mới. Session có thể tái sử dụng, nhưng Assignment đã giao không bị đổi recipient tại chỗ. Trường hợp mất response hoặc tiếp tục qua nhiều Turns giữ identity cũ để đối soát. Không ép code-only Attempts có Assignment hoặc đồng nhất Assignment/Attempt/Turn.\n\nLate results ghi dưới Assignment/Attempt gốc, chỉ reuse sau kiểm applicability/Evidence; thay Session orchestrator giữ nguyên các worker allocations đang chạy. Quy tắc đã chốt tại [GA01](v1-glossary-completion-plan.md#ga01-assignment-identity-acceptance), chưa phải schema/implementation runtime hoặc quyết định concurrency per Session."
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "startLine": 145,
+      "endLine": 160,
+      "mustContain": "D01 đóng",
+      "finding": "Document claims bulk vocabulary acceptance; original chat scope needs distinction.",
+      "sha256AtAudit": "e43d5df7e8de445eead8555a7633edc3414f3509fabd9ef5a223536baae564f5",
+      "exactExcerpt": "## Parent review — D01 draft ready for grouped review, 2026-10-23\n\n[Manifest](v1-vocabulary-review.json) và [audit](v1-vocabulary-audit-r2.md) của subagent phủ đúng 96/96 pending concept IDs ở snapshot được ghi trong manifest: 12 nghĩa đã chốt nhưng thiếu English names và 84 đề xuất chưa có owning definition. Parent đã kiểm lại exact coverage, IDs/references, độ dài định nghĩa và snapshot ban đầu. Không có material meaning question mới; việc chấp nhận bộ tên/định nghĩa/owners vẫn là D01 còn mở.\n\nBản đọc đầy đủ tại [English review MD](v1-vocabulary-review.md), bản tìm/lọc/đối chiếu tại [review HTML](v1-vocabulary-review.html); sinh lại bằng build-v1-vocabulary-review.py. 23 từ kỹ thuật phổ thông có contextual definitions và owner tham chiếu, không tự sinh thêm domain entities hoặc bắt buộc mỗi từ một glossary record. Chưa thêm bản dịch UI tiếng Việt; alias và anchors cũ được giữ trong manifest.\n\nParent đã thu hẹp các cạnh R024/R070/R099/R132/R143/R180/R181 theo nguồn thực; R164/R165/R222/R223 giữ rõ là modeling proposals. Sửa kiểm HTML lỗi thời đòi đúng 50 CQs khi mô hình đã có 51. HTML graph dùng bảng chuỗi lặp để nằm trong giới hạn inline preview; kiểm lossless bằng JavaScript xác nhận mọi trường và giá trị của register được khôi phục đầy đủ.\n\nValidation register và generated views đạt. English review đã preview/smoke ở 728/375 px: search, class/owner filter, definition detail và reset đạt, không console errors. Graph sau sửa đã preview/smoke lại ở 728/375 px: search/status/focused view/inspector/CQ trace/reset đạt, không console errors. Những kiểm này chỉ xác nhận tài liệu tương tác hoạt động, không chứng minh runtime hoặc tự chấp nhận D01.\n\n\n## Accepted review — complete English vocabulary D01, 2026-10-23\n\nSau phần giải thích rằng “Đội năng lực” là nhãn cũ của Agent Catalog / Danh mục agent, người dùng trả lời “Ok thế theo đề xuất”, chấp nhận bộ vocabulary theo bản review đã trình bày. Phạm vi chấp nhận là English canonical names, concise definitions, owners và aliases/anchors được bảo toàn cho 96 mục; 23 từ phổ thông giữ vai trò contextual references. D01 đóng; không tự chốt thêm bản dịch UI, storage types/cardinalities, protocol hoặc runtime capability.\n\nCác định nghĩa được chuyển vào glossary sở hữu. English definitions được đặt trước; wording tiếng Việt hiện có được giữ để đối chiếu. 10 tên có qualifier được dùng thống nhất trong register; tên draft cũ vẫn truy được như aliases theo đúng scope. Nhãn cũ “Đội năng lực” được dọn khỏi các surface/tài liệu hiện hành về Agent Catalog; fixture IDs, route team và code symbols được giữ."
+    },
+    {
+      "path": "docs/design/v1-glossary-completion-plan.md",
+      "startLine": 50,
+      "endLine": 52,
+      "mustContain": "schema",
+      "finding": "Technical investigation/proof frontier, not a claim all product decisions remain open.",
+      "sha256AtAudit": "e43d5df7e8de445eead8555a7633edc3414f3509fabd9ef5a223536baae564f5",
+      "exactExcerpt": "## Engineering investigation — không phải user interview\n\nKỹ thuật phải chọn/kiểm native APIs/version, provider authority enforcement, lost-response correlation, leases/fencing, scheduler source evidence/DST/races, immutable content/pinned revision application, effect reconciliation và independent recovery. Các schema, transport tool names, storage layout, library/interpreter, retention, installer và thresholds đo được vẫn là thiết kế/proof cần làm sau review mô hình. Quy tắc sản phẩm đã chốt không tự biến thành native capability."
+    },
+    {
+      "path": "docs/design/onboarding-implementation.md",
+      "startLine": 1,
+      "endLine": 9,
+      "mustContain": "đề xuất engineering",
+      "finding": "Latest schemas/commands are technical proposals; not production.",
+      "sha256AtAudit": "314aee6047aae742b40d519ee4de76d2a345035b57d45123559db8b7a180f718",
+      "exactExcerpt": "# Onboarding implementation specification\n\n2026-10-23. Đặc tả kỹ thuật để triển khai lát cắt đầu tiên; **chưa có implementation production hoặc kết quả nghiệm thu cho protocol này**. Các quy tắc sản phẩm kế thừa [Onboarding Agent](onboarding-agent.md), [contracts](onboarding-contracts.md), [configuration](configuration.md) và owning glossaries. Types, tên command nội bộ và trạng thái lưu trữ dưới đây là đề xuất engineering, không phải API Paseo hoặc thuật ngữ UI mới.\n\n## 1. Kết quả của lát cắt\n\nNgười dùng mở menu plugin trong project/workspace đã có, Spawn Onboarding Agent, cấu hình bằng native chat/MCP, lưu Build Readiness và Handover, rồi chủ động Spawn Harness Engineering Orchestrator. Reload/reconnect phải nhận lại đúng Session và thao tác đã ghi. Một lần bấm lại không tạo một orchestrator mới.\n\nĐiểm kết thúc kiểm được: Engineering Session nhận và xác nhận đúng Handover đã pin. Việc Engineering thực sự dựng các workflow, lịch và Project Orchestrator thuộc lát cắt tiếp theo. Menu vẫn thể hiện bước Project; nó chỉ cho Spawn khi có Launch Readiness và Handover hợp lệ do bước dựng tạo ra. Không báo đã dựng chỉ từ lời xác nhận bàn giao."
+    },
+    {
+      "path": "docs/design/release-policy.md",
+      "startLine": 62,
+      "endLine": 72,
+      "mustContain": "Check plan",
+      "finding": "Check Plan/cache identity/recovery protocols still need design.",
+      "sha256AtAudit": "e15b3e5e7327bc1316c8bb59b8f737fca2196bf58b5c1fa3fdbac218eaaca4b4",
+      "exactExcerpt": "## Thiết kế kỹ thuật tiếp theo\n\nĐề xuất chi tiết và bằng chứng cần kiểm tại [release-execution.md](release-execution.md). Các lựa chọn implementation trong tài liệu đó chưa mặc định được chấp nhận chỉ vì policy đã chốt.\n\n- Check plan: nhận diện vùng ảnh hưởng, chọn bộ kiểm và mô tả lý do, đầu vào, giới hạn. Chưa chốt cấu trúc dữ liệu/API.\n- Check identity: phiên bản code, nội dung lệnh kiểm, dependencies, cấu hình và môi trường liên quan; chỉ dùng lại khi có thể chứng minh phù hợp. Cần thiết kế invalidation và kết quả phụ thuộc dịch vụ ngoài.\n- Activation: journal bền vững, quyền thực thi duy nhất qua restart, xử lý mất phản hồi, tránh dùng kết quả kiểm của candidate cũ. Không coi mutex trong bộ nhớ là đủ.\n- Revision: kiểm chứng nội dung workflow/agent/skill/principle đã pin có thể được dùng lại cho Run qua Paseo mà không dựa vào file mutable hoặc giả định skill isolation.\n- Recovery: executable độc lập plugin, lựa chọn bản tương thích với dữ liệu hiện tại, khôi phục không replay tác động ngoài. Không mặc định rollback code sửa được migration dữ liệu.\n- Measurement: đo chi phí/latency thực tế trước khi đặt ngưỡng; định nghĩa cách nhận biết kiểm nặng và dữ liệu thiếu.\n"
+    },
+    {
+      "path": "docs/design/configuration.md",
+      "startLine": 1,
+      "endLine": 3,
+      "mustContain": "chưa triển khai schema này",
+      "finding": "Configuration schema is product design; partial spikes do not prove implementation.",
+      "sha256AtAudit": "251e235f7698bc9c39488962742612975a71119b8d72291859a9cc44c135aa50",
+      "exactExcerpt": "# Cấu hình Project Harness\n\nThiết kế hiện hành • 2026-10-22 • [Mục lục](README.md). Đã thu gọn theo nghiên cứu 80/20 và [danh mục agent](autonomous-team-proposal.md). Schema dưới đây là thiết kế của Project Harness; spike Paseo riêng mới kiểm một phần hợp đồng, chưa triển khai schema này."
+    }
+  ]
+}

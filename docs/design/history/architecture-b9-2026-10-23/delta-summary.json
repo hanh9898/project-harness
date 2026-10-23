@@ -1,0 +1,49 @@
+{
+  "conceptsAdded": [
+    "common.instructions",
+    "common.learned-knowledge"
+  ],
+  "relationsAdded": [
+    "R237",
+    "R238",
+    "R239",
+    "R240",
+    "R241",
+    "R242",
+    "R243",
+    "R244",
+    "R245",
+    "R246",
+    "R247",
+    "R248"
+  ],
+  "constraintsAdded": [
+    "K64",
+    "K65",
+    "K66",
+    "K67",
+    "K68",
+    "K69",
+    "K70",
+    "K71",
+    "K72",
+    "K73",
+    "K74"
+  ],
+  "questionsAdded": [
+    "CQ52",
+    "CQ53",
+    "CQ54",
+    "CQ55",
+    "CQ56",
+    "CQ57"
+  ],
+  "mappingsAdded": [
+    "UI.pause-orchestrator",
+    "UI.resume-orchestrator",
+    "CODE.Knowledge"
+  ],
+  "sourcesAdded": 20,
+  "registerSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf",
+  "originalRecordsUnchanged": true
+}

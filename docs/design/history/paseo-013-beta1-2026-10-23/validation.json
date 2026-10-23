@@ -1,0 +1,96 @@
+{
+  "type": "documentation-rebase-validation",
+  "checkedAt": "2026-10-23T12:29:25.854140+00:00",
+  "snapshotsVerified": 12,
+  "sourcePinsVerified": 515,
+  "localLinksVerified": 234,
+  "missingLocalLinks": [],
+  "conceptRegisterUnchanged": true,
+  "fullV1UnexecutedBundles": 14,
+  "checkedFiles": [
+    "docs/design/technical-design-grill.md",
+    "docs/design/technical-session-authority.md",
+    "docs/design/technical-owner-ingress.md",
+    "docs/design/technical-workflow-execution.md",
+    "docs/design/technical-scheduling.md",
+    "docs/design/technical-evaluation-release.md",
+    "docs/design/technical-plugin-deployment.md",
+    "docs/design/README.md",
+    "docs/design/architecture.md",
+    "docs/design/scope-80-20.md",
+    "docs/design/v1-acceptance-matrix.md",
+    "docs/design/verification.md",
+    "docs/design/paseo-013-beta1-baseline.md",
+    "docs/design/paseo-013-beta1-runtime-delta-r7.md",
+    "docs/design/paseo-013-beta1-dispatch-authority-delta-r8.md"
+  ],
+  "runtimeTestsRun": false,
+  "scope": "Document structure, exact citations, preserved history and evidence-state checks only.",
+  "packedGraph": {
+    "embeddedModelMatches": true,
+    "htmlCharacters": 507233,
+    "maximumCharacters": 512000
+  },
+  "currentFileHashes": [
+    {
+      "path": "docs/design/technical-design-grill.md",
+      "sha256": "48b15ce2cf3d45c0cf0e140d0ee54f23a0ee144f8a3c9f9979fc4c4511e21360"
+    },
+    {
+      "path": "docs/design/technical-session-authority.md",
+      "sha256": "22d70879d9af6dfe28458acce14a6c725c0afe24bd435a29255a8f00762cb285"
+    },
+    {
+      "path": "docs/design/technical-owner-ingress.md",
+      "sha256": "b923f4b8e1ed78548fab8b1bbd2e70593b2f0b6907a20ff05e57f1eb9f57ada8"
+    },
+    {
+      "path": "docs/design/technical-workflow-execution.md",
+      "sha256": "a9d562709e7dc487b144f8c16faa851f8beeeed65d1d49bf1af9831c9279f36d"
+    },
+    {
+      "path": "docs/design/technical-scheduling.md",
+      "sha256": "e6b8ee1dc2f799279735937f7e5604a13b140a3ef755b9259ed43246389fbe80"
+    },
+    {
+      "path": "docs/design/technical-evaluation-release.md",
+      "sha256": "d55bb7daa0a96b224fc286a703ebdae9c736923a33483791dc12541805c714c9"
+    },
+    {
+      "path": "docs/design/technical-plugin-deployment.md",
+      "sha256": "9c1037d94181d77c1da5683db1c378be84341a742025d431a81013a67bbaeb94"
+    },
+    {
+      "path": "docs/design/README.md",
+      "sha256": "4182f6c14f85b0dfb3985fd4d92b94aa1b457705428620ee72065347e62b65c9"
+    },
+    {
+      "path": "docs/design/architecture.md",
+      "sha256": "5a459d4e9047b25c5e3f56573713239dc517fd5d81a320f95244950d9cfeabd7"
+    },
+    {
+      "path": "docs/design/scope-80-20.md",
+      "sha256": "fcb57d88526cce1beef7d599718b5689b7aa8135243d3d83b0e514b4102c751f"
+    },
+    {
+      "path": "docs/design/v1-acceptance-matrix.md",
+      "sha256": "875149dfe894cd107289fa661a19bb468d08ecdb18b624f920f2c227976ade6c"
+    },
+    {
+      "path": "docs/design/verification.md",
+      "sha256": "f31169623cdf035ee5ceb6797dc875b2df82d2a80f435da2c0ccacb8d89a8554"
+    },
+    {
+      "path": "docs/design/paseo-013-beta1-baseline.md",
+      "sha256": "8efa8ff65f19f9fd166cb6df3b03efac5a492ace9dffcac08bb2dc8462dc47b4"
+    },
+    {
+      "path": "docs/design/paseo-013-beta1-runtime-delta-r7.md",
+      "sha256": "f4c90218f3764c02d1104e983421e794da96deae9ebdb96f26c8719740227513"
+    },
+    {
+      "path": "docs/design/paseo-013-beta1-dispatch-authority-delta-r8.md",
+      "sha256": "61fa48fdcb066adf712ceed1a2d3021430b92d03e2473a93e5a1d65cbf41e9ec"
+    }
+  ]
+}

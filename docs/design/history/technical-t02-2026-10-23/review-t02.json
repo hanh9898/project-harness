@@ -1,0 +1,47 @@
+{
+  "type": "bounded-factual-parent-review",
+  "report": "docs/design/paseo-012-mcp-auth-facts-r2.md",
+  "taskId": "node:delegated-task:command%3Amcp%3A8bec9096-70b2-40c9-a8b9-91d1f5f4fbac%3Adelegate-task%3Atechnical-mcp-auth-facts-r2-20261023",
+  "status": "completed-and-read",
+  "sourcePin": "cafe4b01c8522ff39560241c5deb01427dc8dc5b",
+  "parentVerification": [
+    "Independently read public PluginServerContext and setup/RPC implementation: SDK connected internally but not passed to setup.",
+    "Read public SDK client connection fields and quickstart: explicit URL/authentication path.",
+    "Read public MCP config union and native agent projections/storage: custom MCP configuration, including literal headers, persists.",
+    "Read daemon operation permission map: plugin RPC requires daemon.manage; no principal/gesture in handler contract.",
+    "Read versioned 2025-11-25 MCP transport requirements; did not infer native support for the reported 2026 revision."
+  ],
+  "primarySources": [
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/plugin/src/server/contracts.ts",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/plugins/plugin-process.ts#L259",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/client/src/index.ts#L77",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/public-docs/sdk/quickstart.md",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/protocol/src/agent-types.ts#L30",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/agent/agent-projections.ts#L297",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/agent/agent-storage.ts#L187",
+    "https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/authorization/operation-permissions.ts#L127",
+    "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports"
+  ],
+  "readyQuestions": [
+    {
+      "id": "T03.Q1",
+      "status": "pending",
+      "recommendation": "One-time explicit runtime SDK connection setup for the selected existing host; public client reconnects on plugin startup. Additional setup obligation, not new native host/profile manager."
+    },
+    {
+      "id": "T03.Q2",
+      "status": "pending",
+      "recommendation": "Direct HTTP MCP with separate scoped revocable Session credentials, explicitly accepting native Session JSON persistence; bundled stdio helper is alternative with extra per-client processes."
+    }
+  ],
+  "limits": [
+    "Facts do not demonstrate a live leak, encryption, full native logging redaction, Claude/Codex auth/reconnect parity, or startup integration.",
+    "Daemon RPC admission is not original-principal or human-gesture attestation.",
+    "No private IPC interception, ambient credentials or default endpoint assumed.",
+    "No production implementation, live operations, HBU mutation or scope acceptance.",
+    "No T0 technical-design closure or V1 test pass."
+  ],
+  "decisionsChosen": false,
+  "hbuMutated": false,
+  "reportSha256": "0a03bd383312919efa09dd92de008033a589aa0a785b391dc0f11c650cec675b"
+}

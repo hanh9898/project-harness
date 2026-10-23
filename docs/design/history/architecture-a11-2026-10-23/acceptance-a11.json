@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A11",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 3047,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb0ddae88881919829f27bc281180a",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb0ddae88881919829f27bc281180a",
+      "createdBy": "agent",
+      "text": "Đã lưu [A10 và bằng chứng](docs/design/history/architecture-a10-2026-10-23/acceptance-a10.json).\n\n[Khảo sát Paseo](docs/design/orchestrator-stop-pause-facts-r4.md) cho thấy Stop gửi yêu cầu ngắt lượt; nó không tự tắt lịch hoặc đặt trạng thái Pause cho harness.\n\n❓ **Q1 — Giữ Stop của Paseo và dùng Pause/Resume riêng để điều khiển closed loop?**\n\n➡️ **Đề xuất: đồng ý.**\n\n- **Stop:** yêu cầu ngắt lượt hiện tại. Event/lịch sau đó vẫn có thể đánh thức agent.\n- **Pause:** lưu trạng thái bền vững, chặn tự đánh thức và giao việc mới của orchestrator đó cho tới **Resume**.\n\nPanel và MCP gọi cùng owner Interface. Nếu cần phối hợp lịch native, phải hiển thị trạng thái chờ/xác nhận đúng thực tế; không đoán Pause từ sự kiện `canceled`.\n\nPhương án khác là yêu cầu Stop native cũng Pause closed loop; hiện cần bổ sung capability được kiểm chứng để bảo đảm điều này.\n\n---\n\n❓ **Q2 — Pause orchestrator vẫn để workers đang chạy tiếp tục và giữ các sự kiện đến?**\n\n➡️ **Đề xuất: đồng ý.**\n\nWorkers đã nhận việc tiếp tục; kết quả/evidence được lưu chờ Resume. Các jobs kéo task/rà PR đã bật vẫn có thể nhận việc vào inbox, nhưng không kích hoạt điều phối/giao việc mới của bên đang Pause. Orchestrator còn lại tiếp tục hoạt động.\n\n**Dừng worker**, **tắt job** và **dừng toàn bộ hệ thống** là những thao tác có phạm vi riêng.\n\nPhương án khác là Pause còn yêu cầu ngắt workers và dừng jobs liên quan, đổi lại việc khôi phục phức tạp hơn.",
+      "updatedAt": "2026-10-23T07:33:58.876Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    },
+    {
+      "position": 3058,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adb100dd9208191b3ff7515445e88ab",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adb100dd9208191b3ff7515445e88ab",
+      "createdBy": "agent",
+      "text": "Đã đối chiếu và lưu [parent review kèm bằng chứng](docs/design/history/architecture-f-a05-review-2026-10-23/review-f-a05.json). Đã bổ sung luồng nhận bản sửa upstream và cách quan sát trạng thái từng loại tài sản.\n\nCòn mở:\n\n- **A11:** hai câu Stop/Pause đang chờ bạn trả lời.\n- **B9:** đồng bộ Instructions/Learned Knowledge vào concept graph.\n\nChưa kết thúc phiên kiến trúc hoặc chốt nghiệm thu V1.",
+      "updatedAt": "2026-10-23T07:43:15.752Z",
+      "jsonPointer": "/structuredResponse/items/5"
+    },
+    {
+      "position": 3060,
+      "itemId": "turn-item:message:a3adc20a-1e5e-43dd-809c-2758c4f14920",
+      "messageId": "a3adc20a-1e5e-43dd-809c-2758c4f14920",
+      "createdBy": "user",
+      "text": "ok theo suggest",
+      "updatedAt": "2026-10-23T08:06:23.420Z",
+      "jsonPointer": "/structuredResponse/items/6"
+    }
+  ],
+  "scopeInterpretation": "P3060 'ok theo suggest' follows P3058's explicit reminder of the two pending A11 questions and accepts the recommendations stated at P3047; it is not architecture closure or a response to the separate V1 gate.",
+  "decisions": [
+    {
+      "id": "A11.Q1",
+      "status": "accepted",
+      "meaning": "Native Stop remains a request to interrupt the current Turn; durable harness Pause/Resume explicitly controls the logical orchestrator's automatic wake and new admissions through the shared owner Interface. Canceled/idle events are not interpreted as durable human Pause. Native cadence coordination must show pending/confirmed truthfully."
+    },
+    {
+      "id": "A11.Q2",
+      "status": "accepted",
+      "meaning": "Pausing one orchestrator preserves running workers and durable results/evidence/events. Enabled independent code jobs can continue ingestion/dedupe; the paused orchestrator must not automatically wake or dispatch new work. The other orchestrator is not paused. Worker cancellation, job disabling and whole-kit stop have separate scope."
+    }
+  ],
+  "excludes": [
+    "guaranteed cancellation/rollback of in-flight effects or control of arbitrary external native prompts",
+    "new provider/native Stop interception or monkeypatch/fork capability",
+    "automatic Resume after restart/events, authority expansion or bypass of revocation",
+    "exact control wire protocol, UI implementation, scope/fencing/native cadence bridge proof",
+    "architecture closure, V1 acceptance or production implementation"
+  ]
+}

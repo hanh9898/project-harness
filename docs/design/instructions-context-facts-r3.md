@@ -1,0 +1,47 @@
+# Instructions and context: bounded facts, round 3
+
+2026-10-23. Design-phase research; no runtime changes, tests, installs, Sessions or live Paseo/provider/HBU calls. **Fact** means inspected contract/source; **Tested** means retained historical evidence, not a rerun; **Inference** states a limited consequence; **Gap** marks unverified behavior.
+
+## Evidence boundary
+
+Read [architecture-grill](architecture-grill.md), [composition](harness-composition.md), [configuration](configuration.md), [Paseo boundary](paseo-boundary.md), both spike reports/READMEs and relevant source. A05/A06 and the supplied A07 acceptance remain baseline; historical isolation proposals are superseded. No `paseo-runtime-contracts` research file was located in this workspace. No applicable `AGENTS.md` was found. The workspace lacks Git metadata; local citations use sections and package versions.
+
+**Fact:** local client/plugin/protocol declarations are **0.11.1**; historical native smoke used daemon **0.11.1**, CLI **0.12.0**, and one Codex profile on 2026-10-22. Separately inspected upstream source is release commit **`cafe4b01c8522ff39560241c5deb01427dc8dc5b`**, associated with **0.12.0** by [prior package research](skill-origins.md#kiểm-riêng-bản-paseo-0120). Deployed docs read on 2026-10-23 are unversioned. `llms.txt` and Markdown fetches failed with `Unsupported content-type: text/markdown`; HTML reference pages were available. Historical fetch dates/hashes remain in [verification.json](../../spikes/onboarding-mcp/evidence/verification.json). These sources do not establish current installed-host behavior.
+
+## 1. Inputs and observations
+
+**Fact, contract:** `PaseoAgentCreateOptions` accepts `prompt`, `cwd`, `env`, attachments and `config`; `PaseoAgentConfig` includes `systemPrompt`, `mcpServers` and `toolPolicy`. `systemPrompt` supplies additional system/developer guidance; its name does not promise replacement of provider instructions. Handles expose runtime information, timeline/refetch, permissions and `commands()`, whose response can report a provider error. See [SDK reference](https://paseo.sh/docs/sdk/reference#clientagents), [agents guide](https://paseo.sh/docs/sdk/agents), and local [0.11.1 declarations](../../spikes/onboarding-mcp/node_modules/@getpaseo/client/dist/index.d.ts).
+
+**Fact, docs/declarations:** `before("agent.create")` can transform public config except `cwd`, plus launch environment overrides. `before("agent.session_open")` can alter only environment overrides on create/resume/refresh/import. Hooks run in plugin-ID/registration order; later returns can overwrite earlier values without automatic deep merging. Paseo subsequently derives runtime tools/daemon prompt. Environment overrides are not persisted with agent config. These are composition mechanics, not universal instruction precedence. [Plugin reference, Before hooks/Ordering](https://paseo.sh/docs/plugins/reference#before-hooks); [0.11.1 lifecycle declarations](../../spikes/onboarding-mcp/node_modules/@getpaseo/plugin/dist/server/lifecycle.d.ts).
+
+**Tested, bounded:** [Onboarding smoke](onboarding-spike-results.md#đã-chạy-thật) injected role-specific HTTP MCP entries and exact tool preapprovals through `agent.create`, preserving other MCP entries. Native agents read assigned Skill/Principles files, called harness Tools, and Engineering retrieved/acknowledged the exact saved handover. The same Onboarding Session used MCP after plugin reload. [Source](../../spikes/onboarding-mcp/index.server.ts), [owner](../../spikes/onboarding-mcp/server/owner.ts), [live evidence](../../spikes/onboarding-mcp/evidence/live.json). This proves that path for those Sessions, not arbitrary native-tool restriction or all-provider compatibility.
+
+**Fact/Tested:** `cwd` and workspace handles establish placement. The smoke required `workspaces.ref(id).agents.create(...)` to reuse its pinned workspace; `agents.create({cwd})` alone created another workspace. No dedicated project/workspace instruction setter or universal instruction-file resolver was found in the inspected SDK. A path/reference can be supplied in text, but that alone does not prove reading. The smoke's successful file-read calls provide narrower evidence. [Onboarding report, Two failures](onboarding-spike-results.md#hai-thất-bại-được-giữ-lại).
+
+**Fact, docs/schema only:** creation attachments support text with external-resource metadata; composer attachment sources send complete text snapshots using Paseo's existing composer. A URL is metadata, not a documented automatic fetch guarantee. This surface was not exercised by the cited smoke. [Attachment reference](https://paseo.sh/docs/plugins/reference#add-a-composer-attachment-source); [0.11.1 TextAttachmentSchema](../../spikes/onboarding-mcp/node_modules/@getpaseo/protocol/dist/messages.d.ts).
+
+## 2. Inheritance and visibility
+
+**Fact, source only:** at the pinned 0.12.0 commit, the [Codex adapter](https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/agent/providers/codex-app-server-agent.ts#L5058) combines Session guidance with daemon-added guidance into `developerInstructions`. The [Claude adapter](https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/server/src/server/agent/providers/claude/agent.ts#L3316) uses the Claude Code preset with appended guidance and user/project/local setting sources, explicitly retaining CLAUDE.md loading. These are adapter facts, not a proof of provider-side prompt ordering or every discovered file.
+
+**Fact, docs:** provider defaults merge with per-agent options at launch/resume; only agent-specific options are stored. Native profiles are launch bundles; notes guide selection. The [profile schema](https://github.com/getpaseo/paseo/blob/cafe4b01c8522ff39560241c5deb01427dc8dc5b/packages/protocol/src/agent-profile.ts) deliberately has no system-prompt field. Thus profile identity alone cannot inventory effective guidance. [Options](https://paseo.sh/docs/sdk/provider-options), [profiles](https://paseo.sh/docs/agent-profiles).
+
+**Tested, historical:** `commands()` reported 68 Skills, while initial prompt metadata listed 47; reading one selected Skill was separately evidenced. User/system/plugin-cache sources remained inherited. Counts apply only to that inspected Codex Session. [Skill origins](skill-origins.md#catalog-không-đồng-nghĩa-toàn-bộ-nội-dung-đã-vào-prompt), [contract spike](paseo-spike-results.md).
+
+**Inference:** Paseo-only inventory/precedence completeness is unsupported. Potential inputs include native/provider prompts, daemon guidance, other plugin hooks, user/project/local configuration, discovered Skills and subsequent conversation/tool content. The inspected public surfaces do not expose a complete effective instruction graph or certify all provider-loaded instructions. A fresh Session does not imply an empty inherited environment.
+
+## 3. Read-on-demand knowledge
+
+**Inference grounded in tested transport:** a harness MCP Tool can return referenced knowledge as text while preserving native chat and provider discovery. The smoke's `handover_read` already retrieved durable content outside the transcript through the same owner used by its driver. This supports an explicit request/read path, without selecting knowledge ownership, storage or retrieval policy. [HTTP adapter](../../spikes/onboarding-mcp/server/http.ts), [README](../../spikes/onboarding-mcp/README.md).
+
+**Gap:** this does not prove generic MCP `resources/list`/`resources/read`, automatic link dereferencing, proactive retrieval, ranking, token limits, freshness, or retention after compaction. The tested path was a Tool returning text, not universal MCP resource discovery.
+
+## 4. Mechanical checks versus semantic judgment
+
+**Fact/Tested:** explicit missing/unauthorized references, changed source digests, stale revisions, handover mismatches and workspace-binding mismatches have deterministic checks in the smoke. Source drift/missing-profile cases used scripted Paseo adapters; stale-revision rejection also ran live. [Owner/tests](../../spikes/onboarding-mcp/server/owner.test.ts), [verification limits](onboarding-spike-results.md#local-scripted-và-chưa-kiểm).
+
+**Inference:** incompatible permissions are mechanically detectable where required capabilities and observed grants are explicit. The recorded approval-policy failure is concrete evidence; a profile badge or prose restriction is insufficient. Whether two prose instructions conflict, which lesson applies, or whether changed content invalidates advice needs agent/user judgment. Digest inequality detects changed bytes, not semantic contradiction or incorrect knowledge. No automatic semantic conflict detector is established.
+
+## 5. Factual prerequisites still open
+
+**Gaps:** version-specific mapping and visibility across supported providers; inherited instruction coverage; MCP access/enforcement and reconnect behavior beyond the smoke; read evidence versus mere references; retrieval size/error/compaction behavior; and freshness checks against mutable external sources. Complete inventory, universal precedence, automatic semantic resolution and generic resource discovery remain unsupported claims. Knowledge owner/schema/source priority and A08 scope/retrieval/freshness preferences remain user decisions; these facts neither block independent questioning nor close the whole-harness interview.

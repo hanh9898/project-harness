@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "type": "scoped-architecture-acceptance",
+  "round": "A07",
+  "threadId": "53d0b426-056c-4920-a3df-13786d026007",
+  "sourcePage": "api-page.json",
+  "records": [
+    {
+      "position": 2953,
+      "itemId": "turn-item:provider:codex:native-item:msg_0a00c010b74921cf016adafd7e7a708191b2f141772a599542",
+      "messageId": "message:provider:codex:native-item:msg_0a00c010b74921cf016adafd7e7a708191b2f141772a599542",
+      "createdBy": "agent",
+      "text": "Đã lưu [A06](docs/design/history/architecture-a06-2026-10-23/acceptance-a06.json). Tiếp theo là cơ chế closed loop của cả hai orchestrator.\n\n❓ **Q1 — Mỗi lượt điều phối kết thúc bằng trạng thái có cấu trúc qua MCP?**\n\nVí dụ: còn việc làm tiếp, đang chờ worker, cần người trả lời hoặc đã xử lý xong lượt.\n\n➡️ **Đề xuất: đồng ý.** Agent ghi trạng thái qua Tool; runtime đối chiếu công việc đã lưu để tiếp tục hoặc chờ. Kết thúc lượt điều phối khác với hoàn thành công việc. Runtime không đoán trạng thái từ câu chat cuối hoặc marker văn bản.\n\n---\n\n❓ **Q2 — Sự kiện đến khi orchestrator đang bận được xếp hàng và gom tín hiệu đánh thức?**\n\nVí dụ: năm workers trả kết quả gần nhau.\n\n➡️ **Đề xuất: đồng ý.** Giữ đầy đủ từng kết quả trong inbox/state, nhưng gom nhu cầu đánh thức thành một lượt xử lý tiếp theo. Mặc định để orchestrator hoàn tất lượt hiện tại, thay vì tự interrupt cho từng callback hoặc tạo orchestrator khác.\n\nNgười dùng vẫn có thể interrupt qua Paseo; pause, quyền và giới hạn tài nguyên tiếp tục có hiệu lực.\n\n---\n\n❓ **Q3 — Ghi bài học trong lúc làm việc, rồi daily retro tuyển chọn và đề xuất cải tiến?**\n\n➡️ **Đề xuất: đồng ý.** Agent đang làm task ghi note ngắn khi có phát hiện đáng giữ, kèm nguồn và mức chắc chắn; không bắt mọi task phải có bài học.\n\nDaily retro đọc notes cùng outcomes/metrics, gộp trùng, kiểm căn cứ và tạo candidate cải tiến khi phù hợp. Candidate tiếp tục qua quy trình kiểm/phát hành đã chốt. Luồng sửa blocker khẩn cấp vẫn hoạt động riêng.",
+      "updatedAt": "2026-10-23T06:24:09.843Z",
+      "jsonPointer": "/structuredResponse/items/2"
+    },
+    {
+      "position": 2955,
+      "itemId": "turn-item:message:b2958586-f21c-4479-a4d9-564c431442ac",
+      "messageId": "b2958586-f21c-4479-a4d9-564c431442ac",
+      "createdBy": "user",
+      "text": "ok",
+      "updatedAt": "2026-10-23T06:35:40.172Z",
+      "jsonPointer": "/structuredResponse/items/3"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "A07.Q1",
+      "status": "accepted",
+      "meaning": "Orchestrators record structured cycle disposition via owner MCP Tools; runtime reconciles durable work to continue or wait. End of cycle/Turn is not work completion; free chat text/markers are not the completion oracle."
+    },
+    {
+      "id": "A07.Q2",
+      "status": "accepted",
+      "meaning": "Preserve events/results individually while coalescing automatic wake needs for the logical orchestrator; by default avoid interrupting the active cycle for each callback or spawning another orchestrator. User native interrupt/pause/authority/budgets remain."
+    },
+    {
+      "id": "A07.Q3",
+      "status": "accepted",
+      "meaning": "Agents record useful sourced/qualified lessons during work without requiring a lesson or extra LLM Turn for every task. Daily retro curates notes with outcomes/metrics and proposes candidates through the agreed release path; urgent blocker handling remains."
+    }
+  ],
+  "excludes": [
+    "exact MCP Tool names/state enum/cycle identity",
+    "proof of native send queue/replay or wake-race handling",
+    "new orchestrator auto-replacement, provider/scheduler capability",
+    "knowledge store/index/retention/freshness schema",
+    "production implementation, architecture closure or aggregate V1 acceptance"
+  ],
+  "integrity": {
+    "note": "Hashes preserve saved bytes, not independent authorship or runtime proof. A08 proposals are not accepted by A07.",
+    "files": [
+      {
+        "path": "api-page.json",
+        "sha256": "058293453f12edcb5c2e8fa87923a8c30dec425e5585e6dc62c6afa0f8be12c8"
+      },
+      {
+        "path": "baseline.json",
+        "sha256": "f2e0785054c95f694f7f297988d0fe4a56a7d3ec7c4bd8fb17bd32cf11af968c"
+      },
+      {
+        "path": "before/docs/design/README.md",
+        "sha256": "7a7a791b81edf4bff1be626c938ec7a7ca5668f3b758fc34b594e508c8bff546"
+      },
+      {
+        "path": "before/docs/design/architecture-grill.md",
+        "sha256": "138452f590c3e342b6da9d08364f7e07cb98acfb90d7c536a431f444ad9eec00"
+      },
+      {
+        "path": "before/docs/design/architecture.md",
+        "sha256": "b3da00763cbdcbd7e1636c81bff8a88c7119728775afc2a3d3d82e6a832cb901"
+      },
+      {
+        "path": "before/docs/design/harness-composition.md",
+        "sha256": "b3bbc39c33e2ef4824ae41111e1ca4bc7c4fd82ea1b1312d70e0ea9428a09c12"
+      },
+      {
+        "path": "before/docs/design/modules.md",
+        "sha256": "005f83e9df5c79592d4046154a4ba3b48f739cf81e8272f94ee5ca55bd7cb3c9"
+      },
+      {
+        "path": "validation-a07.json",
+        "sha256": "e001c4dac9082a435e909b2b306fe2454d6a5826cd649e39a196a76de7241295"
+      }
+    ]
+  }
+}

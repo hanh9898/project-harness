@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "originalPath": "docs/design/v1-acceptance-grill.md",
+      "snapshotPath": "before/docs/design/v1-acceptance-grill.md",
+      "sha256": "6f379f9f376fe46a21b337e015869ff54d40724a22673505c1003a247aa96eb0"
+    },
+    {
+      "originalPath": "docs/design/scope-80-20.md",
+      "snapshotPath": "before/docs/design/scope-80-20.md",
+      "sha256": "e7fdbf44f8b80fc6b159c7ae074b5c735b6503b315acb23f34f5d931e51c40b2"
+    },
+    {
+      "originalPath": "docs/design/verification.md",
+      "snapshotPath": "before/docs/design/verification.md",
+      "sha256": "7ccc16b206177298df4dfb9efad790292dbb866d158280eb46296c27427d30b7"
+    },
+    {
+      "originalPath": "docs/design/README.md",
+      "snapshotPath": "before/docs/design/README.md",
+      "sha256": "93938d01912a1eacbfd016be743539b508b1d04824eb0ef65040e8059b253125"
+    }
+  ],
+  "conceptRegisterSha256": "dc272937b31af0de137f55252f515af4751f9a86097509cf6691011a6d438cdf"
+}
